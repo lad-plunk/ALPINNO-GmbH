@@ -33,12 +33,8 @@ body {
 .hero img.hero-img {
   width: 100%;
   height: 100%;
-  /* Fill the container while cropping the very bottom of the source image.  Using
-     object-fit: cover ensures no letterboxing on widescreens, and
-     object-position: top keeps the mountain peak visible while trimming
-     away the logo portion at the bottom of the artwork. */
-  object-fit: cover;
-  object-position: top;
+  object-fit: contain;
+  object-position: bottom;
   display: block;
   pointer-events: none;
 }

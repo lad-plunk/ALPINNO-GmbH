@@ -1,1 +1,0 @@
-# ALPINNO-GmbH
