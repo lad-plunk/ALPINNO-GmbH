@@ -1,0 +1,5 @@
+# Local backup copies should never be committed.
+* - Copy.*
+
+# Temporary backup created while repairing broken OneDrive Git metadata.
+.git-duplicate-backup/
