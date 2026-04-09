@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fafafa;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  background: #1A3A5F;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+/*
+ * Hero section
+ *
+ * We use an <img> element rather than a CSS background to ensure the
+ * entire mountain graphic is visible. The image scales to fit within
+ * the hero container using object‑fit: contain, avoiding any cropping
+ * of the mountain peak. A semi‑transparent overlay sits on top of
+ * the image for improved text contrast.
+ */
+.hero {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+}
+
+/* The hero image fills the width of the container and maintains its
+   aspect ratio. object‑fit: contain prevents cropping while
+   object‑position: bottom keeps the mountain resting on the bottom
+   edge of the hero container. */
+.hero img.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom;
+  display: block;
+  pointer-events: none;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Slightly darker overlay improves contrast against the lighter
+     mountain graphic. Adjust the alpha as needed. */
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+nav {
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: #1A3A5F;
+}
+
+a:focus-visible {
+  outline: 3px solid #1A3A5F;
+  outline-offset: 2px;
+}
+
+section {
+  padding: 3rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  color: #1A3A5F;
+  font-size: 2rem;
+}
+
+section p {
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.grid li {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.grid h3 {
+  margin-bottom: 0.5rem;
+  color: #1A3A5F;
+  font-size: 1.2rem;
+}
+
+.process-note {
+  margin-top: 1rem;
+  color: #555;
+}
+
+.founder {
+  display: grid;
+  grid-template-columns: minmax(180px, 280px) 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.founder-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.founder-copy p {
+  margin-bottom: 0.75rem;
+}
+
+.bio-highlights {
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.bio-highlights li {
+  margin-bottom: 0.5rem;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.35rem;
+  vertical-align: -0.15em;
+  fill: currentColor;
+}
+
+.whatsapp-icon {
+  fill: #25D366;
+}
+
+.contact-list {
+  list-style: none;
+}
+
+.contact-list li {
+  margin-bottom: 0.5rem;
+}
+
+.contact {
+  font-style: normal;
+}
+
+footer {
+  background: #1A3A5F;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 50vh;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav li {
+    margin: 0.5rem 0;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .founder {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .founder-photo {
+    max-width: 320px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
