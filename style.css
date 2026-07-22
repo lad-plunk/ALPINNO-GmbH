@@ -559,16 +559,7 @@ h3 {
 }
 
 .AIdea-gallery {
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
-  gap: 1.25rem;
-  align-items: start;
-  margin-bottom: 1rem;
-}
-
-.AIdea-gallery-supporting {
-  display: grid;
-  gap: 1.25rem;
+  margin-bottom: clamp(2.5rem, 6vw, 5rem);
 }
 
 .AIdea-screenshot {
@@ -593,19 +584,6 @@ h3 {
 
 .AIdea-screenshot a:hover img {
   transform: scale(1.012);
-}
-
-.AIdea-screenshot figcaption {
-  padding: 0.85rem 1rem;
-  color: var(--navy-900);
-  font-size: 0.9rem;
-  font-weight: 750;
-}
-
-.AIdea-gallery-note {
-  margin: 0 0 clamp(2.5rem, 6vw, 5rem);
-  color: #aebfcd;
-  font-size: 0.85rem;
 }
 
 .capability-list {
@@ -879,14 +857,6 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .AIdea-gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .AIdea-gallery-supporting {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .service-grid,
   .engagement-list {
     grid-template-columns: 1fr;
@@ -932,12 +902,6 @@ footer {
   .footer-shell {
     flex-direction: column;
     align-items: flex-start;
-  }
-}
-
-@media (max-width: 560px) {
-  .AIdea-gallery-supporting {
-    grid-template-columns: 1fr;
   }
 }
 
