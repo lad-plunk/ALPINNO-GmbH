@@ -319,14 +319,18 @@ h3 {
 .hero-visual video,
 .hero-visual img {
   display: block;
-  width: min(100%, 520px);
+  width: min(88%, 420px);
+  height: auto;
   margin-left: auto;
   filter: drop-shadow(0 28px 34px rgba(0, 0, 0, 0.35));
 }
 
 .hero-visual video {
+  aspect-ratio: 1376 / 928;
   border-radius: 0.75rem;
-  background: var(--paper);
+  background: #f8f8f8;
+  object-fit: contain;
+  opacity: 0.93;
 }
 
 .section {
