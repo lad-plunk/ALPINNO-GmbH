@@ -316,10 +316,17 @@ h3 {
   padding-bottom: 3vh;
 }
 
+.hero-visual video,
 .hero-visual img {
+  display: block;
   width: min(100%, 520px);
   margin-left: auto;
   filter: drop-shadow(0 28px 34px rgba(0, 0, 0, 0.35));
+}
+
+.hero-visual video {
+  border-radius: 0.75rem;
+  background: var(--paper);
 }
 
 .section {
