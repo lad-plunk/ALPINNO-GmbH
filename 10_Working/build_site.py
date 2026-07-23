@@ -20,6 +20,7 @@ PUBLIC_FILES = (
     "robots.txt",
     "sitemap.xml",
     "llms.txt",
+    "CNAME",
 )
 PUBLIC_DIRECTORIES = ("images",)
 

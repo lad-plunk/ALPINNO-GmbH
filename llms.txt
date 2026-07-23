@@ -1,37 +1,38 @@
 # ALPINNO GmbH
 
-> ALPINNO is a Swiss consulting and technology company helping organisations harness AI, create valuable innovations and establish the agile processes needed to turn opportunities into results.
+> ALPINNO is a Swiss consulting and technology company helping innovation-led organisations use AI, data, automation and agile methods to create and execute valuable, protectable innovation.
 
-Canonical website: https://lad-plunk.github.io/ALPINNO-GmbH/
+Canonical website: https://alpinno-solutions.ch/
 
 ## Core offerings
 
-- AI transformation, implementation, governance, training and capability building
-- AI-assisted front-end innovation, invention development and intellectual-property support
-- Agile execution, project and programme management, PMO and innovation governance
-- AIdea, ALPINNO's proprietary AI-assisted innovation and invention software
+- AI transformation, implementation, governance, training, coaching and capability building
+- AI-assisted, data-driven innovation, invention development and intellectual-property support
+- Agile execution, new-product development, project and programme management, PMO and portfolio governance
+- AIdea, ALPINNO's proprietary AI-assisted, data-driven innovation and invention platform
 
 ## AIdea
 
-AIdea guides expert-led teams through a configurable, evidence-grounded innovation process. It connects proprietary company knowledge, customer insight and public intelligence to traceable opportunities, ideas, concepts, patentable inventions and invention disclosures.
+AIdea guides expert teams through a structured, flexible and iterative workflow. It connects corporate knowledge, AIdea-curated knowledge and public intelligence to evidence-grounded opportunities, ideas, concepts, inventions and invention disclosures.
 
-AIdea may be provided through ALPINNO-led projects, supported local installations, private-cloud or customer-hosted arrangements, selected beta access and tailored licensing.
+AIdea is used in ALPINNO-led projects and may also be deployed through secure cloud, customer-hosted or dedicated local arrangements with tailored setup, training and support.
 
 ## Important context
 
-- AIdea is human-led and AI-assisted.
-- Preliminary prior-art and pre-FTO work is technical early-stage support, not a formal legal opinion.
+- AIdea is human-led and AI-assisted. Human experts define, select, refine and approve inventive contributions.
+- Preliminary patentability and freedom-to-operate screening is early technical support, not a formal legal opinion.
+- Inventorship and patentability depend on the applicable jurisdiction and the facts of each invention.
 - Performance statements on the website are founder-observed results and are identified as such.
 
 ## Primary resources
 
-- [Website](https://lad-plunk.github.io/ALPINNO-GmbH/)
-- [Services](https://lad-plunk.github.io/ALPINNO-GmbH/#services)
-- [AIdea](https://lad-plunk.github.io/ALPINNO-GmbH/#AIdea)
-- [How ALPINNO works](https://lad-plunk.github.io/ALPINNO-GmbH/#how-we-work)
-- [Founder](https://lad-plunk.github.io/ALPINNO-GmbH/#founder)
-- [Contact](https://lad-plunk.github.io/ALPINNO-GmbH/#contact)
-- [Privacy notice](https://lad-plunk.github.io/ALPINNO-GmbH/privacy.html)
+- [Website](https://alpinno-solutions.ch/)
+- [Services](https://alpinno-solutions.ch/#services)
+- [AIdea](https://alpinno-solutions.ch/#AIdea)
+- [How ALPINNO works](https://alpinno-solutions.ch/#how-we-work)
+- [Founder](https://alpinno-solutions.ch/#founder)
+- [Contact](https://alpinno-solutions.ch/#contact)
+- [Privacy notice](https://alpinno-solutions.ch/privacy.html)
 
 ## Automated access
 

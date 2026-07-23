@@ -151,6 +151,7 @@ def validate(production: bool) -> tuple[list[str], list[str]]:
         "robots.txt",
         "sitemap.xml",
         "llms.txt",
+        "CNAME",
     }
     missing_public_files = sorted(name for name in required_public_files if not (PROJECT_ROOT / name).is_file())
     if missing_public_files:

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lad-plunk.github.io/ALPINNO-GmbH/sitemap.xml
+Sitemap: https://alpinno-solutions.ch/sitemap.xml
