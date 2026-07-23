@@ -9,18 +9,17 @@ Canonical website: https://alpinno-solutions.ch/
 - AI transformation, implementation, governance, training, coaching and capability building
 - AI-assisted, data-driven innovation, invention development and intellectual-property support
 - Agile execution, new-product development, project and programme management, PMO and portfolio governance
-- AIdea, ALPINNO's proprietary AI-assisted, data-driven innovation and invention platform
+- AIdea™, ALPINNO's proprietary AI-assisted, data-driven innovation and invention platform
 
-## AIdea
+## AIdea™
 
-AIdea guides expert teams through a structured, flexible and iterative workflow. It connects corporate knowledge, AIdea-curated knowledge and public intelligence to evidence-grounded opportunities, ideas, concepts, inventions and invention disclosures.
+AIdea™ guides expert teams through a structured, flexible and iterative workflow. It connects corporate knowledge, AIdea™-curated knowledge and public intelligence to evidence-grounded opportunities, ideas, concepts, inventions and invention disclosures.
 
-AIdea is used in ALPINNO-led projects and may also be deployed through secure cloud, customer-hosted or dedicated local arrangements with tailored setup, training and support.
+AIdea™ is used in ALPINNO-led projects and may also be deployed through secure cloud, customer-hosted or dedicated local arrangements with tailored setup, training and support.
 
 ## Important context
 
-- AIdea is human-led and AI-assisted. Human experts define, select, refine and approve inventive contributions.
-- Preliminary patentability and freedom-to-operate screening is early technical support, not a formal legal opinion.
+- AIdea™ is human-led and AI-assisted. Human experts define, select, refine and approve inventive contributions.
 - Inventorship and patentability depend on the applicable jurisdiction and the facts of each invention.
 - Performance statements on the website are founder-observed results and are identified as such.
 
@@ -28,7 +27,7 @@ AIdea is used in ALPINNO-led projects and may also be deployed through secure cl
 
 - [Website](https://alpinno-solutions.ch/)
 - [Services](https://alpinno-solutions.ch/#services)
-- [AIdea](https://alpinno-solutions.ch/#AIdea)
+- [AIdea™](https://alpinno-solutions.ch/#AIdea)
 - [How ALPINNO works](https://alpinno-solutions.ch/#how-we-work)
 - [Founder](https://alpinno-solutions.ch/#founder)
 - [Contact](https://alpinno-solutions.ch/#contact)

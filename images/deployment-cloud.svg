@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 120" role="img" aria-labelledby="title">
+  <title id="title">Secure cloud deployment</title>
+  <defs>
+    <linearGradient id="cloud-fill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9fd8ff"/>
+      <stop offset="1" stop-color="#3d8fc7"/>
+    </linearGradient>
+  </defs>
+  <path d="M49 94h83c20 0 33-11 33-28 0-16-12-27-29-28C130 19 114 8 94 8 70 8 51 25 48 48 30 49 16 59 16 72c0 13 12 22 33 22Z" fill="url(#cloud-fill)"/>
+  <path d="M62 105h56M90 86v19" fill="none" stroke="#eaf7ff" stroke-width="5" stroke-linecap="round"/>
+</svg>
