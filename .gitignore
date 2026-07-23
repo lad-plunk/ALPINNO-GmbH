@@ -3,3 +3,8 @@
 
 # Temporary backup created while repairing broken OneDrive Git metadata.
 .git-duplicate-backup/
+
+# Generated website and local quality reports.
+_site/
+.lighthouseci/
+10_Working/reports/

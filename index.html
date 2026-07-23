@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="ALPINNO delivers AI transformation, training, AI-assisted front-end innovation, IP support, Agile execution and AIdea software.">
   <meta name="theme-color" content="#0b1f3a">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="alpinno:ga4-measurement-id" content="G-D6LRPZDVQY">
   <link rel="canonical" href="https://lad-plunk.github.io/ALPINNO-GmbH/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ALPINNO GmbH">
@@ -23,31 +25,57 @@
   <link rel="icon" href="images/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  <link rel="preload" as="image" href="images/alpinno_hero.png">
+  <link rel="preload" as="image" type="image/webp" href="images/alpinno-hero-1299.webp">
   <link rel="stylesheet" href="style.css">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "ALPINNO GmbH",
-      "url": "https://lad-plunk.github.io/ALPINNO-GmbH/",
-      "logo": "https://lad-plunk.github.io/ALPINNO-GmbH/images/alpinno_hero.png",
-      "image": "https://lad-plunk.github.io/ALPINNO-GmbH/images/alpinno-social-card.png",
-      "description": "AI transformation, training, AI-assisted front-end innovation, IP support, Agile execution and AIdea software.",
-      "email": "pierpaolo.monticone@gmail.com",
-      "founder": {
-        "@type": "Person",
-        "name": "Pier Paolo Monticone",
-        "jobTitle": "Founder and Managing Director"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Acherhofstrasse 27",
-        "postalCode": "6430",
-        "addressLocality": "Schwyz",
-        "addressCountry": "CH"
-      },
-      "sameAs": ["https://www.linkedin.com/in/pierpaolomonticone/"]
+      "@graph": [
+        {
+          "@type": ["Organization", "ProfessionalService"],
+          "@id": "https://lad-plunk.github.io/ALPINNO-GmbH/#organisation",
+          "name": "ALPINNO GmbH",
+          "url": "https://lad-plunk.github.io/ALPINNO-GmbH/",
+          "logo": "https://lad-plunk.github.io/ALPINNO-GmbH/images/alpinno-hero-1299.webp",
+          "image": "https://lad-plunk.github.io/ALPINNO-GmbH/images/alpinno-social-card.png",
+          "description": "AI transformation, training, AI-assisted front-end innovation, IP support, Agile execution and AIdea software.",
+          "founder": {
+            "@type": "Person",
+            "name": "Pier Paolo Monticone",
+            "jobTitle": "Founder and Managing Director"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Acherhofstrasse 27",
+            "postalCode": "6430",
+            "addressLocality": "Schwyz",
+            "addressCountry": "CH"
+          },
+          "sameAs": ["https://www.linkedin.com/in/pierpaolomonticone/"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://lad-plunk.github.io/ALPINNO-GmbH/#website",
+          "url": "https://lad-plunk.github.io/ALPINNO-GmbH/",
+          "name": "ALPINNO GmbH",
+          "publisher": {
+            "@id": "https://lad-plunk.github.io/ALPINNO-GmbH/#organisation"
+          },
+          "inLanguage": "en-GB"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://lad-plunk.github.io/ALPINNO-GmbH/#aidea",
+          "name": "AIdea",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Customer-hosted, private-cloud or supported local deployment",
+          "description": "AI-assisted innovation and invention software that guides teams through a configurable, evidence-grounded innovation process.",
+          "provider": {
+            "@id": "https://lad-plunk.github.io/ALPINNO-GmbH/#organisation"
+          },
+          "url": "https://lad-plunk.github.io/ALPINNO-GmbH/#AIdea"
+        }
+      ]
     }
   </script>
 </head>
@@ -84,9 +112,9 @@
         </div>
       </div>
       <div class="hero-visual" aria-hidden="true">
-        <video class="hero-logo-video" muted playsinline preload="metadata" poster="images/alpinno_hero.png" width="1376" height="928">
+        <video class="hero-logo-video" muted playsinline preload="metadata" poster="images/alpinno-hero-1299.webp" width="1376" height="928">
           <source src="images/alpinno-logo-animated.mp4" type="video/mp4">
-          <img src="images/alpinno_hero.png" alt="" width="1299" height="867" loading="eager" decoding="async">
+          <img src="images/alpinno-hero-1299.webp" alt="" width="1299" height="867" loading="eager" decoding="async">
         </video>
       </div>
     </section>
@@ -190,7 +218,7 @@
           <p>AIdea is human-led and AI-assisted. Experts shape the brief, choose the methods, review the evidence and make the decisions, while AI helps teams explore more broadly, connect relevant knowledge and document the journey.</p>
         </div>
 
-        <div class="AIdea-flow" aria-label="AIdea innovation journey">
+        <div class="AIdea-flow" role="group" aria-label="AIdea innovation journey">
           <span>Evidence</span>
           <span>Opportunities</span>
           <span>Ideas</span>
@@ -214,13 +242,13 @@
               <li>Portfolio governance and traceability</li>
             </ul>
           </div>
-          <aside class="availability-card">
+          <aside class="availability-card" aria-labelledby="availability-title">
             <p class="availability-label">Available through tailored engagements</p>
-            <h3>Supported projects, installation and selected beta access</h3>
+            <h3 id="availability-title">Supported projects, installation and selected beta access</h3>
             <p>AIdea is offered through ALPINNO-led innovation projects and supported local installations. Selected organisations may also participate as beta users through private-cloud, customer-hosted or tailored licensing arrangements.</p>
             <p>A supported local installation may run on a customer-controlled machine capable of local inference. Where required, ALPINNO can work with a specialised infrastructure partner.</p>
             <p>Setup, onboarding, methodology training and ongoing support are available according to the client's needs.</p>
-            <a class="button button-light" href="mailto:pierpaolo.monticone@gmail.com?subject=AIdea%20enquiry">Discuss AIdea and licensing</a>
+            <a class="button button-light contact-topic-link" href="#contact-form" data-contact-topic="AIdea and licensing">Discuss AIdea and licensing</a>
           </aside>
         </div>
 
@@ -243,7 +271,7 @@
           </ul>
         </section>
 
-        <div class="AIdea-gallery" aria-label="Examples of the AIdea software interface">
+        <div class="AIdea-gallery" role="group" aria-label="Examples of the AIdea software interface">
           <figure class="AIdea-screenshot AIdea-screenshot-primary">
             <a href="images/aidea-lines-of-thought.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the full-resolution AIdea visual solution-space screenshot">
               <picture>
@@ -342,7 +370,11 @@
       </div>
       <div class="founder-layout">
         <div class="founder-image-wrap">
-          <img src="images/founder.jpg" alt="Portrait of Pier Paolo Monticone, founder and Managing Director of ALPINNO GmbH" class="founder-photo" width="1293" height="1617" decoding="async">
+          <picture>
+            <source type="image/avif" srcset="images/founder-480.avif 480w, images/founder-900.avif 900w" sizes="(max-width: 760px) min(420px, calc(100vw - 40px)), 390px">
+            <source type="image/webp" srcset="images/founder-480.webp 480w, images/founder-900.webp 900w" sizes="(max-width: 760px) min(420px, calc(100vw - 40px)), 390px">
+            <img src="images/founder.jpg" alt="Portrait of Pier Paolo Monticone, founder and Managing Director of ALPINNO GmbH" class="founder-photo" width="1293" height="1617" loading="lazy" decoding="async">
+          </picture>
         </div>
         <div class="founder-copy">
           <p class="lead">Pier Paolo Monticone, founder and Managing Director of ALPINNO GmbH, is an innovation and transformation executive focused on AI adoption, AI-assisted innovation, product development and effective execution.</p>
@@ -360,30 +392,95 @@
 
     <section class="section section-contact" id="contact" aria-labelledby="contact-title">
       <div class="contact-shell">
-        <div>
+        <div class="contact-intro">
           <p class="section-kicker section-kicker-light">Start a conversation</p>
           <h2 id="contact-title">Get in touch</h2>
           <p>Let's discuss your AI transformation, training, innovation, product-development or execution challenge, or explore a tailored AIdea project, deployment or licensing arrangement.</p>
-          <div class="button-row">
-            <a class="button button-light" href="mailto:pierpaolo.monticone@gmail.com">Discuss your challenge</a>
-            <a class="text-link" href="mailto:pierpaolo.monticone@gmail.com?subject=AIdea%20enquiry">Ask about AIdea <span aria-hidden="true">→</span></a>
-          </div>
+          <address class="contact-details">
+            <p><span>LinkedIn</span><a href="https://www.linkedin.com/in/pierpaolomonticone/" target="_blank" rel="noopener noreferrer">linkedin.com/in/pierpaolomonticone</a></p>
+            <p><span>Address</span>Acherhofstrasse 27<br>6430 Schwyz, Switzerland</p>
+          </address>
         </div>
-        <address class="contact-details">
-          <p><span>Email</span><a href="mailto:pierpaolo.monticone@gmail.com">pierpaolo.monticone@gmail.com</a></p>
-          <p><span>LinkedIn</span><a href="https://www.linkedin.com/in/pierpaolomonticone/" target="_blank" rel="noopener noreferrer">linkedin.com/in/pierpaolomonticone</a></p>
-          <p><span>Address</span>Acherhofstrasse 27<br>6430 Schwyz, Switzerland</p>
-        </address>
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/xkodvdgl" method="post" data-form-kind="contact">
+          <div class="form-heading">
+            <h3>Send a secure enquiry</h3>
+            <p>Your email address is used only to respond to your enquiry.</p>
+          </div>
+          <div class="form-grid">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+            <label>
+              <span>Work email</span>
+              <input type="email" name="email" autocomplete="email" inputmode="email" required>
+            </label>
+          </div>
+          <label>
+            <span>Organisation <small>(optional)</small></span>
+            <input type="text" name="organisation" autocomplete="organization">
+          </label>
+          <label>
+            <span>What would you like to discuss?</span>
+            <select name="topic" required>
+              <option value="">Select a topic</option>
+              <option>AI transformation and training</option>
+              <option>Innovation and IP</option>
+              <option>Agile execution, projects or PMO</option>
+              <option>AIdea and licensing</option>
+              <option>Another topic</option>
+            </select>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+          <div class="form-honeypot" aria-hidden="true">
+            <label>Leave this field empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <label class="consent-check">
+            <input type="checkbox" name="privacy_acknowledged" value="yes" required>
+            <span>I have read the <a href="privacy.html">privacy notice</a> and agree that ALPINNO may use these details to respond.</span>
+          </label>
+          <input type="hidden" name="_subject" value="New enquiry from the ALPINNO website">
+          <button class="button button-light" type="submit">Send enquiry</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="footer-shell">
-      <p><strong>ALPINNO GmbH</strong><br>Consulting and technology for practical progress.</p>
+      <div class="footer-identity">
+        <p><strong>ALPINNO GmbH</strong><br>Consulting and technology for practical progress.</p>
+        <p class="footer-links"><a href="privacy.html">Privacy</a><a href="llms.txt">Information for AI systems</a><button class="footer-link-button" id="analytics-settings" type="button">Analytics settings</button></p>
+      </div>
+      <form class="newsletter-form" action="https://6236316d.sibforms.com/serve/MUIFAI9ynTDdmiN-Y8ebfaZ7W8ZfEzZew6EqPu3eaRp_mmdbl6Mr85vausyflL8T2PFWZFe7H5Ft9ajDRfJCMmbf2tx5vIsHPN1B18SQpcBQVWMhO5G-w3HKhdM5X-LZFeGNi5pOlkFicuTYGqFrSJOV51v5x_uJWXzYzRKqQ_HPQ62xvcYP5lS1DXuBwP81MhwEIU8iE5VVrwmphA==" method="post" target="_blank" data-form-kind="newsletter">
+        <label for="newsletter-email">Occasional ALPINNO updates</label>
+        <div class="newsletter-controls">
+          <input id="newsletter-email" type="email" name="EMAIL" autocomplete="email" inputmode="email" placeholder="Work email" aria-describedby="newsletter-note" required>
+          <button class="button button-primary" type="submit">Subscribe</button>
+        </div>
+        <input class="form-honeypot" type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="locale" value="en">
+        <input type="hidden" name="html_type" value="simple">
+        <p id="newsletter-note">Double opt-in. Unsubscribe at any time. See our <a href="privacy.html">privacy notice</a>.</p>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
       <p>© 2026 ALPINNO GmbH. All rights reserved.</p>
     </div>
   </footer>
+  <aside class="consent-banner" id="analytics-consent" aria-labelledby="analytics-consent-title" hidden>
+    <div>
+      <strong id="analytics-consent-title">Optional website analytics</strong>
+      <p>With your permission, Google Analytics helps us understand visits, viewed pages, approximate region and engagement. No advertising or personalisation is enabled. See the <a href="privacy.html">privacy notice</a>.</p>
+    </div>
+    <div class="consent-actions">
+      <button class="button button-primary" id="analytics-accept" type="button">Allow analytics</button>
+      <button class="button button-secondary" id="analytics-decline" type="button">Decline</button>
+    </div>
+  </aside>
   <script>
     const mobileNavigation = window.matchMedia("(max-width: 760px)");
     const navigationMenu = document.querySelector(".nav-menu");
@@ -422,6 +519,128 @@
       reducedMotion.addEventListener("change", handleMotionPreference);
     } else {
       reducedMotion.addListener(handleMotionPreference);
+    }
+
+    const analyticsMeasurementId = document.querySelector('meta[name="alpinno:ga4-measurement-id"]')?.content.trim();
+    const analyticsConsent = document.querySelector("#analytics-consent");
+    const analyticsAccept = document.querySelector("#analytics-accept");
+    const analyticsDecline = document.querySelector("#analytics-decline");
+    const analyticsSettings = document.querySelector("#analytics-settings");
+    const analyticsPreferenceKey = "alpinno-analytics-consent";
+    let analyticsConsentGranted = false;
+    let analyticsLoaded = false;
+
+    const analyticsIsConfigured = /^G-[A-Z0-9]+$/.test(analyticsMeasurementId || "");
+    const loadGoogleAnalytics = () => {
+      if (!analyticsIsConfigured || analyticsLoaded) return;
+      analyticsLoaded = true;
+      analyticsConsentGranted = true;
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () {
+        window.dataLayer.push(arguments);
+      };
+      window.gtag("consent", "default", {
+        analytics_storage: "denied",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied"
+      });
+      window.gtag("consent", "update", {
+        analytics_storage: "granted",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied"
+      });
+      window.gtag("js", new Date());
+      window.gtag("config", analyticsMeasurementId, {
+        anonymize_ip: true,
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false
+      });
+      const analyticsScript = document.createElement("script");
+      analyticsScript.async = true;
+      analyticsScript.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(analyticsMeasurementId)}`;
+      document.head.append(analyticsScript);
+    };
+
+    const setAnalyticsPreference = (allowed) => {
+      localStorage.setItem(analyticsPreferenceKey, allowed ? "granted" : "denied");
+      analyticsConsent.hidden = true;
+      analyticsConsentGranted = allowed;
+      if (allowed) {
+        if (analyticsLoaded && window.gtag) {
+          window.gtag("consent", "update", {
+            analytics_storage: "granted",
+            ad_storage: "denied",
+            ad_user_data: "denied",
+            ad_personalization: "denied"
+          });
+        } else {
+          loadGoogleAnalytics();
+        }
+      } else if (window.gtag) {
+        window.gtag("consent", "update", {
+          analytics_storage: "denied",
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied"
+        });
+      }
+    };
+
+    if (analyticsIsConfigured) {
+      const storedAnalyticsPreference = localStorage.getItem(analyticsPreferenceKey);
+      if (storedAnalyticsPreference === "granted") {
+        loadGoogleAnalytics();
+      } else if (storedAnalyticsPreference !== "denied") {
+        analyticsConsent.hidden = false;
+      }
+      analyticsAccept.addEventListener("click", () => setAnalyticsPreference(true));
+      analyticsDecline.addEventListener("click", () => setAnalyticsPreference(false));
+      analyticsSettings.addEventListener("click", () => {
+        analyticsConsent.hidden = false;
+        analyticsAccept.focus();
+      });
+    } else {
+      analyticsSettings.hidden = true;
+    }
+
+    document.querySelectorAll(".contact-topic-link").forEach((link) => {
+      link.addEventListener("click", () => {
+        const topic = link.dataset.contactTopic;
+        const option = Array.from(document.querySelectorAll('#contact-form select[name="topic"] option'))
+          .find((item) => item.textContent === topic);
+        if (option) option.selected = true;
+      });
+    });
+
+    document.querySelectorAll("form[data-form-kind]").forEach((form) => {
+      const status = form.querySelector(".form-status");
+      const submitButton = form.querySelector('button[type="submit"]');
+
+      form.addEventListener("submit", () => {
+        submitButton.disabled = true;
+        status.textContent = form.dataset.formKind === "contact"
+          ? "Sending your enquiry…"
+          : "Opening secure subscription confirmation…";
+        if (analyticsConsentGranted && window.gtag) {
+          window.gtag("event", form.dataset.formKind === "contact" ? "contact_form_submit" : "newsletter_signup");
+        }
+      });
+    });
+
+    if ("IntersectionObserver" in window) {
+      const observedSections = new Set();
+      const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting || observedSections.has(entry.target.id)) return;
+          observedSections.add(entry.target.id);
+          if (analyticsConsentGranted && window.gtag) {
+            window.gtag("event", "section_view", { section_name: entry.target.id });
+          }
+        });
+      }, { threshold: 0.55 });
+      document.querySelectorAll("main > section[id]").forEach((section) => sectionObserver.observe(section));
     }
   </script>
 </body>

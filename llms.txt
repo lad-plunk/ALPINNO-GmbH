@@ -1,0 +1,38 @@
+# ALPINNO GmbH
+
+> ALPINNO is a Swiss consulting and technology company helping organisations harness AI, create valuable innovations and establish the agile processes needed to turn opportunities into results.
+
+Canonical website: https://lad-plunk.github.io/ALPINNO-GmbH/
+
+## Core offerings
+
+- AI transformation, implementation, governance, training and capability building
+- AI-assisted front-end innovation, invention development and intellectual-property support
+- Agile execution, project and programme management, PMO and innovation governance
+- AIdea, ALPINNO's proprietary AI-assisted innovation and invention software
+
+## AIdea
+
+AIdea guides expert-led teams through a configurable, evidence-grounded innovation process. It connects proprietary company knowledge, customer insight and public intelligence to traceable opportunities, ideas, concepts, patentable inventions and invention disclosures.
+
+AIdea may be provided through ALPINNO-led projects, supported local installations, private-cloud or customer-hosted arrangements, selected beta access and tailored licensing.
+
+## Important context
+
+- AIdea is human-led and AI-assisted.
+- Preliminary prior-art and pre-FTO work is technical early-stage support, not a formal legal opinion.
+- Performance statements on the website are founder-observed results and are identified as such.
+
+## Primary resources
+
+- [Website](https://lad-plunk.github.io/ALPINNO-GmbH/)
+- [Services](https://lad-plunk.github.io/ALPINNO-GmbH/#services)
+- [AIdea](https://lad-plunk.github.io/ALPINNO-GmbH/#AIdea)
+- [How ALPINNO works](https://lad-plunk.github.io/ALPINNO-GmbH/#how-we-work)
+- [Founder](https://lad-plunk.github.io/ALPINNO-GmbH/#founder)
+- [Contact](https://lad-plunk.github.io/ALPINNO-GmbH/#contact)
+- [Privacy notice](https://lad-plunk.github.io/ALPINNO-GmbH/privacy.html)
+
+## Automated access
+
+Public search and AI crawlers, including AI-search and model-training crawlers, may access the public website under robots.txt.

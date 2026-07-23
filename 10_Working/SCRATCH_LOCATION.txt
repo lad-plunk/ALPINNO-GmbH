@@ -1,0 +1,7 @@
+Local generated website artifacts are kept outside OneDrive to avoid sync locks.
+
+Windows build output:
+C:\CodexSandboxOfficeQA\onedrive-safe-scratch\alpinno-website-build
+
+The GitHub Actions runner uses its temporary local _site folder during deployment.
+Only source files and small validation helpers are retained in this repository.
