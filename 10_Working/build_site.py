@@ -14,7 +14,17 @@ WINDOWS_SCRATCH_ROOT = Path("C:/CodexSandboxOfficeQA/onedrive-safe-scratch/alpin
 DEFAULT_OUTPUT_DIR = WINDOWS_SCRATCH_ROOT if sys.platform == "win32" else PROJECT_ROOT / "_site"
 PUBLIC_FILES = (
     "index.html",
+    "it.html",
+    "fr.html",
+    "de.html",
+    "ja.html",
+    "zh.html",
     "privacy.html",
+    "privacy-it.html",
+    "privacy-fr.html",
+    "privacy-de.html",
+    "privacy-ja.html",
+    "privacy-zh.html",
     "404.html",
     "style.css",
     "robots.txt",

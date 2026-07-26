@@ -38,6 +38,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+html:lang(ja) body,
+html:lang(zh-Hans) body {
+  font-family: "Noto Sans CJK JP", "Yu Gothic UI", "Hiragino Kaku Gothic ProN",
+    "Microsoft YaHei UI", "PingFang SC", sans-serif;
+}
+
 body::selection {
   color: var(--paper);
   background: var(--blue-600);
@@ -141,7 +147,8 @@ h3 {
   margin-left: auto;
 }
 
-.nav-menu > summary {
+.nav-menu > summary,
+.language-menu > summary {
   display: none;
 }
 
@@ -200,6 +207,72 @@ h3 {
 .nav-links a:hover,
 .nav-links a:focus-visible {
   color: var(--paper);
+}
+
+.language-menu {
+  position: relative;
+  margin-left: clamp(0.45rem, 1.2vw, 1rem);
+}
+
+.language-menu > summary {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 8px;
+  color: var(--paper);
+  font-size: 0.78rem;
+  font-weight: 750;
+  cursor: pointer;
+  list-style: none;
+}
+
+.language-menu > summary::-webkit-details-marker {
+  display: none;
+}
+
+.language-menu > ul {
+  position: absolute;
+  top: calc(100% + 0.65rem);
+  right: 0;
+  z-index: 20;
+  display: grid;
+  min-width: 176px;
+  gap: 0.15rem;
+  margin: 0;
+  padding: 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  background: rgba(6, 20, 38, 0.98);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
+  list-style: none;
+}
+
+.language-menu:not([open]) > ul {
+  display: none;
+}
+
+.language-menu a {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.5rem 0.65rem;
+  border-radius: 7px;
+  color: #e7eff5;
+  font-size: 0.86rem;
+  font-weight: 650;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.language-menu a:hover,
+.language-menu a:focus-visible,
+.language-menu a[aria-current="page"] {
+  color: var(--paper);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .hero {
@@ -1794,7 +1867,8 @@ footer {
     position: relative;
   }
 
-  .nav-menu > summary {
+  .nav-menu > summary,
+  .language-menu > summary {
     display: inline-flex;
     min-height: 42px;
     align-items: center;
@@ -1811,6 +1885,10 @@ footer {
 
   .nav-menu > summary::-webkit-details-marker {
     display: none;
+  }
+
+  .language-menu {
+    margin-left: 0;
   }
 
   .nav-links {
