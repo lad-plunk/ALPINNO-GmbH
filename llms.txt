@@ -28,6 +28,7 @@ AIdea™ is used in ALPINNO-led projects and may also be deployed through secure
 - [Website](https://alpinno-solutions.ch/)
 - [Services](https://alpinno-solutions.ch/#services)
 - [AIdea™](https://alpinno-solutions.ch/#AIdea)
+- [Ways to work with ALPINNO](https://alpinno-solutions.ch/#engagements)
 - [How ALPINNO works](https://alpinno-solutions.ch/#how-we-work)
 - [Founder](https://alpinno-solutions.ch/#founder)
 - [Contact](https://alpinno-solutions.ch/#contact)
