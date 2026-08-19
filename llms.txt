@@ -1,6 +1,6 @@
 # ALPINNO GmbH
 
-> ALPINNO is a Swiss consulting and technology company helping innovation-led organisations use AI, data, automation and agile methods to create and execute valuable, protectable innovation.
+> ALPINNO is a Swiss consulting and technology company helping innovation-led organisations use AI, data, automation and Agile methods to create and execute valuable, protectable innovation.
 
 Canonical website: https://alpinno-solutions.ch/
 
