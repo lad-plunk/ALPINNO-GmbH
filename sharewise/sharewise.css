@@ -79,28 +79,10 @@
 .sw-hero-after {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1.2rem;
   max-width: 1000px;
   margin: 1.4rem auto 0;
-}
-
-.sw-hero-facts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem 1.2rem;
-  margin: 0;
-  padding: 0;
-  color: #d9e9f6;
-  font-size: 0.92rem;
-  font-weight: 650;
-  list-style: none;
-}
-
-.sw-hero-facts li::before {
-  content: "✓";
-  margin-right: 0.4rem;
-  color: #9ad6ff;
 }
 
 .sw-button {
@@ -218,6 +200,72 @@
   font-size: 1.08rem;
 }
 
+.sw-value-heading {
+  max-width: 850px;
+}
+
+.sw-value-heading h2 {
+  max-width: 700px;
+  margin-inline: auto;
+  font-size: clamp(2rem, 3.2vw, 3.1rem);
+}
+
+.sw-assurance {
+  padding: 1.8rem 0;
+  border-bottom: 1px solid var(--line);
+  background: #eef4f8;
+}
+
+.sw-assurance-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.sw-assurance-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.sw-assurance-icon {
+  display: grid;
+  flex: 0 0 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border: 1px solid #bbd6e9;
+  border-radius: 50%;
+  color: var(--blue-600);
+  background: var(--paper);
+}
+
+.sw-assurance-icon svg {
+  width: 1.3rem;
+  height: 1.3rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.sw-assurance-item strong,
+.sw-assurance-item span:last-child {
+  display: block;
+}
+
+.sw-assurance-item strong {
+  color: var(--navy-900);
+  font-size: 0.9rem;
+}
+
+.sw-assurance-item div > span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
 .sw-proof {
   padding: clamp(3rem, 5vw, 4.5rem) 0;
   background: var(--blue-100);
@@ -262,12 +310,6 @@
   color: var(--navy-800);
   font-size: 0.87rem;
   text-align: center;
-}
-
-.sw-proof-note a,
-.sw-text-link {
-  color: var(--blue-600);
-  font-weight: 750;
 }
 
 .sw-card-grid {
@@ -379,6 +421,7 @@
   padding: 1rem 1.2rem;
   border: 1px solid var(--line);
   border-radius: 12px;
+  color: var(--ink);
   background: var(--paper);
 }
 
@@ -405,37 +448,6 @@
 .sw-transcript-note {
   color: var(--muted);
   font-size: 0.9rem;
-}
-
-.sw-founder-section {
-  background: var(--paper);
-}
-
-.sw-founder-grid {
-  display: grid;
-  grid-template-columns: minmax(180px, 250px) minmax(0, 1fr);
-  align-items: center;
-  gap: clamp(2rem, 5vw, 5rem);
-  max-width: 960px;
-}
-
-.sw-founder-photo {
-  overflow: hidden;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.sw-founder-photo img {
-  width: 100%;
-  height: auto;
-}
-
-.sw-founder-grid p:not(.sw-kicker) {
-  color: var(--muted);
-}
-
-.sw-founder-grid h2 {
-  font-size: clamp(2rem, 3.3vw, 3.2rem);
 }
 
 .sw-format-list {
@@ -527,6 +539,31 @@
   color: var(--muted);
 }
 
+.sw-heritage {
+  padding: 1.7rem 0;
+  color: var(--paper);
+  background: #070d17;
+}
+
+.sw-heritage-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  text-align: center;
+}
+
+.sw-heritage p {
+  margin: 0;
+  color: #c8d2df;
+  font-size: 0.9rem;
+}
+
+.sw-heritage strong {
+  color: var(--paper);
+}
+
 .sw-availability {
   padding: clamp(3rem, 5vw, 4rem) 0 1rem;
   color: var(--paper);
@@ -594,6 +631,10 @@
 }
 
 @media (max-width: 850px) {
+  .sw-assurance-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .sw-workflow-grid,
   .sw-formats-grid,
   .sw-privacy-panel,
@@ -622,6 +663,10 @@
 }
 
 @media (max-width: 520px) {
+  .sw-assurance-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .sw-topbar {
     min-height: 62px;
   }
@@ -635,14 +680,6 @@
     right: 0.5rem;
     padding: 0.2rem 0.45rem;
     font-size: 0.72rem;
-  }
-
-  .sw-founder-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .sw-founder-photo {
-    max-width: 180px;
   }
 
   .sw-topbar-label {
