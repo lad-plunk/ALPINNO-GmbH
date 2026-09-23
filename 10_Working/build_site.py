@@ -32,7 +32,7 @@ PUBLIC_FILES = (
     "llms.txt",
     "CNAME",
 )
-PUBLIC_DIRECTORIES = ("images",)
+PUBLIC_DIRECTORIES = ("images", "sharewise")
 
 
 def build(clean: bool, output_dir: Path) -> None:

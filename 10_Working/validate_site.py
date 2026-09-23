@@ -14,7 +14,7 @@ from urllib.parse import unquote, urlsplit
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
-HTML_FILES = tuple(sorted(PROJECT_ROOT.glob("*.html")))
+HTML_FILES = tuple(sorted((*PROJECT_ROOT.glob("*.html"), *PROJECT_ROOT.glob("sharewise/*.html"))))
 TEXT_EXTENSIONS = {".html", ".css", ".txt", ".xml", ".js", ".json"}
 PLACEHOLDER_MARKER = "REPLACE_WITH_"
 EMAIL_PATTERN = re.compile(r"[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}")
