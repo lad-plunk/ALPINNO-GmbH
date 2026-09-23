@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ShareWise prepares extracted document text locally on Windows, so you can review private details before choosing what to share with an AI service.">
+  <meta name="description" content="ShareWise helps you prepare sensitive document text locally and offline before using ChatGPT or another AI service. Review what to hide, then choose what to share.">
   <meta name="theme-color" content="#0b1f3a">
   <meta name="robots" content="noindex,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <link rel="canonical" href="https://alpinno-solutions.ch/sharewise/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ALPINNO GmbH">
-  <meta property="og:title" content="ShareWise | Prepare private text before sharing with AI">
-  <meta property="og:description" content="A local Windows tool to extract text, review private details and prepare the content you choose to share.">
+  <meta property="og:title" content="ShareWise | Prepare sensitive document text for AI, on your terms">
+  <meta property="og:description" content="A Windows tool for offline document preparation, human review and optional local restoration. Watch the 3-minute demo.">
   <meta property="og:url" content="https://alpinno-solutions.ch/sharewise/">
   <meta property="og:image" content="https://alpinno-solutions.ch/sharewise/sharewise-demo-poster.jpg">
   <meta property="og:image:width" content="1600">
   <meta property="og:image:height" content="900">
   <meta property="og:image:alt" content="ShareWise Advanced mode showing extracted text beside prepared text with private details replaced by placeholders">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ShareWise | Prepare private text before sharing with AI">
-  <meta name="twitter:description" content="A local Windows tool to extract text, review private details and prepare the content you choose to share.">
+  <meta name="twitter:title" content="ShareWise | Prepare sensitive document text for AI, on your terms">
+  <meta name="twitter:description" content="Offline preparation, human review and optional local restoration. Watch the 3-minute demo.">
   <meta name="twitter:image" content="https://alpinno-solutions.ch/sharewise/sharewise-demo-poster.jpg">
-  <title>ShareWise | Prepare private text before sharing with AI | ALPINNO</title>
+  <title>ShareWise | Prepare sensitive document text for AI | ALPINNO</title>
   <link rel="icon" href="../images/favicon.ico" sizes="any">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="sharewise.css">
@@ -38,171 +38,223 @@
 
   <main id="main">
     <section class="sw-hero" aria-labelledby="hero-title">
-      <div class="sw-container sw-hero-grid">
+      <div class="sw-container">
         <div class="sw-hero-copy">
-          <p class="sw-kicker">ShareWise | Windows document preparation</p>
-          <h1 id="hero-title">Prepare document text before sharing it with AI.</h1>
-          <p class="sw-hero-lead">Extract text on your computer, review detected private details, and decide what to share. If an AI response needs the original details, restore matching placeholders locally with your private restoration file.</p>
-          <p class="sw-facts">Windows x64 <span aria-hidden="true">·</span> Portable application <span aria-hidden="true">·</span> Local processing</p>
-          <div class="sw-actions">
-            <a class="sw-button sw-button-primary" href="#how-it-works">See how it works</a>
-            <a class="sw-button sw-button-outline" href="#availability">Ask about ShareWise</a>
-          </div>
+          <p class="sw-kicker">ShareWise by ALPINNO | Windows desktop</p>
+          <h1 id="hero-title">Need ChatGPT for a private document?</h1>
+          <p class="sw-hero-lead">ShareWise prepares extracted text offline, lets you review what to hide, and gives you control over what you send. If needed, bring the AI response back to restore matching details locally.</p>
+          <p class="sw-watch-prompt">Play the 3-minute demo to see ShareWise in action.</p>
         </div>
-        <figure class="sw-hero-media">
-          <img src="sharewise-demo-poster.jpg" alt="ShareWise Advanced review showing fictional extracted text beside prepared text with private details replaced by placeholders" width="1600" height="900" fetchpriority="high">
-          <figcaption>Fictional demonstration content. ShareWise prepares extracted text, not the original document layout.</figcaption>
+
+        <figure class="sw-video-frame" id="demo">
+          <div class="sw-video-wrap">
+            <button class="sw-video-play" type="button" aria-label="Play the ShareWise demonstration"><span aria-hidden="true">▶</span></button>
+            <video controls playsinline preload="none" poster="sharewise-demo-poster.jpg" width="1920" height="1080" aria-label="ShareWise English product demonstration, 2 minutes 48 seconds" aria-describedby="video-note video-transcript">
+              <source src="sharewise-demo-en-v8.mp4" type="video/mp4">
+              Your browser does not support the video element. Read the transcript below.
+            </video>
+            <span class="sw-video-duration" aria-hidden="true">2:48 demo</span>
+          </div>
+          <figcaption id="video-note">Fictional demonstration. ShareWise prepares and restores text locally. Using ChatGPT or another AI service is a separate online step.</figcaption>
         </figure>
+
+        <div class="sw-hero-after">
+          <ul class="sw-hero-facts" aria-label="ShareWise essentials">
+            <li>Offline preparation and restoration</li>
+            <li>No account or model server required</li>
+            <li>Your choice of AI service</li>
+          </ul>
+          <a class="sw-button sw-button-primary" href="#availability">Ask about ShareWise</a>
+        </div>
+
+        <details class="sw-transcript" id="video-transcript">
+          <summary>Read the full video transcript</summary>
+          <div class="sw-transcript-content">
+            <p class="sw-transcript-note">AI-generated narration using OpenAI's Cedar voice. The demonstration uses fictional content.</p>
+            <h3>1. ShareWise and ChatGPT: the workflow</h3>
+            <p>Before you send a document to ChatGPT, prepare it with ShareWise. Hide detected private details locally, then share the prepared text with ChatGPT or another AI. If you need the original names back in the answer, restore them locally in ShareWise. That final step is optional. You choose what to share.</p>
+            <h3>2. Entirely on your computer</h3>
+            <p>ShareWise runs entirely on your computer, with no internet connection required. Even completely disconnected, you can prepare documents and restore private details. Your document content is not sent to a server for processing. Choose a Word document, a text-based PDF or a PowerPoint file. Detected private details become consistent placeholders. The detection model achieved 98% token-level recall in benchmark testing. Results vary by document.</p>
+            <h3>3. Your confidential-term lists</h3>
+            <p>And you can make it specific to your business. Add a CSV list of client names, companies or project references you want hidden. ShareWise automatically replaces exact matches in the extracted text, alongside its AI detection. Your own confidential-term lists add another layer of control.</p>
+            <h3>4. Two ways to work</h3>
+            <p>ShareWise gives you two ways to work: Minimal mode for one-click preparation, and Advanced mode for review and control.</p>
+            <h3>5. Minimal: select a file</h3>
+            <p>In Minimal mode, select your file and ShareWise does the rest: prepares the text, saves the result and opens the output folder. One simple step to remove detected private details before sharing. Even when you're short on time, privacy preparation can be part of your routine.</p>
+            <h3>6. Advanced: review and adjust</h3>
+            <p>For more sensitive documents, use Advanced mode to give the result your final approval. An intuitive side-by-side view aligns the original extracted text with the redacted version, making it easy to check the automatic work and adjust what stays or goes. Review the unhighlighted text too, then share the prepared result with greater confidence.</p>
+            <h3>7. Your decisions, remembered</h3>
+            <p>ShareWise also remembers your explicit keep and hide decisions locally. When those same terms appear again, your saved choices are applied, helping you avoid repeating the same corrections.</p>
+            <h3>8. Optional local restoration</h3>
+            <p>Now take the prepared text into ChatGPT or another AI. Need the original names back in the answer? Bring the response into ShareWise and restore matching placeholders using your private restoration file. Keep that file to yourself.</p>
+            <h3>9. An efficiency benefit</h3>
+            <p>There's an efficiency benefit too. In our illustrative image-rich PDF comparison, leaving out unnecessary visuals reduced document input tokens by about 90%. Actual savings depend on the document and how the AI processes it.</p>
+            <h3>10. ShareWise, by ALPINNO</h3>
+            <p>Let ShareWise handle the repetitive preparation, so you can focus on the work you wanted AI to help with. ShareWise, by ALPINNO. Your documents. Your rules. Your choice of what to share.</p>
+          </div>
+        </details>
       </div>
     </section>
 
     <section class="sw-section" aria-labelledby="value-title">
       <div class="sw-container">
         <div class="sw-section-heading">
-          <p class="sw-kicker">A deliberate step before sharing</p>
-          <h2 id="value-title">Your content. Your review. Your choice.</h2>
-          <p>ShareWise helps make document preparation part of your AI workflow. You can check the extracted text, adjust what stays or goes, and share only the reviewed output you choose.</p>
+          <p class="sw-kicker">Why ShareWise</p>
+          <h2 id="value-title">Strong privacy preparation without another online workspace.</h2>
+          <p>Get a practical step between your document and the AI service you choose. ShareWise handles the preparation locally and keeps the decision to share with you.</p>
         </div>
         <div class="sw-card-grid">
           <article class="sw-card">
             <span class="sw-card-number" aria-hidden="true">01</span>
-            <h3>Prepare locally</h3>
-            <p>ShareWise extracts supported text and identifies private details on your Windows computer. It does not send your document to a processing server.</p>
+            <h3>Work disconnected</h3>
+            <p>Prepare text and restore matching details on your Windows computer, even without an internet connection. ShareWise has no cloud processing step.</p>
           </article>
           <article class="sw-card">
             <span class="sw-card-number" aria-hidden="true">02</span>
-            <h3>Review before sharing</h3>
-            <p>Inspect the text, adjust suggestions, add exact confidential terms, and acknowledge extraction warnings before exporting a reviewed result.</p>
+            <h3>Stay in control</h3>
+            <p>See the prepared text and decide what to share. Advanced mode lets you inspect and adjust suggestions; your review is essential before sending anything to an AI service.</p>
           </article>
           <article class="sw-card">
             <span class="sw-card-number" aria-hidden="true">03</span>
-            <h3>Restore only when needed</h3>
-            <p>Bring an AI response back to ShareWise and optionally restore exact matching placeholders with the corresponding private restoration file.</p>
+            <h3>Keep it simple</h3>
+            <p>Minimal mode starts from choosing a file. Use Advanced mode when you want more control. No specialist setup, account or training course is needed to get started.</p>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section class="sw-proof" aria-labelledby="proof-title">
+      <div class="sw-container">
+        <div class="sw-section-heading">
+          <p class="sw-kicker">Evidence and essentials</p>
+          <h2 id="proof-title">A capable local tool, with claims you can check.</h2>
+        </div>
+        <div class="sw-proof-grid">
+          <div class="sw-proof-item">
+            <strong>98%</strong>
+            <span>token-level recall in a published benchmark of the OpenAI-developed detection model</span>
+          </div>
+          <div class="sw-proof-item">
+            <strong>4</strong>
+            <span>interface languages: English, Italian, German and French</span>
+          </div>
+          <div class="sw-proof-item">
+            <strong>Offline</strong>
+            <span>document preparation and optional restoration, with no account required</span>
+          </div>
+        </div>
+        <p class="sw-proof-note">The 98% figure is a <a href="https://cdn.openai.com/pdf/c66281ed-b638-456a-8ce1-97e9f5264a90/OpenAI-Privacy-Filter-Model-Card.pdf" target="_blank" rel="noopener noreferrer">published model benchmark</a>, not measured end-to-end ShareWise accuracy or a guarantee for your document. Results vary; always review the complete output. ShareWise is independent software developed by ALPINNO.</p>
       </div>
     </section>
 
     <section class="sw-section sw-section-mist" id="how-it-works" aria-labelledby="workflow-title">
       <div class="sw-container sw-workflow-grid">
         <div>
-          <p class="sw-kicker">From file to reviewed text</p>
-          <h2 id="workflow-title">A clear, reviewable workflow.</h2>
+          <p class="sw-kicker">How it works</p>
+          <h2 id="workflow-title">From your document to the AI answer.</h2>
           <ol class="sw-steps">
-            <li><span>1</span><div><h3>Select and extract</h3><p>Choose a supported file or paste text. ShareWise extracts text and suggests private details to replace.</p></div></li>
-            <li><span>2</span><div><h3>Review and adjust</h3><p>Compare extracted text with the prepared output. Keep or hide suggestions, add exact terms, and review the full text.</p></div></li>
-            <li><span>3</span><div><h3>Share the output you choose</h3><p>Save reviewed text as plain text or Markdown. Sending it to ChatGPT or another AI service is a separate choice you make.</p></div></li>
-            <li><span>4</span><div><h3>Restore optionally</h3><p>Review an AI response with its matching restoration file. ShareWise restores intact exact placeholders; it does not guess missing identities.</p></div></li>
+            <li><span>1</span><div><h3>Choose a document</h3><p>Open a supported file or paste text. ShareWise prepares an extracted-text version on your computer.</p></div></li>
+            <li><span>2</span><div><h3>Check what you will share</h3><p>Review the prepared text and adjust it when needed. You decide whether to use it with ChatGPT or another AI service.</p></div></li>
+            <li><span>3</span><div><h3>Bring back the answer</h3><p>If useful, bring the AI response back to ShareWise and restore matching private details locally with the corresponding private file.</p></div></li>
           </ol>
         </div>
         <aside class="sw-mode-panel" aria-labelledby="modes-title">
-          <p class="sw-kicker">Choose your level of control</p>
-          <h2 id="modes-title">Minimal or Advanced.</h2>
+          <p class="sw-kicker">Two ways to work</p>
+          <h2 id="modes-title">Choose your pace.</h2>
           <div class="sw-mode-item">
             <h3>Minimal</h3>
-            <p>Select one file and ShareWise prepares it, saves Markdown plus a separate restoration file, and opens the output folder.</p>
+            <p>Choose a file and let ShareWise prepare the text with fewer steps.</p>
           </div>
           <div class="sw-mode-item">
             <h3>Advanced</h3>
-            <p>Review findings and extraction warnings, correct suggestions, process batches, choose destinations, and decide which reviewed outputs to save.</p>
+            <p>Inspect suggestions, adjust the result and work through several files when the job calls for more control.</p>
           </div>
-          <p class="sw-mode-note">The fictional Demo mode lets you explore sample workflows without using a real document.</p>
+          <p class="sw-mode-note">A fictional Demo mode lets you explore the workflow without opening your own document.</p>
         </aside>
-      </div>
-    </section>
-
-    <section class="sw-section" aria-labelledby="demo-title">
-      <div class="sw-container">
-        <div class="sw-section-heading">
-          <p class="sw-kicker">See the workflow</p>
-          <h2 id="demo-title">Watch the ShareWise demonstration.</h2>
-          <p>The demonstration uses fictional sample content. It shows local preparation, review and optional restoration as separate steps.</p>
-        </div>
-        <figure class="sw-video-frame">
-          <video controls playsinline preload="none" poster="sharewise-demo-poster.jpg" width="1920" height="1080" aria-describedby="video-transcript">
-            <source src="sharewise-demo-en-v8.mp4" type="video/mp4">
-            Your browser does not support the video element. Read the transcript below.
-          </video>
-          <figcaption>ShareWise demo in English, version 8. ShareWise preparation and restoration run locally; using an external AI service is a separate step.</figcaption>
-        </figure>
-        <details class="sw-transcript" id="video-transcript">
-          <summary>Read the full video transcript</summary>
-          <div class="sw-transcript-content">
-            <p class="sw-transcript-note">AI-generated narration using OpenAI's Cedar voice. Claims and examples below retain their stated scope.</p>
-            <h3>1. ShareWise and ChatGPT: the workflow</h3>
-            <p>Before you send a document to ChatGPT, prepare it with ShareWise. Hide detected private details locally, then share the prepared text with ChatGPT or another AI. If you need the original names back in the answer, restore them locally in ShareWise. That final step is optional. You choose what to share.</p>
-            <p><strong>Claim scope:</strong> ShareWise preparation and restoration run locally; ChatGPT is a separate online step. Restoration requires intact matching placeholders and the private restoration file.</p>
-            <h3>2. Entirely on your computer</h3>
-            <p>ShareWise runs entirely on your computer, with no internet connection required. Even completely disconnected, you can prepare documents and restore private details. Your document content is not sent to a server for processing. Choose a Word document, a text-based PDF or a PowerPoint file. Detected private details become consistent placeholders. The detection model achieved 98% token-level recall in benchmark testing. Results vary by document.</p>
-            <p><strong>Claim scope:</strong> 98% detection-model token recall on PII-Masking-300k, not end-to-end ShareWise document accuracy. No OCR. Offline processing applies to ShareWise, not the external AI service.</p>
-            <h3>3. Your confidential-term lists</h3>
-            <p>And you can make it specific to your business. Add a CSV list of client names, companies or project references you want hidden. ShareWise automatically replaces exact matches in the extracted text, alongside its AI detection. Your own confidential-term lists add another layer of control.</p>
-            <p><strong>Claim scope:</strong> Exact case-sensitive matching in extracted text from successfully loaded lists.</p>
-            <h3>4. Two ways to work</h3>
-            <p>ShareWise gives you two ways to work: Minimal mode for one-click preparation, and Advanced mode for review and control.</p>
-            <p><strong>Claim scope:</strong> Minimal automatic preparation; Advanced review.</p>
-            <h3>5. Minimal: select a file</h3>
-            <p>In Minimal mode, select your file and ShareWise does the rest: prepares the text, saves the result and opens the output folder. One simple step to remove detected private details before sharing. Even when you're short on time, privacy preparation can be part of your routine.</p>
-            <p><strong>Claim scope:</strong> One-click means file selection triggers processing and saving, not total setup clicks.</p>
-            <h3>6. Advanced: review and adjust</h3>
-            <p>For more sensitive documents, use Advanced mode to give the result your final approval. An intuitive side-by-side view aligns the original extracted text with the redacted version, making it easy to check the automatic work and adjust what stays or goes. Review the unhighlighted text too, then share the prepared result with greater confidence.</p>
-            <p><strong>Claim scope:</strong> Extracted original versus prepared text, not native original layout. Review unhighlighted text.</p>
-            <h3>7. Your decisions, remembered</h3>
-            <p>ShareWise also remembers your explicit keep and hide decisions locally. When those same terms appear again, your saved choices are applied, helping you avoid repeating the same corrections.</p>
-            <p><strong>Claim scope:</strong> Explicit exact keep/hide memory, not model retraining.</p>
-            <h3>8. Optional local restoration</h3>
-            <p>Now take the prepared text into ChatGPT or another AI. Need the original names back in the answer? Bring the response into ShareWise and restore matching placeholders using your private restoration file. Keep that file to yourself.</p>
-            <p><strong>Claim scope:</strong> Only intact matching placeholders. Never upload the confidential map.</p>
-            <h3>9. An efficiency benefit</h3>
-            <p>There's an efficiency benefit too. In our illustrative image-rich PDF comparison, leaving out unnecessary visuals reduced document input tokens by about 90%. Actual savings depend on the document and how the AI processes it.</p>
-            <p><strong>Claim scope:</strong> Illustrative calculation: 38,560 versus 4,120 document input tokens, 89.315% reduction. Not a typical saving.</p>
-            <h3>10. ShareWise, by ALPINNO</h3>
-            <p>Let ShareWise handle the repetitive preparation, so you can focus on the work you wanted AI to help with. ShareWise, by ALPINNO. Your documents. Your rules. Your choice of what to share.</p>
-            <p><strong>Claim scope:</strong> AI-generated narration.</p>
-          </div>
-        </details>
       </div>
     </section>
 
     <section class="sw-section sw-section-mist" aria-labelledby="formats-title">
       <div class="sw-container sw-formats-grid">
         <div>
-          <p class="sw-kicker">What it supports</p>
-          <h2 id="formats-title">Work with common document text.</h2>
-          <p>ShareWise is a portable Windows x64 application. No customer Python setup, account or model server is required. The interface is available in English, Italian, German and French.</p>
+          <p class="sw-kicker">Practical document support</p>
+          <h2 id="formats-title">Work with the text in files you already use.</h2>
+          <p>ShareWise is a portable Windows x64 application. It prepares extracted text from common files or text you paste into the app.</p>
           <ul class="sw-format-list">
             <li>DOCX and PPTX</li>
             <li>Text-based PDF</li>
             <li>TXT and Markdown</li>
             <li>Pasted text</li>
           </ul>
-          <p>Per-file limits are 25 MB and 200 PDF pages. Prepared exports are plain text or Markdown. Restored exports can also be RTF.</p>
+          <p>Files can be up to 25 MB, with a limit of 200 PDF pages per file. Prepared text can be saved as TXT or Markdown; restored text can also be saved as RTF.</p>
         </div>
         <aside class="sw-limits-panel" aria-labelledby="limits-title">
-          <p class="sw-kicker">Know the boundaries</p>
-          <h2 id="limits-title">Review remains essential.</h2>
+          <p class="sw-kicker">Clear boundaries</p>
+          <h2 id="limits-title">You make the final decision.</h2>
           <ul>
-            <li>No OCR for scanned or image-only documents.</li>
-            <li>No XLSX input.</li>
-            <li>ShareWise prepares extracted text; it does not redact the original Word, PowerPoint or PDF layout.</li>
-            <li>Some document elements, including images and charts, do not provide extractable text.</li>
+            <li>Scanned or image-only files need OCR elsewhere.</li>
+            <li>XLSX is not supported.</li>
+            <li>ShareWise prepares extracted text. It does not change or redact the original formatted document.</li>
           </ul>
-          <p>Extraction warnings are shown for review. Always inspect the full text, including content that was not highlighted. ShareWise does not guarantee that every private or confidential detail will be found.</p>
+          <p>Some images, charts and complex layout elements do not yield text. Check the extracted text and all unhighlighted content before sharing. ShareWise cannot guarantee that every private detail is found.</p>
         </aside>
       </div>
     </section>
 
-    <section class="sw-section" aria-labelledby="privacy-title">
+    <section class="sw-section sw-founder-section" aria-labelledby="founder-title">
+      <div class="sw-container sw-founder-grid">
+        <div class="sw-founder-photo">
+          <img src="../images/founder-480.webp" alt="Pier Paolo Monticone, founder and Managing Director of ALPINNO GmbH" width="480" height="600" loading="lazy" decoding="async">
+        </div>
+        <div>
+          <p class="sw-kicker">The company behind ShareWise</p>
+          <h2 id="founder-title">Swiss company. Founder-led product.</h2>
+          <p>ShareWise is developed by ALPINNO GmbH, a Swiss technology company. Founder Pier Paolo Monticone holds a PhD and MAS from ETH Zurich, is an alumnus of Politecnico di Milano, and is a certified Project Management Professional.</p>
+          <p>His more than 15 years in innovation and product development inform a practical approach: listen to users, remove unnecessary steps and make review clear for nontechnical professionals.</p>
+          <a class="sw-text-link" href="../#founder">Meet the ALPINNO founder</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sw-section sw-privacy-section" aria-labelledby="privacy-title">
       <div class="sw-container sw-privacy-panel">
         <div>
-          <p class="sw-kicker">Private files need care</p>
-          <h2 id="privacy-title">Keep the restoration file private.</h2>
-          <p>The separate restoration JSON contains original private values and is not encrypted. Keep it locally and do not upload it with the prepared text.</p>
-          <p>Optional correction memory is enabled by default. It saves terms from deliberate keep or hide actions in local CSV files. These files are not encrypted; you can disable learning or clear its saved decisions in Settings.</p>
+          <p class="sw-kicker">Privacy on your terms</p>
+          <h2 id="privacy-title">Your document is not sent to ShareWise servers.</h2>
+          <p>ShareWise prepares and restores text on your computer. It has no required cloud account, telemetry, automatic model download or online processing step. You choose whether to take reviewed text to ChatGPT or another AI service.</p>
+          <p>That external AI step has its own data handling terms. Review the complete prepared text and your chosen service's settings before sharing.</p>
         </div>
         <div class="sw-privacy-callout">
-          <strong>ShareWise processing is local.</strong>
-          <p>If you choose to send reviewed text to ChatGPT or another AI service, that is a separate online step. You decide what to send. Never upload the restoration file.</p>
+          <strong>Keep private support files private.</strong>
+          <p>The optional restoration file contains original values and is not encrypted. Never upload it with the prepared text. Optional correction memory stores your chosen terms locally, also without encryption; you can disable or clear it in Settings.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sw-section sw-section-mist" aria-labelledby="faq-title">
+      <div class="sw-container sw-faq-grid">
+        <div>
+          <p class="sw-kicker">Common questions</p>
+          <h2 id="faq-title">A clear fit for your workflow.</h2>
+          <p>ShareWise is a focused preparation tool. The AI service remains your choice, and your review remains part of the process.</p>
+        </div>
+        <div class="sw-faq-list">
+          <details>
+            <summary>Can I use ShareWise completely offline?</summary>
+            <p>Yes. Document preparation and optional restoration work on a disconnected Windows computer. Using ChatGPT or another online AI service is a separate step you choose to take.</p>
+          </details>
+          <details>
+            <summary>Does ShareWise upload my document to ChatGPT?</summary>
+            <p>No. ShareWise does not automatically send your document or prepared text to an AI service. You review the output and decide what to share.</p>
+          </details>
+          <details>
+            <summary>Will it find every private detail?</summary>
+            <p>No detection system can promise that. Review the entire extracted and prepared text, including content that was not highlighted. The 98% figure above describes the underlying model on a published benchmark, not the result for your document.</p>
+          </details>
+          <details>
+            <summary>Is ShareWise available to try?</summary>
+            <p>Contact ALPINNO for current availability, evaluation options and licensing. There is no public download or price on this page.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -225,5 +277,13 @@
     <p><a href="../privacy.html">Privacy notice</a><a href="../">ALPINNO website</a></p>
     <p>© 2026 ALPINNO GmbH. All rights reserved.</p>
   </footer>
+  <script>
+    const demoVideo = document.querySelector(".sw-video-frame video");
+    const demoPlay = document.querySelector(".sw-video-play");
+    demoPlay.addEventListener("click", () => demoVideo.play());
+    demoVideo.addEventListener("play", () => { demoPlay.hidden = true; });
+    demoVideo.addEventListener("pause", () => { demoPlay.hidden = false; });
+    demoVideo.addEventListener("ended", () => { demoPlay.hidden = false; });
+  </script>
 </body>
 </html>
