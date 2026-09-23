@@ -55,7 +55,7 @@
             </video>
             <span class="sw-video-duration" aria-hidden="true">2:48 demo</span>
           </div>
-          <figcaption id="video-note">Fictional demonstration. ShareWise prepares and restores text locally. Using ChatGPT or another AI service is a separate online step.</figcaption>
+          <figcaption id="video-note">Fictional demonstration. The 98% mentioned in the video is a text-detector benchmark result, not a guarantee for your document. ShareWise works locally; using an AI service is a separate online step. <a href="sharewise-technical-note_en_original_v1.pdf" type="application/pdf">Read the performance and limitations note (PDF)</a>.</figcaption>
         </figure>
 
         <div class="sw-hero-after">
@@ -147,7 +147,7 @@
       </div>
     </section>
 
-    <section class="sw-proof" aria-labelledby="proof-title">
+    <section class="sw-proof" id="evidence" aria-labelledby="proof-title">
       <div class="sw-container">
         <div class="sw-section-heading">
           <p class="sw-kicker">Evidence and essentials</p>
@@ -156,7 +156,7 @@
         <div class="sw-proof-grid">
           <div class="sw-proof-item">
             <strong>98%</strong>
-            <span>of labelled private-data text units found in a published synthetic benchmark</span>
+            <span>of labelled sensitive-text units found by the detector used in ShareWise Core LM in a synthetic benchmark</span>
           </div>
           <div class="sw-proof-item">
             <strong>4</strong>
@@ -167,7 +167,14 @@
             <span>portable Windows app, with no online sign-in or model server required</span>
           </div>
         </div>
-        <p class="sw-proof-note">The 98% figure measures token-level recall of the underlying detection model on synthetic text with labelled personal details. It is not ShareWise end-to-end accuracy and does not predict the result for your document. Review the complete output before sharing.</p>
+        <p class="sw-proof-note">The 98% figure is a benchmark result for ShareWise Core LM's text detector, not a measured success rate for complete ShareWise documents. Results vary. Review the complete output before sharing.</p>
+        <div class="sw-proof-resource">
+          <div>
+            <strong>Want the detail behind the number?</strong>
+            <p>See what the benchmark measured, how to read its scores, and the risks and limits to consider before sharing.</p>
+          </div>
+          <a href="sharewise-technical-note_en_original_v1.pdf" type="application/pdf">Read performance and limitations (PDF)</a>
+        </div>
       </div>
     </section>
 

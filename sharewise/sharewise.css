@@ -181,6 +181,12 @@
   font-size: 0.84rem;
 }
 
+.sw-video-frame figcaption a {
+  color: var(--blue-600);
+  font-weight: 700;
+  text-underline-offset: 0.15em;
+}
+
 .sw-section {
   padding: clamp(3.5rem, 6vw, 5.5rem) 0;
 }
@@ -310,6 +316,37 @@
   color: var(--navy-800);
   font-size: 0.87rem;
   text-align: center;
+}
+
+.sw-proof-resource {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 1.5rem auto 0;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid rgba(23, 105, 170, 0.18);
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+
+.sw-proof-resource strong {
+  color: var(--navy-900);
+  font-size: 1.04rem;
+}
+
+.sw-proof-resource p {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.sw-proof-resource a {
+  flex: 0 0 auto;
+  color: var(--blue-600);
+  font-weight: 750;
+  text-underline-offset: 0.18em;
 }
 
 .sw-card-grid {
@@ -649,6 +686,11 @@
 
   .sw-proof-item {
     min-height: 0;
+  }
+
+  .sw-proof-resource {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .sw-hero-after {
