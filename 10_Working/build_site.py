@@ -5,12 +5,13 @@ from __future__ import annotations
 import argparse
 import shutil
 import sys
+import tempfile
 from pathlib import Path
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
-WINDOWS_SCRATCH_ROOT = Path("C:/CodexSandboxOfficeQA/onedrive-safe-scratch/alpinno-website-build")
+WINDOWS_SCRATCH_ROOT = Path(tempfile.gettempdir()) / "alpinno-website-build"
 DEFAULT_OUTPUT_DIR = WINDOWS_SCRATCH_ROOT if sys.platform == "win32" else PROJECT_ROOT / "_site"
 PUBLIC_FILES = (
     "index.html",
@@ -32,7 +33,15 @@ PUBLIC_FILES = (
     "llms.txt",
     "CNAME",
 )
-PUBLIC_DIRECTORIES = ("images", "sharewise")
+PUBLIC_DIRECTORIES = ("images",)
+PUBLIC_SHAREWISE_FILES = (
+    "index.html",
+    "sharewise.css",
+    "sharewise-demo-poster-v9.jpg",
+    "sharewise-demo-en-v9.mp4",
+    "sharewise-demo-en-v9.vtt",
+    "sharewise-technical-note_en_original_v2.pdf",
+)
 
 
 def build(clean: bool, output_dir: Path) -> None:
@@ -59,6 +68,14 @@ def build(clean: bool, output_dir: Path) -> None:
         if not source.is_dir():
             raise FileNotFoundError(f"Required public directory is missing: {relative_name}")
         shutil.copytree(source, destination, dirs_exist_ok=True)
+
+    sharewise_output = output_dir / "sharewise"
+    sharewise_output.mkdir(exist_ok=True)
+    for relative_name in PUBLIC_SHAREWISE_FILES:
+        source = PROJECT_ROOT / "sharewise" / relative_name
+        if not source.is_file():
+            raise FileNotFoundError(f"Required ShareWise public file is missing: {relative_name}")
+        shutil.copy2(source, sharewise_output / relative_name)
 
     file_count = sum(1 for path in output_dir.rglob("*") if path.is_file())
     total_bytes = sum(path.stat().st_size for path in output_dir.rglob("*") if path.is_file())

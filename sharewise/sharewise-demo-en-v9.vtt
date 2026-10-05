@@ -1,0 +1,121 @@
+WEBVTT
+
+00:00:00.600 --> 00:00:05.614
+Before you send a private document to ChatGPT,
+prepare a text copy with ShareWise.
+
+00:00:05.614 --> 00:00:12.060
+Review what is hidden on your computer, then decide
+whether to share that copy with your chosen AI.
+
+00:00:12.060 --> 00:00:16.000
+If useful, bring the answer back and restore
+matching details locally.
+
+00:00:16.480 --> 00:00:18.569
+ShareWise works offline on Windows.
+
+00:00:18.569 --> 00:00:21.492
+It never uploads your documents for processing.
+
+00:00:21.492 --> 00:00:27.340
+Open Word, PowerPoint, Excel worksheets, text PDFs,
+text files or Markdown, or paste text.
+
+00:00:27.340 --> 00:00:29.847
+Detected private details become consistent
+placeholders.
+
+00:00:29.847 --> 00:00:34.859
+The text detector recorded 98 percent token recall
+in a synthetic benchmark.
+
+00:00:34.859 --> 00:00:36.530
+Results vary by document.
+
+00:00:37.010 --> 00:00:39.418
+Need to work from a scan?
+
+00:00:39.418 --> 00:00:46.239
+Optional Smart OCR can read printed scanned or mixed
+PDFs, plus PNG, JPEG and multipage TIFF images.
+
+00:00:46.239 --> 00:00:48.245
+Recognition runs on your computer.
+
+00:00:48.245 --> 00:00:53.060
+ShareWise prepares text for review; it does not
+change the source image.
+
+00:00:53.540 --> 00:01:01.344
+For each OCR page, compare the source image with the
+editable recognized text and correct mistakes before
+privacy analysis.
+
+00:01:01.344 --> 00:01:04.629
+This check is required even in Minimal mode.
+
+00:01:04.629 --> 00:01:10.790
+Choose automatic language selection or a subset of
+English, Italian, French, German, Spanish and Dutch.
+
+00:01:11.270 --> 00:01:19.220
+For larger jobs, paged PDFs and images can be up to
+200 pages, 512 mebibytes and two million characters.
+
+00:01:19.220 --> 00:01:21.731
+Other supported files retain smaller bounds.
+
+00:01:21.731 --> 00:01:27.170
+ShareWise reports incomplete or failed work instead
+of quietly approving it for export.
+
+00:01:27.650 --> 00:01:29.712
+Minimal keeps standard inputs quick.
+
+00:01:29.712 --> 00:01:33.425
+For scanned files, it pauses for the OCR check.
+
+00:01:33.425 --> 00:01:40.025
+Advanced gives you an aligned text comparison, batch
+work and controls to keep or hide suggestions.
+
+00:01:40.025 --> 00:01:42.500
+Review unhighlighted text too before sharing.
+
+00:01:42.980 --> 00:01:45.587
+Add exact confidential terms you want hidden.
+
+00:01:45.587 --> 00:01:51.917
+ShareWise can also remember your deliberate keep and
+hide choices locally, so repeated decisions take
+less work.
+
+00:01:51.917 --> 00:01:54.523
+It does not learn from untouched suggestions.
+
+00:01:54.523 --> 00:01:57.130
+You can disable or clear this memory.
+
+00:01:57.610 --> 00:02:05.554
+After sharing reviewed text with an AI service of
+your choice, you can optionally restore matching
+placeholders with a private restoration file.
+
+00:02:05.554 --> 00:02:07.721
+Keep that file on your computer.
+
+00:02:07.721 --> 00:02:10.610
+It contains original values and is not encrypted.
+
+00:02:11.090 --> 00:02:15.909
+ShareWise helps you prepare, but cannot guarantee
+that every sensitive detail was found.
+
+00:02:15.909 --> 00:02:19.245
+You remain responsible for deciding what can be
+shared.
+
+00:02:19.245 --> 00:02:21.840
+Ask ALPINNO about current availability and
+licensing.

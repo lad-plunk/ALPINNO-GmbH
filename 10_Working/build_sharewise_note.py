@@ -10,7 +10,6 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import mm
 from reportlab.platypus import (
-    HRFlowable,
     PageBreak,
     Paragraph,
     SimpleDocTemplate,
@@ -21,7 +20,7 @@ from reportlab.platypus import (
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = PROJECT_ROOT / "sharewise" / "sharewise-technical-note_en_original_v1.pdf"
+OUTPUT = PROJECT_ROOT / "sharewise" / "sharewise-technical-note_en_original_v2.pdf"
 
 NAVY = colors.HexColor("#0b1f3a")
 INK = colors.HexColor("#132238")
@@ -126,7 +125,7 @@ def page_frame(canvas, doc) -> None:
     canvas.line(20 * mm, 18 * mm, width - 20 * mm, 18 * mm)
     canvas.setFillColor(MUTED)
     canvas.setFont("Helvetica", 7.5)
-    canvas.drawString(20 * mm, 12 * mm, "ALPINNO GmbH  |  24 September 2026  |  English v1")
+    canvas.drawString(20 * mm, 12 * mm, "ALPINNO GmbH  |  5 October 2026  |  English v2")
     canvas.drawRightString(width - 20 * mm, 12 * mm, f"Page {doc.page}")
     canvas.restoreState()
 
@@ -161,16 +160,18 @@ def build() -> None:
         para("What it is not", "h2"),
         bullet("An anonymisation, legal compliance, confidentiality or safety guarantee."),
         bullet("An automatic decision that unmarked text is safe to disclose."),
-        bullet("OCR for scans, or a tool that redacts the original formatted document."),
+        bullet("A tool that removes information from source-page pixels or redacts the original formatted document."),
         para(
-            "ShareWise works on extracted text from text-based PDF, DOCX, PPTX, TXT, Markdown and pasted text. "
-            "It does not support XLSX. Images, charts, scanned pages and complex layouts may contain information that extraction does not capture.",
+            "ShareWise works with DOCX, PPTX, XLSX, text-based PDF, TXT, Markdown and pasted text. "
+            "Optional local OCR adds printed scanned or mixed PDFs and PNG, JPEG and multipage TIFF images. "
+            "Unsupported embedded images, charts and complex layouts may contain information that extraction does not capture.",
             "small",
         ),
         para("Current input bounds", "h2"),
         para(
-            "Per file: 25 MB, 200 PDF pages, 200,000 extracted characters and 16,000 model tokens. "
-            "Oversize inputs must be split; ShareWise does not silently truncate them.",
+            "Paged PDF and image inputs: up to 512 MiB, 200 pages and two million characters. "
+            "Other supported files retain the 25 MiB and 200,000-character limits. "
+            "XLSX also has sheet, row, column, cell and archive limits. Oversize or incomplete work is not silently approved for export.",
             "small",
         ),
         PageBreak(),
@@ -215,6 +216,15 @@ def build() -> None:
             "The baseline values above are used here to avoid presenting that adjustment as a ShareWise improvement.",
             "small",
         ),
+        para("OCR scope", "h2"),
+        para(
+            "Smart OCR is local, optional and intended for printed pages. Choose automatic language selection or a subset of "
+            "English, Italian, French, German, Spanish and Dutch. Every OCR page requires source-image and editable-text "
+            "confirmation before privacy analysis, including in Minimal mode. Handwriting, signatures and Office-embedded "
+            "images are outside scope. OCR does not remove information from source pixels. Broader multilingual quality "
+            "acceptance remains pending.",
+            "small",
+        ),
         PageBreak(),
         para("RISKS AND RESPONSIBLE USE", "kicker"),
         para("Where review matters most", "title"),
@@ -228,7 +238,8 @@ def build() -> None:
         bullet("Heavy punctuation, line breaks, mixed formats and long-range references may cause missed or fragmented detections."),
         bullet("Results may vary across languages, scripts, subject areas and organisational definitions of confidential information."),
         para("ShareWise workflow limits", "h1"),
-        bullet("Check that extraction captured the text you intend to review. Scans and image-only content require OCR elsewhere."),
+        bullet("Check that extraction or OCR captured the text you intend to review. Confirm each OCR page against its source; missed text in source pixels cannot be repaired by privacy detection."),
+        bullet("OCR can make recognition errors, especially with weak images and complex layouts."),
         bullet("Review the complete prepared text, including words ShareWise did not highlight. The original formatted file is not redacted."),
         bullet("Keep restoration files private. They contain original values and are not encrypted. Optional correction memory is also stored locally without encryption and can be disabled or cleared."),
         bullet("ShareWise does not automatically send content to an AI service or to ALPINNO. Any external AI service you choose has its own terms and data handling."),
@@ -240,8 +251,7 @@ def build() -> None:
         para("2. Inspect both highlighted and unhighlighted text.", "bullet"),
         para("3. Adjust private terms and save the reviewed result.", "bullet"),
         para("4. Decide whether the external service is appropriate for this content.", "bullet"),
-        HRFlowable(width="100%", thickness=0.6, color=LINE, spaceBefore=8, spaceAfter=9),
-        para("This note describes the current public ShareWise workflow as of 24 September 2026. It is product information, not a certification or a guarantee of outcomes.", "small"),
+        para("This note describes ShareWise 0.3.0-rc1 as of 5 October 2026. It is product information, not a certification or guarantee. External-machine acceptance and trusted signing remain pending.", "small"),
     ])
 
     doc.build(story, onFirstPage=page_frame, onLaterPages=page_frame)

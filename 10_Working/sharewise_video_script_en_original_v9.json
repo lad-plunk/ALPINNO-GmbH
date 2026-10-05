@@ -1,0 +1,55 @@
+{
+  "version": "v9",
+  "language": "en",
+  "voice_model": "gpt-4o-mini-tts",
+  "voice": "cedar",
+  "voice_instructions": "Speak as a warm, mature male professional explaining useful business software. Use clear standard English with a light neutral General American accent, no slang or theatrical delivery. Sound reassuring and quietly confident. Use a natural conversational pace near 150 words per minute, with short pauses and gentle emphasis. Keep the voice and pitch consistent across segments. Read the supplied wording exactly and add nothing. Pronounce ShareWise as Share Wise, ALPINNO as al-PEE-no, OCR as O C R, XLSX as Excel worksheets, TIFF as tiff, and mebibytes as meh-bee-bites.",
+  "disclosure": "AI-generated narration. Fictional examples and illustrative interface visuals.",
+  "scenes": [
+    {
+      "title": "Prepare before you share",
+      "text": "Before you send a private document to ChatGPT, prepare a text copy with ShareWise. Review what is hidden on your computer, then decide whether to share that copy with your chosen AI. If useful, bring the answer back and restore matching details locally.",
+      "scope": "ShareWise runs locally. An external AI service is a separate step chosen by the user."
+    },
+    {
+      "title": "Offline on Windows",
+      "text": "ShareWise works offline on Windows. It never uploads your documents for processing. Open Word, PowerPoint, Excel worksheets, text PDFs, text files or Markdown, or paste text. Detected private details become consistent placeholders. The text detector recorded 98 percent token recall in a synthetic benchmark. Results vary by document.",
+      "scope": "The benchmark is model-level, not measured end-to-end ShareWise accuracy. Office inputs are DOCX, PPTX and XLSX."
+    },
+    {
+      "title": "Printed scans, now included",
+      "text": "Need to work from a scan? Optional Smart OCR can read printed scanned or mixed PDFs, plus PNG, JPEG and multipage TIFF images. Recognition runs on your computer. ShareWise prepares text for review; it does not change the source image.",
+      "scope": "Printed content only. No handwriting, signatures or OCR of images embedded inside Office files."
+    },
+    {
+      "title": "Check every OCR page",
+      "text": "For each OCR page, compare the source image with the editable recognized text and correct mistakes before privacy analysis. This check is required even in Minimal mode. Choose automatic language selection or a subset of English, Italian, French, German, Spanish and Dutch.",
+      "scope": "Six OCR document languages, distinct from the four interface languages. OCR quality varies and requires source review."
+    },
+    {
+      "title": "Room for larger documents",
+      "text": "For larger jobs, paged PDFs and images can be up to 200 pages, 512 mebibytes and two million characters. Other supported files retain smaller bounds. ShareWise reports incomplete or failed work instead of quietly approving it for export.",
+      "scope": "Paged PDF and image limits only. Other formats retain 25 MiB and 200,000-character limits, with further XLSX bounds."
+    },
+    {
+      "title": "Simple or detailed review",
+      "text": "Minimal keeps standard inputs quick. For scanned files, it pauses for the OCR check. Advanced gives you an aligned text comparison, batch work and controls to keep or hide suggestions. Review unhighlighted text too before sharing.",
+      "scope": "OCR source confirmation and privacy review remain mandatory where applicable, including Minimal mode."
+    },
+    {
+      "title": "Your local decisions",
+      "text": "Add exact confidential terms you want hidden. ShareWise can also remember your deliberate keep and hide choices locally, so repeated decisions take less work. It does not learn from untouched suggestions. You can disable or clear this memory.",
+      "scope": "Exact, case-sensitive terms and explicit corrections. Local learning files are unencrypted."
+    },
+    {
+      "title": "Restore only if useful",
+      "text": "After sharing reviewed text with an AI service of your choice, you can optionally restore matching placeholders with a private restoration file. Keep that file on your computer. It contains original values and is not encrypted.",
+      "scope": "Restoration requires intact placeholders and the matching private map; never upload the map."
+    },
+    {
+      "title": "Your sharing decision",
+      "text": "ShareWise helps you prepare, but cannot guarantee that every sensitive detail was found. You remain responsible for deciding what can be shared. Ask ALPINNO about current availability and licensing.",
+      "scope": "No anonymity, compliance or safety guarantee. The release is available by enquiry, not public download."
+    }
+  ]
+}
