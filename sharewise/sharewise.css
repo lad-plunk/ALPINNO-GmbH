@@ -22,6 +22,20 @@
   font-size: 0.9rem;
 }
 
+.sw-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.sw-topbar-right .language-menu {
+  margin-left: 0;
+}
+
+.sw-topbar-right .language-menu > summary span[aria-hidden="true"] {
+  display: none;
+}
+
 .sw-container {
   width: min(var(--content), calc(100% - 2.5rem));
   margin-inline: auto;
@@ -725,7 +739,7 @@
   }
 
   .sw-topbar-label {
-    font-size: 0.78rem;
+    display: none;
   }
 
   .sw-format-list {

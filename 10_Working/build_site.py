@@ -36,6 +36,11 @@ PUBLIC_FILES = (
 PUBLIC_DIRECTORIES = ("images",)
 PUBLIC_SHAREWISE_FILES = (
     "index.html",
+    "it.html",
+    "fr.html",
+    "de.html",
+    "ja.html",
+    "zh.html",
     "sharewise.css",
     "sharewise-demo-poster-v9.jpg",
     "sharewise-demo-en-v9.mp4",
