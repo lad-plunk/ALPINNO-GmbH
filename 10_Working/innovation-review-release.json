@@ -3,7 +3,7 @@
   "source_version": "V3",
   "review_page": "review-innovation-excellence-a7c29e.html",
   "review_url": "https://alpinno-solutions.ch/review-innovation-excellence-a7c29e.html",
-  "state": "validated_pending_deployment",
+  "state": "deployed_unlisted_review_verified",
   "authorisation": "Unlisted non-indexed review hosting only. Public launch requires a later explicit owner instruction.",
   "source_folder": "C:\\Users\\pmont\\OneDrive\\DataOD\\01 Work&Uni\\30 ALPINNO\\30 External partners\\Zatory - Rowan Gibson\\20_Output\\ALPINNO_Rowan_Webpage_en_original_v3",
   "source_sha256_before": {
@@ -82,7 +82,39 @@
     "browser": "Desktop hero alignment, transparent metaphor, book/method and lower profile order reviewed. Both agenda panels and Validate remained open together. Fresh #workshop URL opened only Strategize.",
     "generated_artifact": "66 allowlisted files, no internal documents or discovery entries",
     "html_validation": "html-validate 11.5.6 passed using the existing cached tool; no dependency installation",
-    "visual_limit": "Embedded desktop viewport reviewed; a separate mobile viewport was not available through the native preview controls."
+    "visual_limit": "Embedded desktop viewport reviewed; a separate mobile viewport was not available through the native preview controls.",
+    "ci": "Production structure, source review checks, full HTML validation, existing Lighthouse checks, artifact review restrictions and Pages deployment passed.",
+    "live_browser": "Deployed HTTPS page opened in the native embedded browser; review banner, aligned portraits and default closed stages verified.",
+    "screenshot": "10_Working/reports/innovation-review/review-hero.png (ignored local QA evidence, excluded from deployment)"
   },
-  "deployment": null
+  "deployment": {
+    "code_commit": "82f80abcf7f4de388e4294a2e5cad72d28911236",
+    "workflow_run": "https://github.com/lad-plunk/ALPINNO-GmbH/actions/runs/39509968424",
+    "workflow_result": "success: validate and deploy",
+    "verified_at_utc": "2026-10-20T22:44:31.463129+00:00",
+    "final_url": "https://alpinno-solutions.ch/review-innovation-excellence-a7c29e.html",
+    "http_status": 200,
+    "served_robots_meta": "noindex, nofollow, noarchive",
+    "x_robots_tag": null,
+    "live_code_and_assets_match": [
+      "review-innovation-excellence-a7c29e.html",
+      "innovation-excellence.css",
+      "innovation-excellence.js",
+      "images/innovation-excellence/rowan-gibson.jpg",
+      "images/innovation-excellence/pier-paolo-monticone.jpg",
+      "images/innovation-excellence/innovation-ai-agile-metaphor.png",
+      "images/innovation-excellence/four-lenses-book.jpg"
+    ],
+    "other_live_pages_without_inbound_links": 19,
+    "live_discovery_files_without_review_route": [
+      "robots.txt",
+      "sitemap.xml",
+      "llms.txt"
+    ],
+    "internal_files_return_404": {
+      "10_Working/innovation-review-release.json": 404,
+      "CONTEXT.md": 404
+    },
+    "search_engine_results_checked": false
+  }
 }
