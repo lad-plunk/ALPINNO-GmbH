@@ -1,0 +1,2313 @@
+/* V3 review-page styles. Shared ALPINNO tokens and base typography come from style.css. */
+
+.innovation-page * {
+  box-sizing:border-box;
+}
+
+html.innovation-review {
+  scroll-behavior:smooth;
+  scroll-padding-top:96px;
+}
+
+.innovation-page {
+  margin:0;
+  color:var(--ink);
+  background:var(--paper);
+  font:16px/1.65 Inter,Aptos,"Segoe UI",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+
+.innovation-page img {
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+
+.innovation-page a {
+  color:inherit;
+}
+
+.innovation-page button {
+  font:inherit;
+}
+
+.innovation-page h1,
+.innovation-page h2,
+.innovation-page h3,
+.innovation-page p,
+.innovation-page figure {
+  margin-top:0;
+}
+
+.innovation-page h1,
+.innovation-page h2,
+.innovation-page h3 {
+  font-family:"Segoe UI",Inter,Arial,sans-serif;
+  line-height:1.1;
+  letter-spacing:-.035em;
+}
+
+.innovation-page h2 {
+  font-size:clamp(2.15rem,4.1vw,3.6rem);
+  margin-bottom:22px;
+  font-weight:720;
+}
+
+.innovation-page h3 {
+  font-size:1.35rem;
+  letter-spacing:-.02em;
+  margin-bottom:12px;
+}
+
+.innovation-page p {
+  margin-bottom:18px;
+}
+
+.innovation-page .ie-container {
+  width:min(var(--content),calc(100% - 64px));
+  margin-inline:auto;
+}
+
+.innovation-page .ie-section {
+  padding:100px 0;
+}
+
+.innovation-page .ie-section-mist {
+  background:var(--mist);
+}
+
+.innovation-page .ie-section-warm {
+  background:var(--warm);
+}
+
+.innovation-page .ie-section-dark {
+  background:var(--navy-900);
+  color:#e1eaf2;
+}
+
+.innovation-page .ie-section-dark h1,
+.innovation-page .ie-section-dark h2,
+.innovation-page .ie-section-dark h3 {
+  color:#fff;
+}
+
+.innovation-page .ie-section-heading {
+  max-width:790px;
+  margin-bottom:48px;
+}
+
+.innovation-page .ie-section-heading>p:last-child {
+  font-size:1.12rem;
+  max-width:720px;
+  color:var(--muted);
+}
+
+.innovation-page .ie-section-dark .ie-section-heading>p:last-child {
+  color:#bdccda;
+}
+
+.innovation-page .ie-eyebrow {
+  font-size:.72rem;
+  line-height:1.55;
+  letter-spacing:.14em;
+  font-weight:800;
+  margin-bottom:20px;
+  text-transform:uppercase;
+  color:#a9cce7;
+}
+
+.innovation-page .ie-eyebrow.ie-red {
+  color:#b62921;
+}
+
+.innovation-page .ie-micro-label {
+  font-size:.68rem;
+  line-height:1.6;
+  letter-spacing:.1em;
+  font-weight:800;
+  text-transform:uppercase;
+  margin-bottom:8px;
+  color:var(--muted);
+}
+
+.innovation-page .ie-small-copy {
+  font-size:.88rem;
+  color:var(--muted);
+}
+
+.innovation-page .ie-large-copy {
+  font-size:1.35rem;
+  line-height:1.55;
+}
+
+.innovation-page .ie-split-heading {
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:65px;
+  max-width:none;
+  align-items:end;
+}
+
+.innovation-page .ie-split-heading>p:last-child {
+  padding-bottom:6px;
+}
+
+.innovation-page .ie-review-strip {
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  padding:7px 20px;
+  background:#fff4d8;
+  color:#5e4a18;
+  text-align:center;
+  font-size:.72rem;
+}
+
+.innovation-page .ie-review-strip span {
+  font-weight:850;
+  letter-spacing:.09em;
+}
+
+.innovation-page .ie-site-header {
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(6,20,38,.97);
+  color:#fff;
+  border-bottom:1px solid #304158;
+}
+
+.innovation-page .ie-nav-shell {
+  width:min(var(--content),calc(100% - 64px));
+  margin:auto;
+  min-height:74px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.innovation-page .brand {
+  display:inline-flex;
+  align-items:baseline;
+  gap:7px;
+  color:#fff;
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+.innovation-page .brand-name {
+  font-weight:800;
+  letter-spacing:.19em;
+  font-size:1.12rem;
+}
+
+.innovation-page .brand-name:before {
+  content:"";
+  display:inline-block;
+  width:9px;
+  height:9px;
+  margin-right:9px;
+  background:var(--red-500);
+  border-radius:2px;
+  transform:rotate(45deg);
+}
+
+.innovation-page .brand-suffix {
+  font-size:.72rem;
+  font-weight:600;
+  color:#bdd0df;
+}
+
+.innovation-page .ie-nav-links {
+  display:flex;
+  gap:29px;
+  align-items:center;
+}
+
+.innovation-page .ie-nav-links>a {
+  font-size:.83rem;
+  text-decoration:none;
+  font-weight:650;
+}
+
+.innovation-page .ie-nav-links>a:hover {
+  text-decoration:underline;
+  text-underline-offset:5px;
+}
+
+.innovation-page .ie-nav-links .ie-nav-cta {
+  color:#fff;
+  border-bottom:1px solid #cc5c53;
+  padding:7px 0;
+}
+
+.innovation-page .ie-menu-toggle {
+  display:none;
+}
+
+.innovation-page .ie-hero {
+  background:radial-gradient(ellipse at 88% 55%,#164370 0,transparent 52%),linear-gradient(130deg,#061426,#0b1f3a 65%,#12365f);
+}
+
+.innovation-page .ie-hero-grid {
+  display:grid;
+  grid-template-columns:1.15fr 1fr;
+  gap:64px;
+  align-items:center;
+  padding-top:84px;
+  padding-bottom:80px;
+}
+
+.innovation-page .ie-hero h1 {
+  font-size:clamp(2.65rem,4.35vw,4.15rem);
+  font-weight:750;
+  line-height:1.07;
+  letter-spacing:-.043em;
+  margin-bottom:25px;
+  max-width:660px;
+}
+
+.innovation-page .ie-hero h1 em {
+  font-style:normal;
+  color:#accfe9;
+}
+
+.innovation-page .ie-hero-lead {
+  font-size:1.21rem;
+  line-height:1.6;
+  color:#f0f5f9;
+  max-width:600px;
+}
+
+.innovation-page .ie-hero-context {
+  font-size:1rem;
+  color:#b8cbdc;
+  max-width:560px;
+}
+
+.innovation-page .ie-button-row {
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px 24px;
+  align-items:center;
+  margin-top:32px;
+}
+
+.innovation-page .ie-button {
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  gap:18px;
+  min-height:52px;
+  padding:14px 20px;
+  border-radius:5px;
+  font-size:.89rem;
+  font-weight:750;
+  line-height:1.4;
+  text-decoration:none;
+  transition:background .15s,transform .15s;
+}
+
+.innovation-page .ie-button-primary {
+  background:#dc342a;
+  color:#fff;
+}
+
+.innovation-page .ie-button-primary:hover {
+  background:#bb2921;
+  transform:translateY(-1px);
+}
+
+.innovation-page .ie-text-link {
+  display:inline-block;
+  text-decoration:none;
+  font-size:.88rem;
+  font-weight:750;
+  color:var(--navy-800);
+}
+
+.innovation-page .ie-text-link span {
+  padding-left:7px;
+}
+
+.innovation-page .ie-text-link:hover {
+  text-decoration:underline;
+  text-underline-offset:5px;
+}
+
+.innovation-page .ie-text-link.ie-light {
+  color:#d6e7f6;
+}
+
+.innovation-page .ie-hero-people {
+  position:relative;
+  min-width:0;
+}
+
+.innovation-page .ie-people-kicker {
+  font-size:.67rem;
+  line-height:1.55;
+  font-weight:750;
+  letter-spacing:.16em;
+  color:#a9cce7;
+  border-left:2px solid var(--red-500);
+  padding-left:16px;
+  margin-bottom:25px;
+}
+
+.innovation-page .ie-portrait-pair {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+.innovation-page .ie-portrait {
+  margin:0;
+  background:#f3f6f8;
+  color:var(--ink);
+  border-radius:5px;
+  overflow:hidden;
+  box-shadow:0 20px 42px #020a1533;
+}
+
+.innovation-page .ie-portrait img {
+  width:100%;
+  height:245px;
+  object-fit:cover;
+}
+
+.innovation-page .ie-portrait-rowan img {
+  object-position:50% 8%;
+}
+
+.innovation-page .ie-portrait-pier {
+  margin-top:35px;
+  margin-bottom:-35px;
+}
+
+.innovation-page .ie-portrait-pier img {
+  object-position:50% 33%;
+}
+
+.innovation-page .ie-portrait figcaption {
+  padding:15px 15px 18px;
+}
+
+.innovation-page .ie-portrait strong {
+  display:block;
+  font-size:.98rem;
+  margin-bottom:5px;
+  line-height:1.3;
+}
+
+.innovation-page .ie-portrait figcaption span {
+  display:block;
+  font-size:.76rem;
+  line-height:1.55;
+  color:var(--muted);
+}
+
+.innovation-page .ie-people-caption {
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+  margin-top:65px;
+}
+
+.innovation-page .ie-red-line {
+  display:block;
+  width:40px;
+  height:2px;
+  flex:0 0 40px;
+  background:var(--red-500);
+  margin-top:12px;
+}
+
+.innovation-page .ie-people-caption p {
+  font-size:.78rem;
+  color:#adc2d6;
+  line-height:1.65;
+  margin:0;
+}
+
+.innovation-page .ie-people-caption strong {
+  color:#f1f5f8;
+  font-weight:600;
+}
+
+.innovation-page .ie-hero-bottom {
+  border-top:1px solid #34516c80;
+  background:#06142640;
+}
+
+.innovation-page .ie-hero-bottom>.ie-container {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+  padding-block:19px;
+  font-size:.74rem;
+  color:#c3d5e5;
+}
+
+.innovation-page .ie-hero-bottom b {
+  padding-inline:9px;
+  color:#89a8c0;
+}
+
+.innovation-page .ie-intro-grid {
+  display:grid;
+  grid-template-columns:.7fr 2fr;
+  gap:60px;
+}
+
+.innovation-page .ie-intro-grid h2 {
+  max-width:780px;
+}
+
+.innovation-page .ie-intro-grid .ie-eyebrow {
+  padding-top:13px;
+}
+
+.innovation-page .ie-intro-grid>div {
+  max-width:820px;
+}
+
+.innovation-page .ie-intro-grid p:last-child {
+  margin:0;
+}
+
+.innovation-page .ie-system-grid {
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.innovation-page .ie-metaphor {
+  margin:0;
+  min-width:0;
+}
+
+.innovation-page .ie-metaphor img {
+  width:100%;
+  border-radius:8px;
+  background:#fff;
+}
+
+.innovation-page .ie-metaphor figcaption {
+  font-size:.78rem;
+  line-height:1.6;
+  text-align:center;
+  color:var(--muted);
+  margin:17px auto 0;
+  max-width:440px;
+}
+
+.innovation-page .ie-pillar {
+  display:flex;
+  gap:19px;
+  padding:23px 0;
+  border-bottom:1px solid #d5dfe7;
+}
+
+.innovation-page .ie-pillar:first-child {
+  padding-top:0;
+}
+
+.innovation-page .ie-pillar:last-child {
+  border:0;
+  padding-bottom:0;
+}
+
+.innovation-page .ie-pillar-mark {
+  font-size:.8rem;
+  font-weight:800;
+  line-height:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:36px;
+  height:36px;
+  flex:0 0 36px;
+  border-radius:50%;
+  margin-top:3px;
+}
+
+.innovation-page .ie-mark-brain {
+  background:#f4e5bf;
+  color:#75501b;
+}
+
+.innovation-page .ie-mark-ai {
+  background:#d8eafa;
+  color:#174f7a;
+}
+
+.innovation-page .ie-mark-agile {
+  background:#d6f0f0;
+  color:#12656b;
+}
+
+.innovation-page .ie-pillar h3 {
+  font-size:1.2rem;
+  line-height:1.25;
+  margin-bottom:10px;
+}
+
+.innovation-page .ie-pillar p:last-child {
+  font-size:.94rem;
+  line-height:1.65;
+  margin:0;
+}
+
+.innovation-page .ie-system-conclusion {
+  max-width:830px;
+  margin:48px 0 0;
+  padding:23px 0 0;
+  border-top:1px solid #c8d5df;
+  font-weight:650;
+  font-size:1.05rem;
+}
+
+.innovation-page .ie-journey {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:45px;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.innovation-page .ie-journey li {
+  position:relative;
+  border-top:2px solid var(--line);
+  padding-top:27px;
+  min-width:0;
+}
+
+.innovation-page .ie-journey li:first-child {
+  border-color:var(--red-500);
+}
+
+.innovation-page .ie-step-number {
+  display:block;
+  font-size:2.3rem;
+  line-height:1;
+  font-weight:750;
+  color:#7b8a99;
+  margin-bottom:23px;
+  letter-spacing:-.04em;
+}
+
+.innovation-page .ie-journey li:first-child .ie-step-number {
+  color:var(--red-500);
+}
+
+.innovation-page .ie-journey h3 {
+  font-size:1.85rem;
+}
+
+.innovation-page .ie-journey>li>p:not(.ie-micro-label):not(.ie-small-copy) {
+  font-size:.99rem;
+}
+
+.innovation-page .ie-journey .ie-micro-label {
+  min-height:23px;
+}
+
+.innovation-page .ie-journey .ie-small-copy {
+  margin-top:15px;
+}
+
+.innovation-page .ie-workshop-section {
+  background:radial-gradient(ellipse at 90% 10%,#173b5d66,transparent 55%),#0b1f3a;
+}
+
+.innovation-page .ie-workshop-facts {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+  border-top:1px solid #3a5167;
+  border-bottom:1px solid #3a5167;
+  padding:24px 0 28px;
+  margin-bottom:36px;
+}
+
+.innovation-page .ie-workshop-facts span {
+  font-size:.85rem;
+  color:#bdd0df;
+}
+
+.innovation-page .ie-workshop-facts strong {
+  display:block;
+  color:#fff;
+  font-size:2.1rem;
+  line-height:1.3;
+  margin-bottom:6px;
+}
+
+.innovation-page .ie-day-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  align-items:start;
+}
+
+.innovation-page .ie-day-panel {
+  border:1px solid #476077;
+  border-radius:5px;
+  overflow:hidden;
+  background:#102b45;
+}
+
+.innovation-page .ie-day-panel summary {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  padding:25px;
+  cursor:pointer;
+  list-style:none;
+}
+
+.innovation-page .ie-day-panel summary::-webkit-details-marker,
+.innovation-page .ie-faq-list summary::-webkit-details-marker {
+  display:none;
+}
+
+.innovation-page .ie-day-panel summary small {
+  display:block;
+  color:#9fc8e6;
+  font-weight:800;
+  font-size:.65rem;
+  letter-spacing:.12em;
+  margin-bottom:12px;
+}
+
+.innovation-page .ie-day-panel summary strong {
+  display:block;
+  color:#fff;
+  font-size:1.26rem;
+  line-height:1.4;
+  font-weight:650;
+  letter-spacing:-.015em;
+}
+
+.innovation-page .ie-expand-symbol {
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  width:30px;
+  height:30px;
+  flex:0 0 30px;
+  border:1px solid #56718a;
+  border-radius:50%;
+  font-size:1.3rem;
+}
+
+.innovation-page .ie-day-panel[open] .ie-expand-symbol {
+  transform:rotate(45deg);
+}
+
+.innovation-page .ie-day-content {
+  padding:0 25px 24px;
+}
+
+.innovation-page .ie-day-content>p {
+  font-size:.89rem;
+  color:#d1deea;
+}
+
+.innovation-page .ie-day-content table {
+  width:100%;
+  border-collapse:collapse;
+  font-size:.76rem;
+  line-height:1.5;
+}
+
+.innovation-page .ie-day-content th {
+  font-weight:650;
+  text-align:left;
+  width:105px;
+  white-space:nowrap;
+}
+
+.innovation-page .ie-day-content th,
+.innovation-page .ie-day-content td {
+  padding:12px 9px;
+  border-top:1px solid #3f5970;
+  vertical-align:top;
+}
+
+.innovation-page .ie-day-content .ie-executive {
+  background:#efdba7;
+  color:#2f2819;
+}
+
+.innovation-page .ie-agenda-note {
+  font-size:.76rem;
+  color:#b9cddd;
+  margin-top:20px;
+  margin-bottom:39px;
+}
+
+.innovation-page .ie-legend-swatch {
+  display:inline-block;
+  width:10px;
+  height:10px;
+  background:#efdba7;
+  margin-right:8px;
+  border-radius:1px;
+}
+
+.innovation-page .ie-workshop-output {
+  display:grid;
+  grid-template-columns:.65fr 1.35fr;
+  column-gap:45px;
+  border-top:1px solid #3a5167;
+  padding-top:35px;
+}
+
+.innovation-page .ie-workshop-output h3 {
+  font-size:1.65rem;
+}
+
+.innovation-page .ie-workshop-output p {
+  font-size:1.03rem;
+  max-width:710px;
+}
+
+.innovation-page .ie-workshop-output .ie-button {
+  grid-column:2;
+  justify-self:start;
+  margin-top:8px;
+}
+
+.innovation-page .ie-lens-row {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  border-block:1px solid var(--line);
+  padding:20px 0;
+  margin-bottom:36px;
+}
+
+.innovation-page .ie-lens-row span {
+  font-size:.8rem;
+  line-height:1.4;
+  font-weight:650;
+  padding-right:22px;
+  border-right:1px solid #becbd6;
+}
+
+.innovation-page .ie-lens-row span:last-child {
+  border:0;
+}
+
+.innovation-page .ie-process-flow {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:32px 24px;
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.innovation-page .ie-process-flow li {
+  border-left:2px solid #e0e7ed;
+  padding-left:17px;
+  min-width:0;
+}
+
+.innovation-page .ie-process-flow li:first-child {
+  border-color:var(--red-500);
+}
+
+.innovation-page .ie-process-flow li>span {
+  display:block;
+  font-size:.72rem;
+  font-weight:800;
+  color:#526173;
+  margin-bottom:10px;
+}
+
+.innovation-page .ie-process-flow li>strong {
+  display:block;
+  line-height:1.4;
+  margin-bottom:8px;
+}
+
+.innovation-page .ie-process-flow li>p {
+  font-size:.87rem;
+  line-height:1.6;
+  margin:0;
+  color:var(--muted);
+}
+
+.innovation-page .ie-method-note {
+  font-size:.88rem;
+  color:var(--muted);
+  max-width:830px;
+  margin-top:32px;
+  margin-bottom:0;
+}
+
+.innovation-page .ie-expert-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+}
+
+.innovation-page .ie-expert {
+  display:grid;
+  grid-template-columns:140px 1fr;
+  gap:25px;
+  align-items:start;
+}
+
+.innovation-page .ie-expert>img {
+  width:140px;
+  height:170px;
+  object-fit:cover;
+  border-radius:5px;
+}
+
+.innovation-page .ie-expert:first-child>img {
+  object-position:50% 8%;
+}
+
+.innovation-page .ie-expert:nth-child(2)>img {
+  object-position:50% 30%;
+}
+
+.innovation-page .ie-expert h3 {
+  font-size:1.45rem;
+  line-height:1.25;
+}
+
+.innovation-page .ie-expert p:not(.ie-micro-label) {
+  font-size:.91rem;
+  line-height:1.65;
+  margin-bottom:0;
+}
+
+.innovation-page .ie-expert .ie-micro-label {
+  font-size:.61rem;
+  line-height:1.6;
+}
+
+.innovation-page .ie-alpinno-connection {
+  border-top:1px solid #dddcd5;
+  margin-top:48px;
+  padding-top:30px;
+  max-width:900px;
+}
+
+.innovation-page .ie-alpinno-connection>p:not(.ie-micro-label) {
+  font-size:.99rem;
+  margin-bottom:15px;
+}
+
+.innovation-page .ie-faq-layout {
+  display:grid;
+  grid-template-columns:.9fr 1.35fr;
+  gap:70px;
+}
+
+.innovation-page .ie-faq-list details {
+  border-bottom:1px solid var(--line);
+}
+
+.innovation-page .ie-faq-list details:first-child {
+  border-top:1px solid var(--line);
+}
+
+.innovation-page .ie-faq-list summary {
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:center;
+  list-style:none;
+  padding:21px 0;
+  cursor:pointer;
+  font-size:1rem;
+  font-weight:650;
+  line-height:1.5;
+}
+
+.innovation-page .ie-faq-list summary span {
+  font-weight:400;
+  font-size:1.4rem;
+  flex:0 0 20px;
+  text-align:center;
+}
+
+.innovation-page .ie-faq-list details[open] summary span {
+  transform:rotate(45deg);
+}
+
+.innovation-page .ie-faq-list details p {
+  font-size:.94rem;
+  color:var(--muted);
+  padding-right:30px;
+  margin-bottom:24px;
+}
+
+.innovation-page .ie-contact-section {
+  background:linear-gradient(135deg,#0b1f3a,#143d62);
+}
+
+.innovation-page .ie-contact-grid {
+  display:grid;
+  grid-template-columns:1.25fr 1fr;
+  gap:90px;
+  align-items:center;
+}
+
+.innovation-page .ie-contact-grid h2 {
+  font-size:clamp(2.05rem,3.7vw,3.3rem);
+}
+
+.innovation-page .ie-contact-grid p:not(.ie-eyebrow) {
+  color:#c5d7e5;
+  max-width:670px;
+  margin-bottom:0;
+}
+
+.innovation-page .ie-contact-actions {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:25px;
+}
+
+.innovation-page .ie-contact-actions>span {
+  font-size:.77rem;
+  color:#b6cbdc;
+}
+
+.innovation-page .ie-site-footer {
+  background:var(--navy-950);
+  color:#aec1d2;
+  font-size:.76rem;
+  padding:32px 0;
+}
+
+.innovation-page .ie-site-footer>.ie-container {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.innovation-page .ie-site-footer p {
+  margin:0;
+}
+
+.innovation-page .ie-site-footer a:last-child {
+  font-size:.76rem;
+}
+
+.innovation-page .skip-link {
+  position:fixed;
+  z-index:1000;
+  top:10px;
+  left:10px;
+  padding:12px 20px;
+  color:white;
+  background:#1769aa;
+  transform:translateY(-180%);
+  border-radius:4px;
+}
+
+.innovation-page .skip-link:focus {
+  transform:translateY(0);
+}
+
+.innovation-page :focus-visible {
+  outline:3px solid #f5ad30;
+  outline-offset:5px;
+}
+
+.innovation-page .ie-sr-only {
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
+
+@media(min-width:1500px) {
+  .innovation-page .ie-hero-grid {
+    padding-top:98px;
+    padding-bottom:98px;
+  }
+
+}
+
+@media(max-width:1050px) {
+  .innovation-page .ie-hero-grid {
+    gap:35px;
+    grid-template-columns:1.1fr 1fr;
+  }
+
+  .innovation-page .ie-hero h1 {
+    font-size:3.1rem;
+  }
+
+  .innovation-page .ie-portrait img {
+    height:220px;
+  }
+
+  .innovation-page .ie-nav-links {
+    gap:20px;
+  }
+
+  .innovation-page .ie-system-grid {
+    gap:35px;
+  }
+
+  .innovation-page .ie-expert-grid {
+    gap:35px;
+  }
+
+  .innovation-page .ie-expert {
+    grid-template-columns:110px 1fr;
+    gap:18px;
+  }
+
+  .innovation-page .ie-expert>img {
+    width:110px;
+    height:145px;
+  }
+
+  .innovation-page .ie-contact-grid {
+    gap:45px;
+  }
+
+  .innovation-page .ie-journey {
+    gap:28px;
+  }
+
+  .innovation-page .ie-split-heading {
+    gap:35px;
+  }
+
+}
+
+@media(max-width:800px) {
+  .innovation-page .ie-container,
+  .innovation-page .ie-nav-shell {
+    width:calc(100% - 44px);
+  }
+
+  .innovation-page .ie-section {
+    padding:72px 0;
+  }
+
+  .innovation-page .ie-hero-grid {
+    grid-template-columns:1fr;
+    padding-top:60px;
+    padding-bottom:60px;
+    gap:50px;
+  }
+
+  .innovation-page .ie-hero h1 {
+    font-size:clamp(2.65rem,7.6vw,3.85rem);
+    max-width:690px;
+  }
+
+  .innovation-page .ie-hero-copy {
+    max-width:690px;
+  }
+
+  .innovation-page .ie-hero-people {
+    max-width:520px;
+    width:100%;
+    margin-inline:auto;
+  }
+
+  .innovation-page .ie-portrait img {
+    height:270px;
+  }
+
+  .innovation-page .ie-people-kicker {
+    margin-bottom:20px;
+  }
+
+  .innovation-page .ie-hero-bottom>.ie-container {
+    align-items:flex-start;
+    flex-direction:column;
+    gap:8px;
+  }
+
+  .innovation-page .ie-intro-grid {
+    grid-template-columns:1fr;
+    gap:8px;
+  }
+
+  .innovation-page .ie-intro-grid .ie-eyebrow {
+    padding:0;
+  }
+
+  .innovation-page .ie-system-grid {
+    grid-template-columns:1fr;
+    gap:42px;
+  }
+
+  .innovation-page .ie-metaphor {
+    max-width:670px;
+    margin:auto;
+  }
+
+  .innovation-page .ie-pillar-list {
+    display:grid;
+    grid-template-columns:1fr;
+    max-width:700px;
+  }
+
+  .innovation-page .ie-pillar {
+    padding-block:23px;
+  }
+
+  .innovation-page .ie-split-heading {
+    grid-template-columns:1fr;
+    gap:8px;
+  }
+
+  .innovation-page .ie-section-heading {
+    margin-bottom:35px;
+  }
+
+  .innovation-page .ie-journey {
+    gap:23px;
+  }
+
+  .innovation-page .ie-journey .ie-micro-label {
+    font-size:.6rem;
+    min-height:36px;
+  }
+
+  .innovation-page .ie-journey h3 {
+    font-size:1.55rem;
+  }
+
+  .innovation-page .ie-journey p {
+    font-size:.91rem!important;
+  }
+
+  .innovation-page .ie-day-grid {
+    grid-template-columns:1fr;
+  }
+
+  .innovation-page .ie-workshop-output {
+    grid-template-columns:1fr;
+    gap:0;
+  }
+
+  .innovation-page .ie-workshop-output .ie-button {
+    grid-column:1;
+  }
+
+  .innovation-page .ie-process-flow {
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .innovation-page .ie-expert-grid {
+    grid-template-columns:1fr;
+    max-width:700px;
+    gap:36px;
+  }
+
+  .innovation-page .ie-expert {
+    grid-template-columns:140px 1fr;
+    gap:25px;
+  }
+
+  .innovation-page .ie-expert>img {
+    width:140px;
+    height:170px;
+  }
+
+  .innovation-page .ie-faq-layout,
+  .innovation-page .ie-contact-grid {
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .innovation-page .ie-site-footer>.ie-container {
+    flex-wrap:wrap;
+  }
+
+  .innovation-page .ie-site-footer p {
+    order:3;
+    width:100%;
+  }
+
+  .innovation-page .ie-menu-toggle {
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    border:1px solid #516173;
+    background:transparent;
+    color:white;
+    padding:8px 12px;
+    border-radius:4px;
+    font-size:.8rem;
+    cursor:pointer;
+  }
+
+  .innovation-page .ie-menu-toggle span {
+    font-size:1rem;
+  }
+
+  .innovation-page .ie-nav-shell {
+    position:relative;
+    min-height:67px;
+  }
+
+  .innovation-page .ie-nav-links {
+    position:absolute;
+    top:100%;
+    left:-22px;
+    right:-22px;
+    display:none;
+    align-items:stretch;
+    flex-direction:column;
+    gap:0;
+    padding:14px 22px 20px;
+    background:#081a2f;
+    border-bottom:1px solid #3c536a;
+  }
+
+  .innovation-page .ie-nav-links.ie-is-open {
+    display:flex;
+  }
+
+  .innovation-page .ie-nav-links>a {
+    padding:13px 0;
+  }
+
+  .innovation-page .ie-nav-links .ie-nav-cta {
+    border:0;
+  }
+
+  .innovation-page .ie-review-strip {
+    font-size:.64rem;
+    gap:8px;
+  }
+
+}
+
+@media(max-width:520px) {
+  .innovation-page .ie-container,
+  .innovation-page .ie-nav-shell {
+    width:calc(100% - 36px);
+  }
+
+  .innovation-page .ie-section {
+    padding:58px 0;
+  }
+
+  .innovation-page .ie-review-strip {
+    padding:7px 12px;
+    line-height:1.55;
+    flex-wrap:wrap;
+    gap:0 8px;
+  }
+
+  .innovation-page .ie-hero-grid {
+    padding-block:46px 49px;
+    gap:40px;
+  }
+
+  .innovation-page .ie-hero h1 {
+    font-size:2.75rem;
+    letter-spacing:-.04em;
+  }
+
+  .innovation-page .ie-hero-lead {
+    font-size:1.1rem;
+  }
+
+  .innovation-page .ie-hero-context {
+    font-size:.94rem;
+  }
+
+  .innovation-page .ie-hero .ie-eyebrow {
+    font-size:.64rem;
+    max-width:310px;
+  }
+
+  .innovation-page .ie-button-row {
+    align-items:flex-start;
+    gap:21px;
+    margin-top:25px;
+  }
+
+  .innovation-page .ie-button {
+    font-size:.84rem;
+    padding:14px 17px;
+    min-height:50px;
+  }
+
+  .innovation-page .ie-hero-people {
+    max-width:420px;
+  }
+
+  .innovation-page .ie-people-kicker {
+    font-size:.61rem;
+  }
+
+  .innovation-page .ie-portrait-pair {
+    gap:12px;
+  }
+
+  .innovation-page .ie-portrait img {
+    height:210px;
+  }
+
+  .innovation-page .ie-portrait-pier {
+    margin-top:26px;
+    margin-bottom:-26px;
+  }
+
+  .innovation-page .ie-portrait figcaption {
+    padding:13px 11px 15px;
+  }
+
+  .innovation-page .ie-portrait strong {
+    font-size:.84rem;
+  }
+
+  .innovation-page .ie-portrait figcaption span {
+    font-size:.69rem;
+  }
+
+  .innovation-page .ie-people-caption {
+    margin-top:51px;
+    gap:12px;
+  }
+
+  .innovation-page .ie-people-caption p {
+    font-size:.71rem;
+  }
+
+  .innovation-page .ie-hero-bottom>.ie-container {
+    font-size:.68rem;
+    padding-block:18px;
+  }
+
+  .innovation-page .ie-hero-bottom b {
+    padding:0 4px;
+  }
+
+  .innovation-page .ie-large-copy {
+    font-size:1.15rem;
+  }
+
+  .innovation-page h2 {
+    font-size:2.3rem;
+  }
+
+  .innovation-page .ie-section-heading>p:last-child {
+    font-size:1.02rem;
+  }
+
+  .innovation-page .ie-system-grid {
+    gap:33px;
+  }
+
+  .innovation-page .ie-pillar {
+    gap:15px;
+  }
+
+  .innovation-page .ie-pillar-mark {
+    width:31px;
+    height:31px;
+    flex-basis:31px;
+    font-size:.7rem;
+  }
+
+  .innovation-page .ie-pillar h3 {
+    font-size:1.12rem;
+  }
+
+  .innovation-page .ie-pillar p:last-child {
+    font-size:.91rem;
+  }
+
+  .innovation-page .ie-metaphor figcaption {
+    font-size:.72rem;
+    max-width:300px;
+  }
+
+  .innovation-page .ie-system-conclusion {
+    font-size:.97rem;
+    margin-top:32px;
+  }
+
+  .innovation-page .ie-journey {
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .innovation-page .ie-journey li {
+    padding-top:21px;
+  }
+
+  .innovation-page .ie-step-number {
+    font-size:1.9rem;
+    margin-bottom:15px;
+  }
+
+  .innovation-page .ie-journey .ie-micro-label {
+    font-size:.66rem;
+    min-height:0;
+  }
+
+  .innovation-page .ie-journey h3 {
+    font-size:1.65rem;
+  }
+
+  .innovation-page .ie-workshop-facts {
+    gap:17px;
+    padding:22px 0;
+  }
+
+  .innovation-page .ie-workshop-facts span {
+    font-size:.7rem;
+    line-height:1.5;
+  }
+
+  .innovation-page .ie-workshop-facts strong {
+    font-size:1.55rem;
+  }
+
+  .innovation-page .ie-day-panel summary {
+    padding:21px 18px;
+  }
+
+  .innovation-page .ie-day-panel summary strong {
+    font-size:1.12rem;
+  }
+
+  .innovation-page .ie-day-content {
+    padding:0 15px 20px;
+  }
+
+  .innovation-page .ie-day-content th {
+    width:88px;
+  }
+
+  .innovation-page .ie-day-content th,
+  .innovation-page .ie-day-content td {
+    padding:10px 6px;
+    font-size:.69rem;
+  }
+
+  .innovation-page .ie-agenda-note {
+    font-size:.7rem;
+  }
+
+  .innovation-page .ie-workshop-output h3 {
+    font-size:1.45rem;
+  }
+
+  .innovation-page .ie-workshop-output p {
+    font-size:.96rem;
+  }
+
+  .innovation-page .ie-lens-row {
+    gap:13px 0;
+  }
+
+  .innovation-page .ie-lens-row span {
+    font-size:.72rem;
+    padding-inline:0 12px;
+    margin-right:12px;
+  }
+
+  .innovation-page .ie-process-flow {
+    grid-template-columns:1fr 1fr;
+    gap:26px 19px;
+  }
+
+  .innovation-page .ie-process-flow li {
+    padding-left:12px;
+  }
+
+  .innovation-page .ie-process-flow li>strong {
+    font-size:.9rem;
+  }
+
+  .innovation-page .ie-process-flow li>p {
+    font-size:.8rem;
+  }
+
+  .innovation-page .ie-method-note {
+    font-size:.82rem;
+  }
+
+  .innovation-page .ie-expert {
+    grid-template-columns:104px 1fr;
+    gap:18px;
+  }
+
+  .innovation-page .ie-expert>img {
+    width:104px;
+    height:136px;
+  }
+
+  .innovation-page .ie-expert h3 {
+    font-size:1.25rem;
+  }
+
+  .innovation-page .ie-expert p:not(.ie-micro-label) {
+    font-size:.86rem;
+  }
+
+  .innovation-page .ie-expert .ie-micro-label {
+    font-size:.56rem;
+  }
+
+  .innovation-page .ie-alpinno-connection {
+    margin-top:34px;
+  }
+
+  .innovation-page .ie-alpinno-connection>p:not(.ie-micro-label) {
+    font-size:.93rem;
+  }
+
+  .innovation-page .ie-faq-list summary {
+    font-size:.94rem;
+  }
+
+  .innovation-page .ie-faq-list details p {
+    font-size:.88rem;
+  }
+
+  .innovation-page .ie-contact-grid h2 {
+    font-size:2.2rem;
+  }
+
+  .innovation-page .ie-contact-grid p:not(.ie-eyebrow) {
+    font-size:.94rem;
+  }
+
+  .innovation-page .ie-contact-actions {
+    gap:22px;
+  }
+
+  .innovation-page .ie-nav-links {
+    left:-18px;
+    right:-18px;
+    padding-inline:18px;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html.innovation-review {
+    scroll-behavior:auto;
+  }
+
+  .innovation-page * {
+    transition:none!important;
+  }
+
+}
+
+@media print {
+  .innovation-page .ie-review-strip,
+  .innovation-page .ie-site-header,
+  .innovation-page .ie-site-footer,
+  .innovation-page .ie-menu-toggle {
+    display:none;
+  }
+
+  .innovation-page .ie-section {
+    padding:28px 0;
+  }
+
+  .innovation-page .ie-section-dark {
+    background:#fff;
+    color:#132238;
+  }
+
+  .innovation-page .ie-section-dark h1,
+  .innovation-page .ie-section-dark h2,
+  .innovation-page .ie-section-dark h3 {
+    color:#0b1f3a;
+  }
+
+  .innovation-page .ie-hero h1 em {
+    color:#1769aa;
+  }
+
+  .innovation-page .ie-hero-context,
+  .innovation-page .ie-hero-lead,
+  .innovation-page .ie-section-dark p {
+    color:#132238!important;
+  }
+
+  .innovation-page .ie-hero-grid {
+    padding:20px 0;
+  }
+
+  .innovation-page .ie-button {
+    border:1px solid #132238;
+    color:#132238;
+    background:none;
+  }
+
+  .innovation-page .ie-day-content {
+    display:block;
+  }
+
+  .innovation-page .ie-day-panel {
+    break-inside:avoid;
+  }
+
+  .innovation-page .ie-hero-bottom {
+    display:none;
+  }
+
+}
+
+.innovation-page h2 {
+  font-size:clamp(1.8rem,2.7vw,2.55rem);
+  line-height:1.17;
+  letter-spacing:-.03em;
+  text-wrap:pretty;
+}
+
+.innovation-page h4 {
+  font-size:1.04rem;
+  line-height:1.4;
+  margin:0 0 10px;
+}
+
+.innovation-page .ie-portrait-pair {
+  align-items:stretch;
+}
+
+.innovation-page .ie-portrait-pier {
+  margin:0;
+}
+
+.innovation-page .ie-portrait strong {
+  min-height:2.6em;
+}
+
+.innovation-page .ie-portrait figcaption {
+  height:100%;
+}
+
+.innovation-page .ie-people-caption {
+  margin-top:30px;
+}
+
+.innovation-page .ie-intro-grid {
+  grid-template-columns:.65fr 2fr;
+  gap:40px;
+}
+
+.innovation-page .ie-intro-grid h2 {
+  max-width:none;
+}
+
+.innovation-page .ie-section-heading.ie-full-width-heading {
+  max-width:none;
+}
+
+.innovation-page .ie-full-width-heading>p:last-child {
+  max-width:970px;
+}
+
+.innovation-page .ie-metaphor {
+  position:relative;
+  width:min(100%,520px);
+  aspect-ratio:1;
+  margin:auto;
+}
+
+.innovation-page .ie-metaphor img {
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  background:transparent;
+  border-radius:0;
+}
+
+.innovation-page .ie-image-marker {
+  position:absolute;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  border:2px solid white;
+  font-weight:850;
+  font-size:.83rem;
+  box-shadow:0 2px 10px #06142622;
+}
+
+.innovation-page .ie-image-marker-brain {
+  left:34%;
+  top:18%;
+}
+
+.innovation-page .ie-image-marker-ai {
+  left:72%;
+  top:47%;
+}
+
+.innovation-page .ie-image-marker-agile {
+  left:48%;
+  top:78%;
+}
+
+.innovation-page .ie-mark-agile {
+  background:#c7f5b6;
+  color:#225015;
+}
+
+.innovation-page .ie-system-grid {
+  grid-template-columns:1fr 1fr;
+  gap:65px;
+}
+
+.innovation-page .ie-stage-list {
+  display:grid;
+  gap:18px;
+}
+
+.innovation-page .ie-stage-panel {
+  --stage-colour:#b62921;
+  --stage-tint:#fdf0ee;
+  border:1px solid #cbd6df;
+  border-left:4px solid var(--stage-colour);
+  border-radius:6px;
+  background:white;
+  overflow:hidden;
+  scroll-margin-top:95px;
+}
+
+.innovation-page .ie-stage-validate {
+  --stage-colour:#175b8d;
+  --stage-tint:#eaf3fa;
+}
+
+.innovation-page .ie-stage-scale {
+  --stage-colour:#236244;
+  --stage-tint:#e9f5ec;
+}
+
+.innovation-page .ie-stage-panel>summary {
+  display:flex;
+  gap:25px;
+  align-items:center;
+  padding:27px 30px;
+  cursor:pointer;
+  list-style:none;
+}
+
+.innovation-page .ie-stage-panel>summary::-webkit-details-marker {
+  display:none;
+}
+
+.innovation-page .ie-stage-number {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 54px;
+  width:54px;
+  height:54px;
+  border-radius:50%;
+  background:var(--stage-tint);
+  color:var(--stage-colour);
+  font-size:1.45rem;
+  font-weight:800;
+}
+
+.innovation-page .ie-stage-summary-copy {
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  min-width:0;
+}
+
+.innovation-page .ie-stage-summary-copy strong {
+  font-size:1.65rem;
+  line-height:1.15;
+  letter-spacing:-.02em;
+  color:var(--stage-colour);
+}
+
+.innovation-page .ie-stage-summary-copy small {
+  font-size:.65rem;
+  letter-spacing:.085em;
+  font-weight:800;
+  color:var(--muted);
+}
+
+.innovation-page .ie-stage-summary-copy>span {
+  font-size:.95rem;
+  line-height:1.5;
+  color:var(--muted);
+}
+
+.innovation-page .ie-stage-expand {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 31px;
+  width:31px;
+  height:31px;
+  margin-left:auto;
+  border:1px solid #b3c1cd;
+  border-radius:50%;
+  font-size:1.4rem;
+  line-height:1;
+  color:var(--stage-colour);
+}
+
+.innovation-page .ie-stage-panel[open]>summary .ie-stage-expand {
+  transform:rotate(45deg);
+}
+
+.innovation-page .ie-stage-panel[open]>summary {
+  border-bottom:1px solid #d8e0e8;
+  background:var(--stage-tint);
+}
+
+.innovation-page .ie-stage-content {
+  padding:38px 34px;
+}
+
+.innovation-page .ie-stage-content .ie-section-heading {
+  max-width:940px;
+  margin-bottom:30px;
+}
+
+.innovation-page .ie-stage-content .ie-section-heading h3 {
+  font-size:1.85rem;
+  line-height:1.2;
+  margin-bottom:16px;
+}
+
+.innovation-page .ie-stage-content .ie-section-heading>p:last-child {
+  max-width:840px;
+}
+
+.innovation-page .ie-stage-content .ie-workshop-facts {
+  margin-bottom:28px;
+}
+
+.innovation-page .ie-validation-content,
+.innovation-page .ie-scale-content {
+  background:#fff;
+}
+
+.innovation-page .ie-validation-content>div:first-child,
+.innovation-page .ie-scale-content>div:first-child {
+  max-width:900px;
+}
+
+.innovation-page .ie-validation-content h3,
+.innovation-page .ie-scale-content h3 {
+  font-size:1.6rem;
+  line-height:1.3;
+}
+
+.innovation-page .ie-pilot-sequence {
+  list-style:none;
+  padding:0;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+  margin:28px 0;
+}
+
+.innovation-page .ie-pilot-sequence li {
+  border-top:2px solid #9cbfd9;
+  padding-top:14px;
+}
+
+.innovation-page .ie-pilot-sequence strong,
+.innovation-page .ie-pilot-sequence span {
+  display:block;
+}
+
+.innovation-page .ie-pilot-sequence span {
+  font-size:.9rem;
+  color:var(--muted);
+  margin-top:7px;
+}
+
+.innovation-page .ie-scope-note {
+  border-top:1px solid var(--line);
+  padding-top:22px;
+  font-size:.88rem;
+  max-width:1000px;
+  margin-bottom:0;
+}
+
+.innovation-page .ie-scale-options {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+  margin:28px 0;
+}
+
+.innovation-page .ie-scale-options article {
+  border-top:2px solid #9fc8af;
+  padding-top:16px;
+}
+
+.innovation-page .ie-scale-options p {
+  font-size:.94rem;
+  color:var(--muted);
+  margin:0;
+}
+
+.innovation-page .ie-book-method-bridge {
+  display:grid;
+  grid-template-columns:280px 1fr;
+  gap:52px;
+  align-items:center;
+  padding-bottom:36px;
+  margin-bottom:36px;
+  border-bottom:1px solid var(--line);
+}
+
+.innovation-page .ie-book-cover {
+  margin:0;
+  align-self:center;
+}
+
+.innovation-page .ie-book-cover img {
+  width:280px;
+  height:auto;
+}
+
+.innovation-page .ie-book-cover figcaption {
+  font-size:.75rem;
+  line-height:1.7;
+  color:var(--muted);
+  margin-top:15px;
+}
+
+.innovation-page .ie-book-cover figcaption a {
+  font-weight:650;
+  color:var(--navy-800);
+  text-underline-offset:3px;
+}
+
+.innovation-page .ie-lens-explanation h3 {
+  font-size:1.45rem;
+  line-height:1.3;
+}
+
+.innovation-page .ie-lens-perspectives {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:17px 30px;
+  margin:23px 0;
+}
+
+.innovation-page .ie-lens-perspectives p {
+  font-size:.88rem;
+  line-height:1.6;
+  color:var(--muted);
+  margin:0;
+}
+
+.innovation-page .ie-lens-perspectives strong {
+  display:block;
+  color:var(--ink);
+  font-size:.94rem;
+  margin-bottom:4px;
+}
+
+.innovation-page .ie-lens-bridge-copy {
+  font-size:.92rem;
+  line-height:1.7;
+  margin-bottom:0;
+}
+
+.innovation-page .ie-workflow-heading {
+  max-width:990px;
+  margin-bottom:30px;
+}
+
+.innovation-page .ie-workflow-heading h3 {
+  font-size:1.55rem;
+  line-height:1.3;
+}
+
+.innovation-page .ie-workflow-heading>p:last-child {
+  font-size:.95rem;
+  color:var(--muted);
+}
+
+.innovation-page .ie-expert.ie-expert-pier>img {
+  object-position:50% 30%;
+}
+
+.innovation-page .ie-expert.ie-expert-rowan>img {
+  object-position:50% 8%;
+}
+
+@media(max-width:1050px) {
+  .innovation-page .ie-system-grid {
+    gap:35px;
+  }
+
+  .innovation-page .ie-book-method-bridge {
+    grid-template-columns:240px 1fr;
+    gap:35px;
+  }
+
+  .innovation-page .ie-book-cover img {
+    width:240px;
+  }
+
+  .innovation-page .ie-stage-panel>summary {
+    padding:25px;
+  }
+
+  .innovation-page .ie-stage-content {
+    padding:32px 25px;
+  }
+
+}
+
+@media(max-width:800px) {
+  .innovation-page h2 {
+    font-size:clamp(1.85rem,4.4vw,2.35rem);
+  }
+
+  .innovation-page .ie-intro-grid {
+    grid-template-columns:1fr;
+    gap:8px;
+  }
+
+  .innovation-page .ie-system-grid {
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .innovation-page .ie-metaphor {
+    max-width:470px;
+  }
+
+  .innovation-page .ie-book-method-bridge {
+    grid-template-columns:210px 1fr;
+    gap:30px;
+  }
+
+  .innovation-page .ie-book-cover img {
+    width:210px;
+  }
+
+  .innovation-page .ie-lens-perspectives {
+    grid-template-columns:1fr;
+    gap:13px;
+  }
+
+  .innovation-page .ie-stage-panel>summary {
+    gap:20px;
+  }
+
+  .innovation-page .ie-stage-content {
+    padding:30px 23px;
+  }
+
+  .innovation-page .ie-stage-content .ie-section-heading h3 {
+    font-size:1.65rem;
+  }
+
+}
+
+@media(max-width:520px) {
+  .innovation-page h2 {
+    font-size:1.9rem;
+  }
+
+  .innovation-page .ie-portrait-pier {
+    margin:0;
+  }
+
+  .innovation-page .ie-people-caption {
+    margin-top:25px;
+  }
+
+  .innovation-page .ie-image-marker {
+    width:32px;
+    height:32px;
+    font-size:.73rem;
+  }
+
+  .innovation-page .ie-system-grid {
+    gap:30px;
+  }
+
+  .innovation-page .ie-stage-panel>summary {
+    padding:21px 16px;
+    gap:13px;
+    align-items:flex-start;
+  }
+
+  .innovation-page .ie-stage-number {
+    flex-basis:39px;
+    width:39px;
+    height:39px;
+    font-size:1.08rem;
+  }
+
+  .innovation-page .ie-stage-summary-copy strong {
+    font-size:1.4rem;
+  }
+
+  .innovation-page .ie-stage-summary-copy small {
+    font-size:.57rem;
+    letter-spacing:.055em;
+  }
+
+  .innovation-page .ie-stage-summary-copy>span {
+    font-size:.84rem;
+    line-height:1.6;
+  }
+
+  .innovation-page .ie-stage-expand {
+    flex-basis:25px;
+    width:25px;
+    height:25px;
+    font-size:1.1rem;
+    margin-top:7px;
+  }
+
+  .innovation-page .ie-stage-content {
+    padding:26px 16px;
+  }
+
+  .innovation-page .ie-stage-content .ie-section-heading h3 {
+    font-size:1.5rem;
+  }
+
+  .innovation-page .ie-day-panel summary {
+    padding:20px 14px;
+  }
+
+  .innovation-page .ie-day-content {
+    padding:0 10px 18px;
+  }
+
+  .innovation-page .ie-day-content th {
+    width:80px;
+  }
+
+  .innovation-page .ie-day-content th,
+  .innovation-page .ie-day-content td {
+    font-size:.67rem;
+    padding:10px 4px;
+  }
+
+  .innovation-page .ie-workshop-facts {
+    gap:13px;
+  }
+
+  .innovation-page .ie-workshop-facts strong {
+    font-size:1.45rem;
+  }
+
+  .innovation-page .ie-workshop-facts span {
+    font-size:.68rem;
+  }
+
+  .innovation-page .ie-pilot-sequence,
+  .innovation-page .ie-scale-options {
+    grid-template-columns:1fr;
+    gap:21px;
+  }
+
+  .innovation-page .ie-validation-content h3,
+  .innovation-page .ie-scale-content h3 {
+    font-size:1.4rem;
+  }
+
+  .innovation-page .ie-book-method-bridge {
+    grid-template-columns:1fr;
+    gap:32px;
+  }
+
+  .innovation-page .ie-book-cover {
+    max-width:260px;
+  }
+
+  .innovation-page .ie-book-cover img {
+    width:240px;
+  }
+
+  .innovation-page .ie-lens-perspectives {
+    grid-template-columns:1fr 1fr;
+    gap:20px 18px;
+  }
+
+  .innovation-page .ie-lens-explanation h3 {
+    font-size:1.3rem;
+  }
+
+  .innovation-page .ie-lens-perspectives strong {
+    font-size:.88rem;
+  }
+
+  .innovation-page .ie-lens-perspectives p {
+    font-size:.81rem;
+  }
+
+  .innovation-page .ie-lens-bridge-copy {
+    font-size:.88rem;
+  }
+
+  .innovation-page .ie-workflow-heading h3 {
+    font-size:1.4rem;
+  }
+
+  .innovation-page .ie-workflow-heading>p:last-child {
+    font-size:.9rem;
+  }
+
+  .innovation-page .ie-scope-note {
+    font-size:.83rem;
+  }
+
+}
+
+@media print {
+  .innovation-page .ie-stage-panel {
+    break-inside:avoid;
+  }
+
+  .innovation-page .ie-stage-panel>summary {
+    padding:15px;
+  }
+
+  .innovation-page .ie-stage-content {
+    padding:20px;
+  }
+
+  .innovation-page .ie-book-cover {
+    max-width:220px;
+  }
+
+}
