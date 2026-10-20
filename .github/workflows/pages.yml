@@ -38,6 +38,9 @@ jobs:
         run: python 10_Working/validate_innovation_review.py
 
       - name: Validate HTML
+        env:
+          # The standalone CLI does not use optional Jest/Vitest integrations.
+          npm_config_legacy_peer_deps: "true"
         run: npx --yes html-validate@11.5.6 index.html privacy.html 404.html sharewise/*.html review-*.html
 
       - name: Start local website

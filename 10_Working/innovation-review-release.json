@@ -59,7 +59,16 @@
     "backend": "No new backend, form, analytics, dependencies or infrastructure",
     "response_header": "No custom response header configured; served HTML head carries noindex, nofollow",
     "discovery": "Excluded from other pages, navigation, sitemap, llms, feeds and language alternates",
-    "source_notes": "Source registers, internal prices and source notes are not copied into the public artifact"
+    "source_notes": "Source registers, internal prices and source notes are not copied into the public artifact",
+    "ci_adjustment": {
+      "observed": "Initial Pages run 39509621051 and its retry failed inside npm before executing HTML validation: edgesOut null dereference.",
+      "scope": "Set npm_config_legacy_peer_deps only on the existing html-validate step. Same pinned validator and full validation rules; no new project dependencies.",
+      "reason": "Standalone HTML CLI does not use the optional Jest/Vitest test integrations declared by html-validate 11.5.6.",
+      "references": [
+        "https://github.com/npm/cli/issues/9787",
+        "https://docs.npmjs.com/cli/v10/using-npm/config/#legacy-peer-deps"
+      ]
+    }
   },
   "validation": {
     "site_structure": "20 HTML pages passed production validation, zero warnings",
