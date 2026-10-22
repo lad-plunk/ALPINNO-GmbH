@@ -3,7 +3,7 @@
   "source_version": "V3",
   "review_page": "review-innovation-excellence-a7c29e.html",
   "review_url": "https://alpinno-solutions.ch/review-innovation-excellence-a7c29e.html",
-  "state": "public_launch_validated_pending_deployment",
+  "state": "public_launched_index_eligible",
   "authorisation": "Owner instruction of 22 October 2026 explicitly authorises Imagination Bridge branding, public publication, homepage/discovery links and indexing eligibility. Earlier review-only restrictions are superseded.",
   "source_folder": "C:\\Users\\pmont\\OneDrive\\DataOD\\01 Work&Uni\\30 ALPINNO\\30 External partners\\Zatory - Rowan Gibson\\20_Output\\ALPINNO_Rowan_Webpage_en_original_v3",
   "source_sha256_before": {
@@ -89,10 +89,48 @@
     "discovery": "Homepage service link, one sitemap entry and one llms directory entry; self-canonical and social/structured metadata agree; no non-existent translation alternates",
     "public_artifact": "68 allowlisted code/asset files; source records, private deck, notes and local QA helper excluded",
     "screenshots": [
-      "10_Working/reports/innovation-launch/mobile-menu.png"
-    ]
+      "10_Working/reports/innovation-launch/mobile-menu.png",
+      "10_Working/reports/innovation-launch/public-launch.png"
+    ],
+    "ci": "Production checks, branding/content checks, full HTML validation, Lighthouse including the collaboration page, artifact checks and Pages deployment passed.",
+    "live_browser": "Published HTTPS page inspected in the native embedded browser; official partner lockup, Rowan affiliation and absence of the draft banner verified.",
+    "local_qa_helper": "10_Working/reports/innovation-launch/mobile-preview.html (ignored and excluded from deployment)",
+    "lighthouse": {
+      "run_count": 3,
+      "required_accessibility_best_practices_and_seo_gates": "passed",
+      "collaboration_simulated_mobile_performance_score": 0.78,
+      "collaboration_lcp_ms": 6001.1491,
+      "collaboration_network_payload_bytes": 2093366,
+      "homepage_performance_score": 0.76,
+      "warnings": "Non-blocking performance, LCP and payload warnings remain; a single simulated CI mobile run is not a real-device measurement."
+    }
   },
-  "deployment": null,
+  "deployment": {
+    "code_commit": "af3353cc681154a3c4d3a7fe6f0e3ff16dc6ef04",
+    "workflow_run": "https://github.com/lad-plunk/ALPINNO-GmbH/actions/runs/39771919483",
+    "workflow_result": "success: validate and deploy",
+    "verified_at_utc": "2026-10-22T11:40:40.996540+00:00",
+    "final_url": "https://alpinno-solutions.ch/review-innovation-excellence-a7c29e.html",
+    "http_status": 200,
+    "redirect_chain": [],
+    "served_robots_meta": [
+      "index, follow, max-image-preview:large"
+    ],
+    "x_robots_tag": null,
+    "canonical": "https://alpinno-solutions.ch/review-innovation-excellence-a7c29e.html",
+    "og_url": "https://alpinno-solutions.ch/review-innovation-excellence-a7c29e.html",
+    "homepage_link": true,
+    "homepage_contact_form_anchor": true,
+    "sitemap_entries": 1,
+    "llms_entries": 1,
+    "robots_txt_allows_crawling": true,
+    "live_code_and_assets_match_deployed_commit": true,
+    "internal_files_return_404": {
+      "10_Working/innovation-review-release.json": 404,
+      "CONTEXT.md": 404
+    },
+    "indexing_state": "eligible; no Search Console request made; actual Google inclusion not confirmed"
+  },
   "review_phase": {
     "state": "deployed_unlisted_review_verified",
     "authorisation": "Unlisted non-indexed review hosting only. Public launch requires a later explicit owner instruction.",
@@ -223,7 +261,7 @@
     "deliberate_zatory_product_mentions": [],
     "presentation_use": "Names and positioning checked only; presentation and its commercial terms are not copied or deployed.",
     "indexing": {
-      "state": "pending_live_eligibility_check",
+      "state": "eligible",
       "requested": false,
       "confirmed_indexed": null,
       "search_console": "No authorised Search Console connector is exposed by the available tools; no new connection or credentials will be created."
