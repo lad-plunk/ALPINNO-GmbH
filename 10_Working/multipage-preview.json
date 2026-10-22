@@ -107,7 +107,8 @@
       "10_Working/reports/multipage-preview/local-home.png",
       "10_Working/reports/multipage-preview/local-offering.png",
       "10_Working/reports/multipage-preview/local-projects-and-tools.png",
-      "10_Working/reports/multipage-preview/standalone-services.png"
+      "10_Working/reports/multipage-preview/standalone-services.png",
+      "10_Working/reports/multipage-preview/senior-expertise-and-identity.png"
     ]
   },
   "follow_ups": [
@@ -126,6 +127,16 @@
       "changes": "Retained the homepage and both ShareWise URL forms. Added concise visible ALPINNO founder context to Services and AIdea, and named Pier Paolo in ShareWise’s existing provider background. Kept both short expert biographies on the Rowan offering page.",
       "publication": "Local English preview only; no publication or app changes.",
       "validation": "Production validation passed for 25 HTML files; HTML validation passed for the three changed pages; clean build and public artifact checks passed. Both direct ShareWise URL forms returned HTTP 200 in the local preview, and the built page matched the source. Desktop browser review confirmed the compact provider introduction and enquiry action."
+    },
+    {
+      "date": "2026-10-22",
+      "request": "Replace founder-led positioning with senior or executive-level expertise, consider Italian creativity in the homepage line, and suggest an About-page network presentation in chat only.",
+      "changes": "Homepage and Services now emphasise executive-level experience, senior expertise and direct delivery. Homepage line is Swiss expertise. Italian creativity. Practical progress. The English discovery summary was updated consistently.",
+      "about_page": "Left unchanged. Suggestions about showing collaborators, specialist capacity, client work and previous experience are for discussion only; no new team, client, partner or staffing claims were added.",
+      "about_page_sha256_unchanged": "abe7f0a2e50b9797f6879407a0c0cc5f996555e426f7049afde88c1943b082cb",
+      "publication": "Local English preview only.",
+      "validation": "Production checks passed for 25 HTML pages, HTML validation passed for the changed pages, and clean build and public artifact checks passed. Desktop and 390px browser review confirmed the revised homepage line fits. About-page bytes remained unchanged.",
+      "discussion_source": "https://www.nngroup.com/articles/about-us-information-on-websites/"
     }
   ],
   "url_preservation": {
