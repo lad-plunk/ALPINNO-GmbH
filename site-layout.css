@@ -90,6 +90,12 @@
   font-size: clamp(2.6rem, 4.5vw, 4.15rem);
 }
 
+.multipage-site .hero-location {
+  margin: 1.25rem 0 0;
+  color: #bdd0df;
+  font-size: 0.85rem;
+}
+
 .offering-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

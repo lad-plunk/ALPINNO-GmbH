@@ -23,10 +23,11 @@
   "compatibility": "Existing offering URL remains canonical. Shared English homepage fragments route to the new pages through client-side navigation; this is not an HTTP permanent redirect.",
   "validation": {
     "production_structure": "25 HTML pages, zero errors or warnings",
-    "html": "html-validate 11.5.6 passed for all root and ShareWise HTML pages",
+    "html": "html-validate 11.5.6 passed for all root and ShareWise HTML pages during the initial restructure; the four pages revised in the latest follow-up also passed.",
     "innovation_content": "Approved method, stages, workshop timing, qualified outcomes and source asset hashes passed for source and built artifact",
-    "build": "75 public files, 13.55 MiB; explicit public allowlist passed. Windows read-only directory cleanup was repaired and clean build verified.",
+    "build": "75 public files, 13.56 MiB; explicit public allowlist passed. Windows read-only directory cleanup was repaired and clean build verified.",
     "browser": "Desktop and 390px iframe review. Mobile page navigation, workshop deep links and Day 1 agenda expansion passed. Legacy AIdea/contact links and enquiry topic selection passed. No forms submitted.",
+    "checks_scope": "The preservation flags below record the initial multipage move. Later owner-requested positioning and copy changes are documented in follow_ups; the founder biography, existing links and fixed ShareWise routes remain preserved.",
     "checks": {
       "preserved_engagements": true,
       "preserved_how-we-work": true,
@@ -108,7 +109,10 @@
       "10_Working/reports/multipage-preview/local-offering.png",
       "10_Working/reports/multipage-preview/local-projects-and-tools.png",
       "10_Working/reports/multipage-preview/standalone-services.png",
-      "10_Working/reports/multipage-preview/senior-expertise-and-identity.png"
+      "10_Working/reports/multipage-preview/senior-expertise-and-identity.png",
+      "10_Working/reports/multipage-preview/about-network-introduction.png",
+      "10_Working/reports/multipage-preview/about-specialist-network.png",
+      "10_Working/reports/multipage-preview/people-first-homepage.png"
     ]
   },
   "follow_ups": [
@@ -137,6 +141,22 @@
       "publication": "Local English preview only.",
       "validation": "Production checks passed for 25 HTML pages, HTML validation passed for the changed pages, and clean build and public artifact checks passed. Desktop and 390px browser review confirmed the revised homepage line fits. About-page bytes remained unchanged.",
       "discussion_source": "https://www.nngroup.com/articles/about-us-information-on-websites/"
+    },
+    {
+      "date": "2026-10-22",
+      "request": "Implement the specialist-network positioning on the local English About page. Use capabilities rather than adding company names or testimonials, and retain existing career references.",
+      "changes": "Replaced founder-led positioning with senior expertise and a network matched to each engagement. Clarified Pier Paolo’s lead-contact role and added conditional capability examples for industrial design and 3D drawings, patent attorney support, and computer simulation including multiphysics. Updated About metadata and the discovery summary.",
+      "preserved": "Existing founder biography, career references, dates, images, qualifications and links are unchanged. No new company names, collaborator names, client logos or testimonials were added. The network is described as project-dependent.",
+      "publication": "Local English review only; multilingual work and publication remain pending approval.",
+      "validation": "Source, HTML and clean-build checks passed. The founder biography and all existing About-page links were preserved. Desktop and 390px layouts were reviewed, and completion was saved with the values follow-up in the local Git checkpoint."
+    },
+    {
+      "date": "2026-10-22",
+      "request": "Resume the English local preview and reflect people-first collaboration, creativity, strategic perspective before implementation, and adaptive delivery focused on client value. Remove the national-label slogan and avoid rigour as a company value.",
+      "changes": "Replaced the homepage line with People first. Progress with purpose. Added Based in Switzerland. Working internationally. Integrated the values into the existing About and Services copy instead of adding a lengthy manifesto. Added a short explanation of the Montico project’s relevance to ALPINNO.",
+      "preserved": "No new client names, collaborator names, company logos or testimonials. Existing founder biography, career references, specialist-network examples and fixed ShareWise URLs remain intact.",
+      "publication": "Local English review only. No multilingual publication has been authorised.",
+      "validation": "Production checks passed for 25 HTML pages with zero warnings. HTML validation passed for index, about, services and tools. Clean build and source/built innovation checks passed. Desktop review confirmed all revised sections; 390px review confirmed the homepage wording and About collaboration panel. Homepage and all existing ShareWise URL forms returned HTTP 200, including successful slashless redirection. Founder biography and existing About links are unchanged. Lighthouse remains a publication check."
     }
   ],
   "url_preservation": {
@@ -151,5 +171,16 @@
     "implementation": "The ShareWise directory and index.html remain in the public build at their original paths. The page keeps its existing canonical URL. Existing app links using these addresses require no update.",
     "checked": "The homepage, index.html, sharewise/, and sharewise/index.html returned HTTP 200 in the new local preview. The slashless sharewise route reached sharewise/ successfully. The rebuilt ShareWise page matches the current source bytes."
   },
-  "landing_page_principle": "The homepage organises the offerings. Each service or product page is independently shareable and explains the offering, relevant people or provider, practical details and next step. Brief contextual repetition is intentional; visitors should not need the About page to understand who delivers the work."
+  "landing_page_principle": "The homepage organises the offerings. Each service or product page is independently shareable and explains the offering, relevant people or provider, practical details and next step. Brief contextual repetition is intentional; visitors should not need the About page to understand who delivers the work.",
+  "current_positioning": {
+    "homepage_line": "People first. Progress with purpose.",
+    "location_line": "Based in Switzerland. Working internationally.",
+    "values": [
+      "Constructive, people-first collaboration",
+      "Creative exploration of ideas and alternatives",
+      "Strategic perspective and clear priorities before implementation",
+      "Practical delivery that learns from client and user feedback and adapts to evolving needs"
+    ],
+    "network": "Senior leadership with project-specific specialist support; no additional companies or testimonials named."
+  }
 }
