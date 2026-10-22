@@ -19,6 +19,12 @@ const mobileNavigation = window.matchMedia("(max-width: 1120px)");
         if (mobileNavigation.matches) navigationMenu.open = false;
       });
     });
+    document.querySelectorAll(".language-menu a").forEach((link) => {
+      const target = new URL(link.href, window.location.href);
+      target.search = window.location.search;
+      target.hash = window.location.hash;
+      link.href = target.href;
+    });
 
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const logoVideo = document.querySelector(".hero-logo-video");
@@ -130,20 +136,28 @@ const mobileNavigation = window.matchMedia("(max-width: 1120px)");
       link.addEventListener("click", () => {
         const topic = link.dataset.contactTopic;
         const option = Array.from(document.querySelectorAll('#contact-form select[name="topic"] option'))
-          .find((item) => item.textContent === topic);
+          .find((item) => item.value === topic || item.textContent === topic);
         if (option) option.selected = true;
       });
     });
 
+    const formMessages = {
+      en: ["Sending your enquiry…", "Opening secure subscription confirmation…"],
+      it: ["Invio della richiesta…", "Apertura della conferma sicura dell’iscrizione…"],
+      fr: ["Envoi de votre demande…", "Ouverture de la confirmation sécurisée d’inscription…"],
+      de: ["Ihre Anfrage wird gesendet…", "Sichere Anmeldebestätigung wird geöffnet…"],
+      ja: ["お問い合わせを送信しています…", "安全な登録確認ページを開いています…"],
+      zh: ["正在发送您的咨询…", "正在打开安全订阅确认页面…"]
+    };
+    const language = document.documentElement.lang.split("-")[0];
+    const messages = formMessages[language] || formMessages.en;
     document.querySelectorAll("form[data-form-kind]").forEach((form) => {
       const status = form.querySelector(".form-status");
       const submitButton = form.querySelector('button[type="submit"]');
 
       form.addEventListener("submit", () => {
         submitButton.disabled = true;
-        status.textContent = form.dataset.formKind === "contact"
-          ? "Sending your enquiry…"
-          : "Opening secure subscription confirmation…";
+        status.textContent = messages[form.dataset.formKind === "contact" ? 0 : 1];
         if (analyticsConsentGranted && window.gtag) {
           window.gtag("event", form.dataset.formKind === "contact" ? "contact_form_submit" : "newsletter_signup");
         }
@@ -176,7 +190,10 @@ const mobileNavigation = window.matchMedia("(max-width: 1120px)");
         let id;
         try { id = decodeURIComponent(window.location.hash.slice(1)); } catch { return; }
         const page = legacyPages[id];
-        if (page) window.location.replace(page + window.location.search + window.location.hash);
+        if (page) {
+          const target = page.replace(".html", (document.body.dataset.localeSuffix || "") + ".html");
+          window.location.replace(target + window.location.search + window.location.hash);
+        }
       };
       window.addEventListener("hashchange", followLegacyLink);
       followLegacyLink();

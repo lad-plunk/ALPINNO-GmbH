@@ -88,7 +88,23 @@ def validate(root: Path, artifact: bool) -> list[str]:
                 check(not {"noindex", "nofollow", "none"} & directives, "No crawler-specific meta tag may block public indexing or following")
     canonicals = [link for head in heads for link in head.find("link") if "canonical" in link.attrs.get("rel", "").split()]
     check(len(canonicals) == 1 and canonicals[0].attrs.get("href") == public_url, "Public page must have one self-referencing canonical")
-    check(not any("alternate" in link.attrs.get("rel", "").split() for head in heads for link in head.find("link")), "Do not advertise translations that do not exist")
+    expected_alternates = {"en-GB": public_url, "x-default": public_url}
+    for language in ("it", "fr", "de", "ja", "zh"):
+        expected_alternates["zh-Hans" if language == "zh" else language] = public_url.removesuffix(".html") + "-" + language + ".html"
+    alternate_links = [link for head in heads for link in head.find("link") if "alternate" in link.attrs.get("rel", "").split()]
+    check(len(alternate_links) == 7 and {link.attrs.get("hreflang"): link.attrs.get("href") for link in alternate_links} == expected_alternates, "Advertise only the six real language variants and the default English page")
+    for language in ("it", "fr", "de", "ja", "zh"):
+        translated_path = root / (page_name.removesuffix(".html") + "-" + language + ".html")
+        check(translated_path.is_file(), f"Missing translated offering: {language}")
+        if not translated_path.is_file():
+            continue
+        translated = DocumentParser(translated_path.read_text(encoding="utf-8")).document
+        check(len(translated.find("h1")) == 1, f"Translated offering must have one H1: {language}")
+        english_times = [cell.text().strip() for panel in document.find(class_name="ie-day-panel") for cell in panel.find("th")]
+        translated_times = [cell.text().strip() for panel in translated.find(class_name="ie-day-panel") for cell in panel.find("th")]
+        check(english_times == translated_times, f"Translated workshop must preserve all agenda times: {language}")
+        check(len(translated.find(class_name="ie-process-flow")) == 1 and len(translated.find(class_name="ie-stage-panel")) == 3, f"Translated offering must preserve the method and three stages: {language}")
+        check([image.attrs.get("src") for image in translated.find("img")] == [image.attrs.get("src") for image in document.find("img")], f"Translated offering must reuse the approved images: {language}")
     check(len(document.find("h1")) == 1, "Innovation Excellence page must have one H1")
     check(not document.find(class_name="ie-review-strip") and not re.search(r"review draft|not published|awaiting approval|proposed collaboration", text, re.I), "Public page must have no review or approval-pending copy")
     titles = document.find("title")

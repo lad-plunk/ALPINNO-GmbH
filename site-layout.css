@@ -1,4 +1,4 @@
-/* Shared page navigation and layouts for the English multipage preview. */
+/* Shared navigation and layouts for the multilingual ALPINNO website. */
 .site-navigation {
   gap: 1.35rem;
   align-items: center;
@@ -206,6 +206,21 @@
 
 .page-contact-cta .button {
   flex-shrink: 0;
+}
+
+.contact-email a {
+  color: inherit;
+  overflow-wrap: anywhere;
+  text-underline-offset: 0.2em;
+}
+
+.multipage-site:lang(ja) h1,
+.multipage-site:lang(zh) h1,
+.innovation-page:lang(ja) .ie-hero h1,
+.innovation-page:lang(zh) .ie-hero h1 {
+  text-wrap: balance;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
 }
 
 .tool-grid {

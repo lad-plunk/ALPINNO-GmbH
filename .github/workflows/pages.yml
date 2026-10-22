@@ -3,6 +3,8 @@ name: Validate and deploy GitHub Pages
 on:
   push:
     branches: ["main"]
+    paths-ignore:
+      - "10_Working/multipage-preview.json"
   workflow_dispatch:
 
 permissions:

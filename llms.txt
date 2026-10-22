@@ -4,6 +4,10 @@
 
 Canonical website: https://alpinno-solutions.ch/
 
+Contact: info@alpinno-solutions.ch
+
+The website is available in English, Italian, French, German, Japanese and Simplified Chinese. Language menus link to the corresponding page in each language. Images and videos are shared across language versions.
+
 ## Core offerings
 
 - AI transformation, implementation, governance, training, coaching and capability building

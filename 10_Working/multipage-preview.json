@@ -1,10 +1,10 @@
 {
-  "status": "English local review, awaiting owner validation before multilingual work and publication",
+  "status": "Owner approved multilingual publication; local checks passed; awaiting GitHub CI and deployment",
   "baseline_commit": "7ccf3b5514fc741380aed037156a8235057831d9",
   "rollback_tag": "codex/before-multipage-2026-10-22",
   "local_branch": "codex/multipage-site-preview",
   "published": false,
-  "scope": "ALPINNO website repository only; English pages for local review. Existing translated pages, images and videos remain unchanged.",
+  "scope": "ALPINNO website repository; English, Italian, French, German, Japanese and Simplified Chinese. Existing media reused and homepage/ShareWise addresses retained.",
   "navigation": [
     "Home",
     "Services",
@@ -22,11 +22,11 @@
   },
   "compatibility": "Existing offering URL remains canonical. Shared English homepage fragments route to the new pages through client-side navigation; this is not an HTTP permanent redirect.",
   "validation": {
-    "production_structure": "25 HTML pages, zero errors or warnings",
-    "html": "html-validate 11.5.6 passed for all root and ShareWise HTML pages during the initial restructure; the four pages revised in the latest follow-up also passed.",
+    "production_structure": "55 HTML pages, zero errors or warnings",
+    "html": "html-validate 11.5.6 passed for all 55 HTML pages",
     "innovation_content": "Approved method, stages, workshop timing, qualified outcomes and source asset hashes passed for source and built artifact",
-    "build": "75 public files, 13.56 MiB; explicit public allowlist passed. Windows read-only directory cleanup was repaired and clean build verified.",
-    "browser": "Desktop and 390px iframe review. Mobile page navigation, workshop deep links and Day 1 agenda expansion passed. Legacy AIdea/contact links and enquiry topic selection passed. No forms submitted.",
+    "build": "105 public files, 13.97 MiB. Explicit public allowlist and source/built innovation checks passed.",
+    "browser": "Desktop and 390px review. German contact email, Japanese offering layout, same-page language switching, Japanese ShareWise topic preselection and Italian legacy AIdea fragment forwarding verified. No forms submitted.",
     "checks_scope": "The preservation flags below record the initial multipage move. Later owner-requested positioning and copy changes are documented in follow_ups; the founder biography, existing links and fixed ShareWise routes remain preserved.",
     "checks": {
       "preserved_engagements": true,
@@ -51,13 +51,11 @@
       "Lighthouse was not run locally; the existing CI audit was extended to the new pages and remains a publication check.",
       "Physical phone and tablet testing.",
       "External form or newsletter submissions."
-    ]
+    ],
+    "translations": "All 54 language pages match the maintained translation catalogue. Reciprocal language menus, hreflang, self-referencing canonicals and sitemap entries pass validation."
   },
   "before_publication": [
-    "Obtain owner validation of this local English preview.",
-    "Prepare the multilingual version in all six existing site languages; reuse videos and images without translation.",
-    "Update matching language links, hreflang and sitemap entries; verify approved multilingual content, forms and navigation.",
-    "Run all required production, HTML, artifact and Lighthouse checks before the established Pages publication process."
+    "GitHub production, HTML, artifact and Lighthouse checks must pass; deployment and live URLs must be verified."
   ],
   "indexing": "Existing indexability settings retained, including ShareWise noindex. The local preview is bound to loopback and is not publicly served.",
   "preview_restart_command": "python -m http.server 5057 --bind 127.0.0.1 (run from the repository root)",
@@ -113,6 +111,280 @@
       "10_Working/reports/multipage-preview/about-network-introduction.png",
       "10_Working/reports/multipage-preview/about-specialist-network.png",
       "10_Working/reports/multipage-preview/people-first-homepage.png"
+    ],
+    "publication": [
+      {
+        "path": ".github/workflows/pages.yml",
+        "purpose": "Pages validation/deployment and representative multilingual Lighthouse coverage; evidence-only commits do not redeploy."
+      },
+      {
+        "path": ".lighthouserc.json",
+        "purpose": "Pages validation/deployment and representative multilingual Lighthouse coverage; evidence-only commits do not redeploy."
+      },
+      {
+        "path": "10_Working/build_site.py",
+        "purpose": "Public-build manifest or structural/content validation."
+      },
+      {
+        "path": "10_Working/localize_site.py",
+        "purpose": "Portable local translation authoring and consistency helper."
+      },
+      {
+        "path": "10_Working/multipage-preview.json",
+        "purpose": "Authoritative review, publication and validation evidence."
+      },
+      {
+        "path": "10_Working/site-translations.json",
+        "purpose": "Maintained translation catalogue for the six-language site."
+      },
+      {
+        "path": "10_Working/validate_innovation_review.py",
+        "purpose": "Public-build manifest or structural/content validation."
+      },
+      {
+        "path": "10_Working/validate_site.py",
+        "purpose": "Public-build manifest or structural/content validation."
+      },
+      {
+        "path": "about-de.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "about-fr.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "about-it.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "about-ja.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "about-zh.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "about.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "aidea-de.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "aidea-fr.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "aidea-it.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "aidea-ja.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "aidea-zh.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "aidea.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "contact-de.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "contact-fr.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "contact-it.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "contact-ja.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "contact-zh.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "contact.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "de.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "fr.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "index.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "innovation-excellence.css",
+        "purpose": "Shared site layout, navigation or offering behaviour."
+      },
+      {
+        "path": "innovation-excellence.js",
+        "purpose": "Shared site layout, navigation or offering behaviour."
+      },
+      {
+        "path": "it.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "ja.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "llms.txt",
+        "purpose": "Aligned discovery information, languages and direct contact email."
+      },
+      {
+        "path": "privacy-de.html",
+        "purpose": "Localized privacy page with matching site navigation and language links."
+      },
+      {
+        "path": "privacy-fr.html",
+        "purpose": "Localized privacy page with matching site navigation and language links."
+      },
+      {
+        "path": "privacy-it.html",
+        "purpose": "Localized privacy page with matching site navigation and language links."
+      },
+      {
+        "path": "privacy-ja.html",
+        "purpose": "Localized privacy page with matching site navigation and language links."
+      },
+      {
+        "path": "privacy-zh.html",
+        "purpose": "Localized privacy page with matching site navigation and language links."
+      },
+      {
+        "path": "privacy.html",
+        "purpose": "Localized privacy page with matching site navigation and language links."
+      },
+      {
+        "path": "review-innovation-excellence-a7c29e-de.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "review-innovation-excellence-a7c29e-fr.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "review-innovation-excellence-a7c29e-it.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "review-innovation-excellence-a7c29e-ja.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "review-innovation-excellence-a7c29e-zh.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "review-innovation-excellence-a7c29e.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "services-de.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "services-fr.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "services-it.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "services-ja.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "services-zh.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "services.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "sharewise/de.html",
+        "purpose": "ShareWise language navigation, provider context and direct email; stable URL."
+      },
+      {
+        "path": "sharewise/fr.html",
+        "purpose": "ShareWise language navigation, provider context and direct email; stable URL."
+      },
+      {
+        "path": "sharewise/index.html",
+        "purpose": "ShareWise language navigation, provider context and direct email; stable URL."
+      },
+      {
+        "path": "sharewise/it.html",
+        "purpose": "ShareWise language navigation, provider context and direct email; stable URL."
+      },
+      {
+        "path": "sharewise/ja.html",
+        "purpose": "ShareWise language navigation, provider context and direct email; stable URL."
+      },
+      {
+        "path": "sharewise/zh.html",
+        "purpose": "ShareWise language navigation, provider context and direct email; stable URL."
+      },
+      {
+        "path": "site-layout.css",
+        "purpose": "Shared site layout, navigation or offering behaviour."
+      },
+      {
+        "path": "site.js",
+        "purpose": "Shared site layout, navigation or offering behaviour."
+      },
+      {
+        "path": "sitemap.xml",
+        "purpose": "48 indexable language URLs with reciprocal language alternates."
+      },
+      {
+        "path": "tools-de.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "tools-fr.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "tools-it.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "tools-ja.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "tools-zh.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "tools.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      },
+      {
+        "path": "zh.html",
+        "purpose": "Localized multipage website content, navigation, contact details and metadata."
+      }
     ]
   },
   "follow_ups": [
@@ -157,6 +429,12 @@
       "preserved": "No new client names, collaborator names, company logos or testimonials. Existing founder biography, career references, specialist-network examples and fixed ShareWise URLs remain intact.",
       "publication": "Local English review only. No multilingual publication has been authorised.",
       "validation": "Production checks passed for 25 HTML pages with zero warnings. HTML validation passed for index, about, services and tools. Clean build and source/built innovation checks passed. Desktop review confirmed all revised sections; 390px review confirmed the homepage wording and About collaboration panel. Homepage and all existing ShareWise URL forms returned HTTP 200, including successful slashless redirection. Founder biography and existing About links are unchanged. Lighthouse remains a publication check."
+    },
+    {
+      "date": "2026-10-22",
+      "request": "Add the public contact email and proceed with translation and publication.",
+      "changes": "Added the approved mailto address to contact pages, service contact sections, Innovation Excellence footer and ShareWise availability. Prepared six matching language versions across the multipage site and offering. Kept stable homepage and ShareWise routes, localized form feedback and topic selection, preserved legacy fragment links, and added reciprocal language menus and hreflang. Shared assets carry a release query to avoid stale navigation scripts.",
+      "validation": "All 55 HTML files and production structure passed; 54 language outputs match the catalogue; approved English core sections and media are preserved; 105-file public build and innovation checks passed. Desktop/mobile checks passed. GitHub Lighthouse and live verification pending."
     }
   ],
   "url_preservation": {
@@ -182,5 +460,17 @@
       "Practical delivery that learns from client and user feedback and adapts to evolving needs"
     ],
     "network": "Senior leadership with project-specific specialist support; no additional companies or testimonials named."
+  },
+  "publication_authorization": {
+    "date": "2026-10-22",
+    "request": "Add info@alpinno-solutions.ch to the contact sections and proceed with translation and publication.",
+    "publication_route": "Existing GitHub Pages workflow on main; no new hosting service or paid API."
+  },
+  "translation_maintenance": {
+    "source": "English HTML pages",
+    "catalogue": "10_Working/site-translations.json",
+    "command": "python 10_Working/localize_site.py",
+    "completeness_check": "python 10_Working/localize_site.py --missing",
+    "notes": "Uses already-installed beautifulsoup4 for local authoring only. Public HTML is committed; CI build and validators use the Python standard library. Source media remains unchanged."
   }
 }

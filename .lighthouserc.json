@@ -9,7 +9,10 @@
         "http://127.0.0.1:5055/about.html",
         "http://127.0.0.1:5055/contact.html",
         "http://127.0.0.1:5055/privacy.html",
-        "http://127.0.0.1:5055/review-innovation-excellence-a7c29e.html"
+        "http://127.0.0.1:5055/review-innovation-excellence-a7c29e.html",
+        "http://127.0.0.1:5055/contact-de.html",
+        "http://127.0.0.1:5055/review-innovation-excellence-a7c29e-ja.html",
+        "http://127.0.0.1:5055/zh.html"
       ],
       "numberOfRuns": 1,
       "settings": {

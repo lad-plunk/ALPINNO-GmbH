@@ -48,6 +48,11 @@ PUBLIC_FILES = (
     "llms.txt",
     "CNAME",
 ) + INNOVATION_FILES + MULTIPAGE_FILES
+PUBLIC_FILES += tuple(
+    name.removesuffix(".html") + "-" + language + ".html"
+    for name in INNOVATION_FILES + MULTIPAGE_FILES if name.endswith(".html")
+    for language in ("it", "fr", "de", "ja", "zh")
+)
 PUBLIC_DIRECTORIES = ("images",)
 PUBLIC_SHAREWISE_FILES = (
     "index.html",
