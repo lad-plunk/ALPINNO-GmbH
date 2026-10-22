@@ -106,7 +106,8 @@
       "10_Working/reports/multipage-preview/mobile-preview.html",
       "10_Working/reports/multipage-preview/local-home.png",
       "10_Working/reports/multipage-preview/local-offering.png",
-      "10_Working/reports/multipage-preview/local-projects-and-tools.png"
+      "10_Working/reports/multipage-preview/local-projects-and-tools.png",
+      "10_Working/reports/multipage-preview/standalone-services.png"
     ]
   },
   "follow_ups": [
@@ -118,6 +119,26 @@
       "changes": "Kept tools.html as the stable route, updated its heading and metadata, renamed the English menu entry and homepage callout, and added a text project feature linking to the artist’s Italian page. Preserved the existing software entries.",
       "publication": "English local preview only; approval and multilingual publication remain pending.",
       "validation": "Production checks passed for 25 HTML pages; HTML validation passed for all nine affected English pages; clean build and public artifact checks passed. Desktop and 390px browser review confirmed the project card, link and navigation layout. Official project URL returned HTTP 200."
+    },
+    {
+      "date": "2026-10-22",
+      "request": "Confirm that existing ShareWise links remain valid in the new version, especially the URL embedded in the app, and make service pages work as self-contained landing pages.",
+      "changes": "Retained the homepage and both ShareWise URL forms. Added concise visible ALPINNO founder context to Services and AIdea, and named Pier Paolo in ShareWise’s existing provider background. Kept both short expert biographies on the Rowan offering page.",
+      "publication": "Local English preview only; no publication or app changes.",
+      "validation": "Production validation passed for 25 HTML files; HTML validation passed for the three changed pages; clean build and public artifact checks passed. Both direct ShareWise URL forms returned HTTP 200 in the local preview, and the built page matched the source. Desktop browser review confirmed the compact provider introduction and enquiry action."
     }
-  ]
+  ],
+  "url_preservation": {
+    "requirement": "Preserve existing public homepage and ShareWise URLs, including links already distributed to prospects and embedded in the ShareWise app.",
+    "fixed_public_urls": [
+      "https://alpinno-solutions.ch/",
+      "https://alpinno-solutions.ch/index.html",
+      "https://alpinno-solutions.ch/sharewise/",
+      "https://alpinno-solutions.ch/sharewise/index.html",
+      "https://alpinno-solutions.ch/sharewise"
+    ],
+    "implementation": "The ShareWise directory and index.html remain in the public build at their original paths. The page keeps its existing canonical URL. Existing app links using these addresses require no update.",
+    "checked": "The homepage, index.html, sharewise/, and sharewise/index.html returned HTTP 200 in the new local preview. The slashless sharewise route reached sharewise/ successfully. The rebuilt ShareWise page matches the current source bytes."
+  },
+  "landing_page_principle": "The homepage organises the offerings. Each service or product page is independently shareable and explains the offering, relevant people or provider, practical details and next step. Brief contextual repetition is intentional; visitors should not need the About page to understand who delivers the work."
 }

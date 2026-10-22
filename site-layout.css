@@ -157,6 +157,27 @@
   color: var(--muted);
 }
 
+.delivery-profile {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.65fr);
+  align-items: start;
+  gap: 3rem;
+  padding: 3rem max(1.25rem, calc((100vw - var(--content)) / 2));
+  border-top: 1px solid var(--line);
+  background: var(--warm);
+}
+
+.delivery-profile h2 {
+  margin-bottom: 0;
+  font-size: clamp(1.4rem, 2.3vw, 1.9rem);
+  line-height: 1.2;
+}
+
+.delivery-profile > p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
 .page-contact-cta {
   display: flex;
   align-items: center;
@@ -346,6 +367,7 @@
   }
 
   .home-pathways,
+  .delivery-profile,
   .tool-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
