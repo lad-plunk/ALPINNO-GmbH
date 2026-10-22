@@ -227,6 +227,36 @@
   background: #fff;
 }
 
+.tool-card.project-card {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.5fr);
+  align-items: start;
+  gap: 2.5rem;
+  border-top: 3px solid var(--red-500);
+  background: var(--warm);
+}
+
+.project-card h2 {
+  margin-bottom: 0.75rem;
+  font-size: clamp(2.7rem, 4.5vw, 3.8rem);
+}
+
+.project-subtitle {
+  max-width: 280px;
+  margin-bottom: 0;
+  color: var(--navy-800);
+  font-size: 1.15rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.project-link-note {
+  margin: 0.65rem 0 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
 /* One consistent, keyboard-accessible menu on all English pages. */
 @media (max-width: 1120px) {
   .site-navigation {
@@ -330,6 +360,11 @@
 
   .tool-card {
     padding: 1.5rem;
+  }
+
+  .tool-card.project-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
 

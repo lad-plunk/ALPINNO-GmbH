@@ -10,7 +10,7 @@
     "Services",
     "AIdea™",
     "Innovation Excellence",
-    "Tools",
+    "Projects & tools",
     "About",
     "Contact"
   ],
@@ -105,7 +105,19 @@
     "local_review_artifacts": [
       "10_Working/reports/multipage-preview/mobile-preview.html",
       "10_Working/reports/multipage-preview/local-home.png",
-      "10_Working/reports/multipage-preview/local-offering.png"
+      "10_Working/reports/multipage-preview/local-offering.png",
+      "10_Working/reports/multipage-preview/local-projects-and-tools.png"
     ]
-  }
+  },
+  "follow_ups": [
+    {
+      "date": "2026-10-22",
+      "request": "Broaden the Tools page to other projects and tools from ALPINNO, and add a recap and link to 11 / 1000.",
+      "source": "https://artemontico.it/it/11-1000.html",
+      "source_verification": "Official artist page retrieved successfully with HTTP 200. The web reader could not open it, so the recap was checked against the page HTML.",
+      "changes": "Kept tools.html as the stable route, updated its heading and metadata, renamed the English menu entry and homepage callout, and added a text project feature linking to the artist’s Italian page. Preserved the existing software entries.",
+      "publication": "English local preview only; approval and multilingual publication remain pending.",
+      "validation": "Production checks passed for 25 HTML pages; HTML validation passed for all nine affected English pages; clean build and public artifact checks passed. Desktop and 390px browser review confirmed the project card, link and navigation layout. Official project URL returned HTTP 200."
+    }
+  ]
 }

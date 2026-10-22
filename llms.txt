@@ -31,7 +31,8 @@ AIdea™ is used in ALPINNO-led projects and may also be deployed through secure
 - [AIdea™](https://alpinno-solutions.ch/aidea.html)
 - [Ways to work with ALPINNO](https://alpinno-solutions.ch/services.html#engagements)
 - [How ALPINNO works](https://alpinno-solutions.ch/services.html#how-we-work)
-- [Tools from ALPINNO](https://alpinno-solutions.ch/tools.html)
+- [Other projects and tools from ALPINNO](https://alpinno-solutions.ch/tools.html)
+- [11 / 1000: art, method and authorship in the age of AI](https://artemontico.it/it/11-1000.html): Gigi Montico’s artistic selection from 1,000 AI-generated images, with method, orchestration, traceability and analysis by Pier Paolo Monticone.
 - [About ALPINNO](https://alpinno-solutions.ch/about.html)
 - [Founder](https://alpinno-solutions.ch/about.html#founder)
 - [Contact](https://alpinno-solutions.ch/contact.html)
