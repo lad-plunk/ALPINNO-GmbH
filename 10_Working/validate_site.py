@@ -28,10 +28,22 @@ class SiteHTMLParser(HTMLParser):
         self.references: list[tuple[str, str]] = []
         self.images: list[dict[str, str]] = []
         self.json_ld: list[str] = []
+        self.h1_count = 0
+        self.primary_links: list[dict[str, str]] = []
+        self.canonicals: list[str] = []
+        self._in_primary_navigation = False
         self._json_ld_parts: list[str] | None = None
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = {name: value or "" for name, value in attrs}
+        if tag == "h1":
+            self.h1_count += 1
+        if tag == "nav" and "site-navigation" in values.get("class", "").split():
+            self._in_primary_navigation = True
+        if tag == "a" and self._in_primary_navigation and "brand" not in values.get("class", "").split() and "lang" not in values:
+            self.primary_links.append(values)
+        if tag == "link" and "canonical" in values.get("rel", "").split():
+            self.canonicals.append(values.get("href", ""))
         if values.get("id"):
             self.ids.append(values["id"])
         for name in ("href", "src", "poster", "action"):
@@ -50,6 +62,8 @@ class SiteHTMLParser(HTMLParser):
             self._json_ld_parts.append(data)
 
     def handle_endtag(self, tag: str) -> None:
+        if tag == "nav":
+            self._in_primary_navigation = False
         if tag == "script" and self._json_ld_parts is not None:
             self.json_ld.append("".join(self._json_ld_parts))
             self._json_ld_parts = None
@@ -85,6 +99,30 @@ def validate(production: bool) -> tuple[list[str], list[str]]:
     errors: list[str] = []
     warnings: list[str] = []
     parsed_pages = {path.resolve(): parse_html(path) for path in HTML_FILES}
+
+    navigation_pages = (
+        "index.html", "services.html", "aidea.html",
+        "review-innovation-excellence-a7c29e.html", "tools.html", "about.html", "contact.html",
+    )
+    english_pages = navigation_pages + ("privacy.html", "sharewise/index.html")
+    for name in english_pages:
+        path = (PROJECT_ROOT / name).resolve()
+        page = parsed_pages.get(path)
+        if page is None:
+            errors.append(f"Missing English site page: {name}")
+            continue
+        prefix = "../" if name.startswith("sharewise/") else ""
+        if [link.get("href") for link in page.primary_links] != [prefix + item for item in navigation_pages]:
+            errors.append(f"{name}: primary navigation must consistently link between pages")
+        if page.h1_count != 1:
+            errors.append(f"{name}: expected one H1")
+        canonical = "https://alpinno-solutions.ch/" + ("" if name == "index.html" else "sharewise/" if name == "sharewise/index.html" else name)
+        if page.canonicals != [canonical]:
+            errors.append(f"{name}: expected one self-referencing canonical")
+        current = [link for link in page.primary_links if link.get("aria-current")]
+        expected_current = "../tools.html" if name == "sharewise/index.html" else name
+        if name != "privacy.html" and (len(current) != 1 or current[0].get("href") != expected_current):
+            errors.append(f"{name}: primary navigation must identify the current page or section")
 
     for path, parser in parsed_pages.items():
         display = path.relative_to(PROJECT_ROOT)

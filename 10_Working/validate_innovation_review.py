@@ -92,15 +92,18 @@ def validate(root: Path, artifact: bool) -> list[str]:
     check(len(document.find("h1")) == 1, "Innovation Excellence page must have one H1")
     check(not document.find(class_name="ie-review-strip") and not re.search(r"review draft|not published|awaiting approval|proposed collaboration", text, re.I), "Public page must have no review or approval-pending copy")
     titles = document.find("title")
-    check(len(titles) == 1 and "ALPINNO" in titles[0].text() and "Imagination Bridge" in titles[0].text(), "Public title must identify ALPINNO and Imagination Bridge")
+    check(len(titles) == 1 and "ALPINNO" in titles[0].text() and "Rowan Gibson" in titles[0].text(), "Public title must identify ALPINNO's offering with Rowan Gibson")
     metadata = {meta.attrs.get("property", meta.attrs.get("name")): meta.attrs.get("content", "") for head in heads for meta in head.find("meta")}
-    check(metadata.get("og:url") == public_url and "Imagination Bridge" in metadata.get("og:title", "") and "Imagination Bridge" in metadata.get("description", "") and metadata.get("og:description") == metadata.get("description"), "Public description and social metadata must match the identity and canonical URL")
+    check(metadata.get("og:url") == public_url and "ALPINNO" in metadata.get("og:title", "") and "ALPINNO-led" in metadata.get("description", "") and "Rowan Gibson" in metadata.get("description", "") and metadata.get("og:description") == metadata.get("description"), "Public description and social metadata must describe the ALPINNO-led offering")
     check(document.find("html")[0].attrs.get("lang") == "en-GB", "Preserve the page's English language declaration")
     webpage_data = [json.loads(script.text()) for script in document.find("script") if script.attrs.get("type") == "application/ld+json"]
     check(any(item.get("@type") == "WebPage" and item.get("url") == public_url and item.get("@id") == public_url + "#webpage" for item in webpage_data), "WebPage structured data must use the public canonical URL")
     partner_links = [link for link in document.find("a") if "Imagination Bridge" in link.text()]
     check(bool(partner_links) and all(link.attrs.get("href") == "https://imaginationbridge.com/" for link in partner_links), "Partner-name and logo links must use the official Imagination Bridge homepage")
     check("Founder & President," in text and "Imagination Bridge" in text, "Preserve Rowan's approved Imagination Bridge affiliation")
+    check("Founder & Managing Director," in text, "Identify Pier's ALPINNO leadership role")
+    check(not document.find(class_name="ie-partner-lockup"), "Remove the joint-brand hero lockup")
+    check("An ALPINNO-led offering, delivered in collaboration with Rowan Gibson." in text, "Make ALPINNO ownership explicit")
     check(not re.search(r"joint[ -]venture|exclusive partnership|guaranteed patents|guaranteed returns", text, re.I), "Do not add legal-entity, exclusivity or performance promises")
     if not record["public_launch"]["deliberate_zatory_product_mentions"]:
         check(not re.search(r"\bzatory\b", html, re.I), "No partner-brand references to Zatory are expected on this page")
@@ -109,14 +112,16 @@ def validate(root: Path, artifact: bool) -> list[str]:
     check(not re.search(r"\b(?:EUR|USD|CHF|20[ ,]?000|70[ ,]?000)\b|€", text), "Public page must not contain internal prices")
     check(not document.find("form"), "Enquiries must reuse the existing contact form")
     ctas = document.find("a", class_name="ie-button")
-    check(bool(ctas) and all(link.attrs.get("href") == "https://alpinno-solutions.ch/#contact-form" for link in ctas), "Every enquiry button must use the existing contact form")
+    check(bool(ctas) and all(link.attrs.get("href") == "contact.html?topic=Innovation%20Excellence%20with%20Rowan%20Gibson#contact-form" for link in ctas), "Every enquiry button must use the ALPINNO contact page and select the offering")
 
     def portrait_order(class_name):
         groups = document.find(class_name=class_name)
         return [Path(image.attrs.get("src", "")).name for image in groups[0].find("img") if Path(image.attrs.get("src", "")).name in {"rowan-gibson.jpg", "pier-paolo-monticone.jpg"}] if groups else []
 
     check(portrait_order("ie-portrait-pair") == ["rowan-gibson.jpg", "pier-paolo-monticone.jpg"], "Hero portrait order must be Rowan, Pier")
-    check(portrait_order("ie-expert-grid") == ["pier-paolo-monticone.jpg", "rowan-gibson.jpg"], "Lower profile order must be Pier, Rowan")
+    profiles = document.find(class_name="ie-expert-grid")
+    check(bool(profiles) and not profiles[0].find("img"), "Lower biographies must not repeat portraits or partner logos")
+    check(bool(profiles) and [node.attrs.get("class", "").split()[-1] for node in profiles[0].find("article")] == ["ie-expert-pier", "ie-expert-rowan"], "Lower text profile order must remain Pier, Rowan")
     check([node.text().strip() for node in document.find(class_name="ie-image-marker")] == ["01", "02", "03"], "Metaphor labels must remain editable HTML")
 
     stage_lists = document.find(class_name="ie-stage-list")
@@ -167,7 +172,7 @@ def validate(root: Path, artifact: bool) -> list[str]:
     if homepage_path.is_file():
         homepage = DocumentParser(homepage_path.read_text(encoding="utf-8")).document
         homepage_links = [link for link in homepage.find("a") if Path(unquote(urlsplit(link.attrs.get("href", "")).path)).name == page_name]
-        check(any("Innovation Excellence" in link.text() and "Imagination Bridge" in link.text() for link in homepage_links), "Homepage must visibly link to the collaboration page")
+        check(any("Innovation Excellence" in link.text() and "Rowan Gibson" in link.text() for link in homepage_links), "Homepage must visibly link to ALPINNO's offering with Rowan Gibson")
     else:
         errors.append("Missing public homepage")
     try:

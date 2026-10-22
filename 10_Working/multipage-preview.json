@@ -1,0 +1,111 @@
+{
+  "status": "English local review, awaiting owner validation before multilingual work and publication",
+  "baseline_commit": "7ccf3b5514fc741380aed037156a8235057831d9",
+  "rollback_tag": "codex/before-multipage-2026-10-22",
+  "local_branch": "codex/multipage-site-preview",
+  "published": false,
+  "scope": "ALPINNO website repository only; English pages for local review. Existing translated pages, images and videos remain unchanged.",
+  "navigation": [
+    "Home",
+    "Services",
+    "AIdea™",
+    "Innovation Excellence",
+    "Tools",
+    "About",
+    "Contact"
+  ],
+  "offering_positioning": "ALPINNO leads the offering, contracting and invoicing. Rowan is a collaborating expert. His Imagination Bridge affiliation remains under his hero portrait. Pier uses the existing Founder and Managing Director title. The lower section contains text biographies without repeated portraits or partner logos.",
+  "routes": {
+    "preview": "http://127.0.0.1:5057/",
+    "offering": "http://127.0.0.1:5057/review-innovation-excellence-a7c29e.html",
+    "mobile": "http://127.0.0.1:5057/10_Working/reports/multipage-preview/mobile-preview.html"
+  },
+  "compatibility": "Existing offering URL remains canonical. Shared English homepage fragments route to the new pages through client-side navigation; this is not an HTTP permanent redirect.",
+  "validation": {
+    "production_structure": "25 HTML pages, zero errors or warnings",
+    "html": "html-validate 11.5.6 passed for all root and ShareWise HTML pages",
+    "innovation_content": "Approved method, stages, workshop timing, qualified outcomes and source asset hashes passed for source and built artifact",
+    "build": "75 public files, 13.55 MiB; explicit public allowlist passed. Windows read-only directory cleanup was repaired and clean build verified.",
+    "browser": "Desktop and 390px iframe review. Mobile page navigation, workshop deep links and Day 1 agenda expansion passed. Legacy AIdea/contact links and enquiry topic selection passed. No forms submitted.",
+    "checks": {
+      "preserved_engagements": true,
+      "preserved_how-we-work": true,
+      "preserved_AIdea": true,
+      "preserved_about": true,
+      "preserved_founder": true,
+      "preserved_services": true,
+      "preserved_offering_.ie-section-intro": true,
+      "preserved_offering_#system": true,
+      "preserved_offering_#journey": true,
+      "preserved_offering_#method": true,
+      "preserved_bio_.ie-expert-pier": true,
+      "preserved_bio_.ie-expert-rowan": true,
+      "privacy_body_preserved": true,
+      "form_destinations_preserved": true,
+      "media_unchanged": true,
+      "translations_unchanged": true,
+      "local_http_200": true
+    },
+    "not_run": [
+      "Lighthouse was not run locally; the existing CI audit was extended to the new pages and remains a publication check.",
+      "Physical phone and tablet testing.",
+      "External form or newsletter submissions."
+    ]
+  },
+  "before_publication": [
+    "Obtain owner validation of this local English preview.",
+    "Prepare the multilingual version in all six existing site languages; reuse videos and images without translation.",
+    "Update matching language links, hreflang and sitemap entries; verify approved multilingual content, forms and navigation.",
+    "Run all required production, HTML, artifact and Lighthouse checks before the established Pages publication process."
+  ],
+  "indexing": "Existing indexability settings retained, including ShareWise noindex. The local preview is bound to loopback and is not publicly served.",
+  "preview_restart_command": "python -m http.server 5057 --bind 127.0.0.1 (run from the repository root)",
+  "build_scratch": "Windows temporary directory / alpinno-website-build; generated files are outside OneDrive.",
+  "design_references": [
+    {
+      "url": "https://www.w3.org/WAI/tutorials/menus/structure/",
+      "applied": "Semantic navigation list, current-page indication and small-screen navigation."
+    },
+    {
+      "url": "https://developers.google.com/search/docs/appearance/sitelinks",
+      "applied": "Logical page structure, meaningful titles and links between related pages."
+    },
+    {
+      "url": "https://www.nngroup.com/articles/menu-design/",
+      "applied": "Visible desktop navigation and clear current location."
+    }
+  ],
+  "execution": "Completed locally with the existing orchestrator configuration and context; no delegation, new dependencies or paid APIs. Acceptance was based on source preservation, structural and HTML validation, built artifact checks, and browser review.",
+  "files": {
+    "created": [
+      "about.html",
+      "aidea.html",
+      "contact.html",
+      "services.html",
+      "site-layout.css",
+      "site.js",
+      "tools.html",
+      "10_Working/multipage-preview.json"
+    ],
+    "modified": [
+      ".github/workflows/pages.yml",
+      ".lighthouserc.json",
+      "10_Working/build_site.py",
+      "10_Working/validate_innovation_review.py",
+      "10_Working/validate_site.py",
+      "index.html",
+      "innovation-excellence.css",
+      "innovation-excellence.js",
+      "llms.txt",
+      "privacy.html",
+      "review-innovation-excellence-a7c29e.html",
+      "sharewise/index.html",
+      "sitemap.xml"
+    ],
+    "local_review_artifacts": [
+      "10_Working/reports/multipage-preview/mobile-preview.html",
+      "10_Working/reports/multipage-preview/local-home.png",
+      "10_Working/reports/multipage-preview/local-offering.png"
+    ]
+  }
+}

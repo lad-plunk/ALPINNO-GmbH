@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import shutil
+import stat
 import sys
 import tempfile
 from pathlib import Path
@@ -17,6 +18,15 @@ INNOVATION_FILES = (
     "review-innovation-excellence-a7c29e.html",
     "innovation-excellence.css",
     "innovation-excellence.js",
+)
+MULTIPAGE_FILES = (
+    "services.html",
+    "aidea.html",
+    "tools.html",
+    "about.html",
+    "contact.html",
+    "site-layout.css",
+    "site.js",
 )
 PUBLIC_FILES = (
     "index.html",
@@ -37,7 +47,7 @@ PUBLIC_FILES = (
     "sitemap.xml",
     "llms.txt",
     "CNAME",
-) + INNOVATION_FILES
+) + INNOVATION_FILES + MULTIPAGE_FILES
 PUBLIC_DIRECTORIES = ("images",)
 PUBLIC_SHAREWISE_FILES = (
     "index.html",
@@ -63,7 +73,15 @@ def build(clean: bool, output_dir: Path) -> None:
     if output_dir not in allowed_output_dirs:
         raise ValueError(f"Unsafe build output path: {output_dir}")
     if clean and output_dir.exists():
-        shutil.rmtree(output_dir)
+        def remove_readonly(function, path, exception):
+            target = Path(path).resolve()
+            if not isinstance(exception, PermissionError) or not target.is_relative_to(output_dir):
+                raise exception
+            # Windows can retain source-directory read-only flags after copytree.
+            target.chmod(target.stat().st_mode | stat.S_IWRITE)
+            function(path)
+
+        shutil.rmtree(output_dir, onexc=remove_readonly)
     output_dir.mkdir(parents=True, exist_ok=True)
 
     for relative_name in PUBLIC_FILES:

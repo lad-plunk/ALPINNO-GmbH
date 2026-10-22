@@ -78,4 +78,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://alpinno-solutions.ch/services.html</loc>
+    <lastmod>2026-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https://alpinno-solutions.ch/aidea.html</loc>
+    <lastmod>2026-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https://alpinno-solutions.ch/tools.html</loc>
+    <lastmod>2026-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https://alpinno-solutions.ch/about.html</loc>
+    <lastmod>2026-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https://alpinno-solutions.ch/contact.html</loc>
+    <lastmod>2026-10-22</lastmod>
+  </url>
 </urlset>
