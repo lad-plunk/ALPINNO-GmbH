@@ -1,9 +1,9 @@
 {
-  "status": "Owner approved multilingual publication; local checks passed; awaiting GitHub CI and deployment",
+  "status": "Published and verified on the public ALPINNO website in all six languages",
   "baseline_commit": "7ccf3b5514fc741380aed037156a8235057831d9",
   "rollback_tag": "codex/before-multipage-2026-10-22",
   "local_branch": "codex/multipage-site-preview",
-  "published": false,
+  "published": true,
   "scope": "ALPINNO website repository; English, Italian, French, German, Japanese and Simplified Chinese. Existing media reused and homepage/ShareWise addresses retained.",
   "navigation": [
     "Home",
@@ -48,16 +48,15 @@
       "local_http_200": true
     },
     "not_run": [
-      "Lighthouse was not run locally; the existing CI audit was extended to the new pages and remains a publication check.",
-      "Physical phone and tablet testing.",
-      "External form or newsletter submissions."
+      "Physical phone and tablet testing; 390px browser layout reviewed.",
+      "External form or newsletter submissions; destinations and controls were preserved and no messages were sent."
     ],
-    "translations": "All 54 language pages match the maintained translation catalogue. Reciprocal language menus, hreflang, self-referencing canonicals and sitemap entries pass validation."
+    "translations": "All 54 language pages match the maintained translation catalogue. Reciprocal language menus, hreflang, self-referencing canonicals and sitemap entries pass validation.",
+    "lighthouse": "GitHub Lighthouse step passed for the 11 configured English and representative translated pages.",
+    "live": "58/58 public HTML, shared script/style and sitemap files match the released source after line-ending normalization. Existing homepage and ShareWise URL variants returned HTTP 200; slashless ShareWise redirected correctly. Five key image, video and document URLs returned HTTP 200."
   },
-  "before_publication": [
-    "GitHub production, HTML, artifact and Lighthouse checks must pass; deployment and live URLs must be verified."
-  ],
-  "indexing": "Existing indexability settings retained, including ShareWise noindex. The local preview is bound to loopback and is not publicly served.",
+  "before_publication": [],
+  "indexing": "Public site and translated offering retain index/follow and self-referencing canonicals. ShareWise retains its existing noindex in all six languages and is excluded from the sitemap.",
   "preview_restart_command": "python -m http.server 5057 --bind 127.0.0.1 (run from the repository root)",
   "build_scratch": "Windows temporary directory / alpinno-website-build; generated files are outside OneDrive.",
   "design_references": [
@@ -110,7 +109,9 @@
       "10_Working/reports/multipage-preview/senior-expertise-and-identity.png",
       "10_Working/reports/multipage-preview/about-network-introduction.png",
       "10_Working/reports/multipage-preview/about-specialist-network.png",
-      "10_Working/reports/multipage-preview/people-first-homepage.png"
+      "10_Working/reports/multipage-preview/people-first-homepage.png",
+      "10_Working/reports/multipage-preview/live-multilingual-verification.json",
+      "10_Working/reports/multipage-preview/published-contact-en.png"
     ],
     "publication": [
       {
@@ -434,7 +435,7 @@
       "date": "2026-10-22",
       "request": "Add the public contact email and proceed with translation and publication.",
       "changes": "Added the approved mailto address to contact pages, service contact sections, Innovation Excellence footer and ShareWise availability. Prepared six matching language versions across the multipage site and offering. Kept stable homepage and ShareWise routes, localized form feedback and topic selection, preserved legacy fragment links, and added reciprocal language menus and hreflang. Shared assets carry a release query to avoid stale navigation scripts.",
-      "validation": "All 55 HTML files and production structure passed; 54 language outputs match the catalogue; approved English core sections and media are preserved; 105-file public build and innovation checks passed. Desktop/mobile checks passed. GitHub Lighthouse and live verification pending."
+      "validation": "All local structural, HTML, catalogue-consistency, English-content preservation and artifact checks passed. GitHub validation, Lighthouse and deployment passed. Desktop/mobile review, topic-preserving language changes, legacy fragment forwarding and live URL/source checks passed."
     }
   ],
   "url_preservation": {
@@ -472,5 +473,26 @@
     "command": "python 10_Working/localize_site.py",
     "completeness_check": "python 10_Working/localize_site.py --missing",
     "notes": "Uses already-installed beautifulsoup4 for local authoring only. Public HTML is committed; CI build and validators use the Python standard library. Source media remains unchanged."
+  },
+  "release": {
+    "source_commit": "3060dd76e1f96d5b819873751d88a3fb04a7ed15",
+    "workflow_run": "https://github.com/lad-plunk/ALPINNO-GmbH/actions/runs/39815936030",
+    "workflow_result": "success",
+    "deployed_at_utc": "2026-10-22T16:45:19Z",
+    "live_website": "https://alpinno-solutions.ch/",
+    "live_contact": "https://alpinno-solutions.ch/contact.html",
+    "contact_email": "info@alpinno-solutions.ch",
+    "languages": [
+      "English",
+      "Italian",
+      "French",
+      "German",
+      "Japanese",
+      "Simplified Chinese"
+    ],
+    "live_verification": "10_Working/reports/multipage-preview/live-multilingual-verification.json",
+    "screenshot": "10_Working/reports/multipage-preview/published-contact-en.png",
+    "rollback": "The existing codex/before-multipage-2026-10-22 tag and baseline commit retain the previous public site; source history is preserved on main.",
+    "evidence_only_commit": "The workflow ignores changes confined to this non-public release record, avoiding a redundant website deployment."
   }
 }
