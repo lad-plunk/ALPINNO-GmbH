@@ -1,4 +1,4 @@
-"""Check review content, asset identity and discovery restrictions without dependencies."""
+"""Check Innovation Excellence content, branding and public indexing eligibility."""
 
 from __future__ import annotations
 
@@ -6,13 +6,14 @@ import argparse
 import hashlib
 import json
 import re
+import xml.etree.ElementTree as ET
 from dataclasses import dataclass, field
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
-from build_site import PUBLIC_FILES, PUBLIC_SHAREWISE_FILES, REVIEW_FILES
-from validate_site import PROJECT_ROOT, parse_html
+from build_site import INNOVATION_FILES, PUBLIC_FILES, PUBLIC_SHAREWISE_FILES
+from validate_site import PROJECT_ROOT
 
 
 @dataclass
@@ -68,30 +69,51 @@ def validate(root: Path, artifact: bool) -> list[str]:
         if not condition:
             errors.append(message)
 
-    review_name = next(name for name in REVIEW_FILES if name.endswith(".html"))
+    page_name = next(name for name in INNOVATION_FILES if name.endswith(".html"))
     record = json.loads((PROJECT_ROOT / "10_Working" / "innovation-review-release.json").read_text(encoding="utf-8"))
-    review_path = root / review_name
-    if not review_path.is_file():
-        return [f"Missing review page: {review_name}"]
-    html = review_path.read_text(encoding="utf-8")
+    public_url = record["public_url"]
+    page_path = root / page_name
+    if not page_path.is_file():
+        return [f"Missing Innovation Excellence page: {page_name}"]
+    html = page_path.read_text(encoding="utf-8")
     document = DocumentParser(html).document
     text = " ".join(document.text().split())
     heads = document.find("head")
     robots = [meta for head in heads for meta in head.find("meta") if meta.attrs.get("name", "").lower() == "robots"]
-    check(len(robots) == 1 and {"noindex", "nofollow"}.issubset(set(robots[0].attrs.get("content", "").lower().replace(" ", "").split(","))), "Review HTML head must contain one robots tag with noindex, nofollow")
-    check(not any({"canonical", "alternate"} & set(link.attrs.get("rel", "").split()) for head in heads for link in head.find("link")), "Review page must have no canonical or language-alternate discovery links")
-    check(len(document.find("h1")) == 1, "Review page must have one H1")
-    check("REVIEW DRAFT" in text and "Not published" not in text, "Hosted review banner must be accurate")
+    check(len(robots) == 1 and {"index", "follow"}.issubset(set(robots[0].attrs.get("content", "").lower().replace(" ", "").split(","))), "Public HTML head must permit index and follow")
+    for head in heads:
+        for meta in head.find("meta"):
+            if "name" in meta.attrs:
+                directives = set(re.split(r"[\s,]+", meta.attrs.get("content", "").lower()))
+                check(not {"noindex", "nofollow", "none"} & directives, "No crawler-specific meta tag may block public indexing or following")
+    canonicals = [link for head in heads for link in head.find("link") if "canonical" in link.attrs.get("rel", "").split()]
+    check(len(canonicals) == 1 and canonicals[0].attrs.get("href") == public_url, "Public page must have one self-referencing canonical")
+    check(not any("alternate" in link.attrs.get("rel", "").split() for head in heads for link in head.find("link")), "Do not advertise translations that do not exist")
+    check(len(document.find("h1")) == 1, "Innovation Excellence page must have one H1")
+    check(not document.find(class_name="ie-review-strip") and not re.search(r"review draft|not published|awaiting approval|proposed collaboration", text, re.I), "Public page must have no review or approval-pending copy")
+    titles = document.find("title")
+    check(len(titles) == 1 and "ALPINNO" in titles[0].text() and "Imagination Bridge" in titles[0].text(), "Public title must identify ALPINNO and Imagination Bridge")
+    metadata = {meta.attrs.get("property", meta.attrs.get("name")): meta.attrs.get("content", "") for head in heads for meta in head.find("meta")}
+    check(metadata.get("og:url") == public_url and "Imagination Bridge" in metadata.get("og:title", "") and "Imagination Bridge" in metadata.get("description", "") and metadata.get("og:description") == metadata.get("description"), "Public description and social metadata must match the identity and canonical URL")
+    check(document.find("html")[0].attrs.get("lang") == "en-GB", "Preserve the page's English language declaration")
+    webpage_data = [json.loads(script.text()) for script in document.find("script") if script.attrs.get("type") == "application/ld+json"]
+    check(any(item.get("@type") == "WebPage" and item.get("url") == public_url and item.get("@id") == public_url + "#webpage" for item in webpage_data), "WebPage structured data must use the public canonical URL")
+    partner_links = [link for link in document.find("a") if "Imagination Bridge" in link.text()]
+    check(bool(partner_links) and all(link.attrs.get("href") == "https://imaginationbridge.com/" for link in partner_links), "Partner-name and logo links must use the official Imagination Bridge homepage")
+    check("Founder & President," in text and "Imagination Bridge" in text, "Preserve Rowan's approved Imagination Bridge affiliation")
+    check(not re.search(r"joint[ -]venture|exclusive partnership|guaranteed patents|guaranteed returns", text, re.I), "Do not add legal-entity, exclusivity or performance promises")
+    if not record["public_launch"]["deliberate_zatory_product_mentions"]:
+        check(not re.search(r"\bzatory\b", html, re.I), "No partner-brand references to Zatory are expected on this page")
     method = "Based on Rowan’s Four Lenses of Innovation. All four lenses remain fully applicable; their implementation is redesigned to leverage big data and AI, moving from an analogue approach to a digital, AI-enabled workflow."
     check(method in text, "Required Four Lenses method statement changed")
     check(not re.search(r"\b(?:EUR|USD|CHF|20[ ,]?000|70[ ,]?000)\b|€", text), "Public page must not contain internal prices")
-    check(not document.find("form"), "Review enquiries must reuse the existing contact form")
+    check(not document.find("form"), "Enquiries must reuse the existing contact form")
     ctas = document.find("a", class_name="ie-button")
     check(bool(ctas) and all(link.attrs.get("href") == "https://alpinno-solutions.ch/#contact-form" for link in ctas), "Every enquiry button must use the existing contact form")
 
     def portrait_order(class_name):
         groups = document.find(class_name=class_name)
-        return [Path(image.attrs.get("src", "")).name for image in groups[0].find("img")] if groups else []
+        return [Path(image.attrs.get("src", "")).name for image in groups[0].find("img") if Path(image.attrs.get("src", "")).name in {"rowan-gibson.jpg", "pier-paolo-monticone.jpg"}] if groups else []
 
     check(portrait_order("ie-portrait-pair") == ["rowan-gibson.jpg", "pier-paolo-monticone.jpg"], "Hero portrait order must be Rowan, Pier")
     check(portrait_order("ie-expert-grid") == ["pier-paolo-monticone.jpg", "rowan-gibson.jpg"], "Lower profile order must be Pier, Rowan")
@@ -135,30 +157,34 @@ def validate(root: Path, artifact: bool) -> list[str]:
 
     for relative_name, expected_hash in record["content_assets_sha256"].items():
         asset = root / relative_name
-        check(asset.is_file() and hashlib.sha256(asset.read_bytes()).hexdigest() == expected_hash, f"Asset must match supplied V3 bytes: {relative_name}")
+        check(asset.is_file() and hashlib.sha256(asset.read_bytes()).hexdigest() == expected_hash, f"Asset must match its approved source bytes: {relative_name}")
     png = root / "images" / "innovation-excellence" / "innovation-ai-agile-metaphor.png"
     if png.is_file():
         header = png.read_bytes()[:26]
         check(header[:8] == b"\x89PNG\r\n\x1a\n" and header[16:20] == header[20:24] and header[25] == 6, "Metaphor must remain a square RGBA PNG")
 
-    public_html = [name for name in PUBLIC_FILES if name.endswith(".html")]
-    public_html += ["sharewise/" + name for name in PUBLIC_SHAREWISE_FILES if name.endswith(".html")]
-    for relative_name in public_html:
-        path = root / relative_name
-        if path == review_path or not path.is_file():
-            continue
-        for _, reference in parse_html(path).references:
-            check(Path(unquote(urlsplit(reference).path)).name != review_name, f"Public inbound review link in {relative_name}")
-    for name in PUBLIC_FILES:
-        if Path(name).suffix in {".txt", ".xml", ".json", ".rss", ".atom"} and (root / name).is_file():
-            check(review_name not in (root / name).read_text(encoding="utf-8"), f"Review route exposed in public discovery file: {name}")
+    homepage_path = root / "index.html"
+    if homepage_path.is_file():
+        homepage = DocumentParser(homepage_path.read_text(encoding="utf-8")).document
+        homepage_links = [link for link in homepage.find("a") if Path(unquote(urlsplit(link.attrs.get("href", "")).path)).name == page_name]
+        check(any("Innovation Excellence" in link.text() and "Imagination Bridge" in link.text() for link in homepage_links), "Homepage must visibly link to the collaboration page")
+    else:
+        errors.append("Missing public homepage")
+    try:
+        sitemap = ET.parse(root / "sitemap.xml")
+        locations = [node.text for node in sitemap.findall(".//{http://www.sitemaps.org/schemas/sitemap/0.9}loc")]
+        check(locations.count(public_url) == 1, "Sitemap must list the public canonical URL exactly once")
+    except (ET.ParseError, FileNotFoundError) as error:
+        errors.append(f"Invalid sitemap: {error}")
+    llms_path = root / "llms.txt"
+    check(llms_path.is_file() and llms_path.read_text(encoding="utf-8").count(public_url) == 1, "Existing llms page directory must list the public canonical URL once")
     robots_path = root / "robots.txt"
     if robots_path.is_file():
         for line in robots_path.read_text(encoding="utf-8").splitlines():
             key, _, value = line.partition(":")
             value = value.split("#", 1)[0].strip()
             if key.strip().lower() == "disallow" and value:
-                check(not ("/" + review_name).startswith(value), "robots.txt must allow crawling the review robots directive")
+                check(not ("/" + page_name).startswith(value), "robots.txt must allow crawling the public collaboration page")
     if artifact:
         allowed = set(PUBLIC_FILES) | {"sharewise/" + name for name in PUBLIC_SHAREWISE_FILES}
         unexpected = [path.relative_to(root).as_posix() for path in root.rglob("*") if path.is_file() and path.relative_to(root).parts[0] != "images" and path.relative_to(root).as_posix() not in allowed]
@@ -175,9 +201,9 @@ def main() -> int:
     for error in errors:
         print(f"ERROR: {error}")
     if errors:
-        print(f"Review validation failed with {len(errors)} error(s).")
+        print(f"Innovation Excellence validation failed with {len(errors)} error(s).")
         return 1
-    print("Review content, agenda, assets, noindex and discovery checks passed.")
+    print("Innovation Excellence content, branding, agenda, assets and public discovery checks passed.")
     return 0
 
 

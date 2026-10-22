@@ -1,10 +1,10 @@
-/* V3 review-page styles. Shared ALPINNO tokens and base typography come from style.css. */
+/* Innovation Excellence styles. Shared ALPINNO tokens and typography come from style.css. */
 
 .innovation-page * {
   box-sizing:border-box;
 }
 
-html.innovation-review {
+html.innovation-excellence-page {
   scroll-behavior:smooth;
   scroll-padding-top:96px;
 }
@@ -150,22 +150,6 @@ html.innovation-review {
 
 .innovation-page .ie-split-heading>p:last-child {
   padding-bottom:6px;
-}
-
-.innovation-page .ie-review-strip {
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  padding:7px 20px;
-  background:#fff4d8;
-  color:#5e4a18;
-  text-align:center;
-  font-size:.72rem;
-}
-
-.innovation-page .ie-review-strip span {
-  font-weight:850;
-  letter-spacing:.09em;
 }
 
 .innovation-page .ie-site-header {
@@ -1298,12 +1282,7 @@ html.innovation-review {
     border:0;
   }
 
-  .innovation-page .ie-review-strip {
-    font-size:.64rem;
-    gap:8px;
   }
-
-}
 
 @media(max-width:520px) {
   .innovation-page .ie-container,
@@ -1313,13 +1292,6 @@ html.innovation-review {
 
   .innovation-page .ie-section {
     padding:58px 0;
-  }
-
-  .innovation-page .ie-review-strip {
-    padding:7px 12px;
-    line-height:1.55;
-    flex-wrap:wrap;
-    gap:0 8px;
   }
 
   .innovation-page .ie-hero-grid {
@@ -1614,7 +1586,7 @@ html.innovation-review {
 }
 
 @media(prefers-reduced-motion:reduce) {
-  html.innovation-review {
+  html.innovation-excellence-page {
     scroll-behavior:auto;
   }
 
@@ -1625,7 +1597,7 @@ html.innovation-review {
 }
 
 @media print {
-  .innovation-page .ie-review-strip,
+
   .innovation-page .ie-site-header,
   .innovation-page .ie-site-footer,
   .innovation-page .ie-menu-toggle {
@@ -2310,4 +2282,88 @@ html.innovation-review {
     max-width:220px;
   }
 
+}
+
+/* Official partner marks keep their source colours and square aspect ratio. */
+.innovation-page .ie-partner-lockup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 12px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: .94rem;
+  line-height: 1.4;
+}
+
+.innovation-page .ie-partner-alpinno {
+  font-weight: 800;
+  letter-spacing: .15em;
+}
+
+.innovation-page .ie-partner-join {
+  color: #bdccda;
+  font-size: .8rem;
+}
+
+.innovation-page .ie-partner-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.innovation-page .ie-partner-brand:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.innovation-page .ie-partner-brand img {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  object-fit: contain;
+}
+
+.innovation-page .ie-portrait-affiliation {
+  margin-bottom: 8px;
+}
+
+.innovation-page .ie-portrait-affiliation a {
+  color: var(--navy-800);
+  text-underline-offset: 3px;
+}
+
+.innovation-page .ie-expert p.ie-expert-affiliation {
+  margin-bottom: 12px;
+  font-size: .82rem;
+  line-height: 1.5;
+}
+
+.innovation-page .ie-expert-affiliation a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.innovation-page .ie-expert-affiliation a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.innovation-page .ie-expert-affiliation img {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  object-fit: contain;
+}
+
+@media (max-width: 520px) {
+  .innovation-page .ie-partner-lockup {
+    font-size: .84rem;
+    gap: 8px 10px;
+  }
 }

@@ -1,4 +1,4 @@
-/* Review-page navigation and hash links. No analytics, storage or form submission. */
+/* Innovation Excellence navigation and hash links. No analytics, storage or form submission. */
 const menuButton = document.querySelector('.ie-menu-toggle');
 const navigation = document.querySelector('#page-navigation');
 

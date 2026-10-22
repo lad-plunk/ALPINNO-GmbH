@@ -13,7 +13,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
 WINDOWS_SCRATCH_ROOT = Path(tempfile.gettempdir()) / "alpinno-website-build"
 DEFAULT_OUTPUT_DIR = WINDOWS_SCRATCH_ROOT if sys.platform == "win32" else PROJECT_ROOT / "_site"
-REVIEW_FILES = (
+INNOVATION_FILES = (
     "review-innovation-excellence-a7c29e.html",
     "innovation-excellence.css",
     "innovation-excellence.js",
@@ -37,7 +37,7 @@ PUBLIC_FILES = (
     "sitemap.xml",
     "llms.txt",
     "CNAME",
-) + REVIEW_FILES
+) + INNOVATION_FILES
 PUBLIC_DIRECTORIES = ("images",)
 PUBLIC_SHAREWISE_FILES = (
     "index.html",

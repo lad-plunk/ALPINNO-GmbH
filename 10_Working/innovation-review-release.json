@@ -3,8 +3,8 @@
   "source_version": "V3",
   "review_page": "review-innovation-excellence-a7c29e.html",
   "review_url": "https://alpinno-solutions.ch/review-innovation-excellence-a7c29e.html",
-  "state": "deployed_unlisted_review_verified",
-  "authorisation": "Unlisted non-indexed review hosting only. Public launch requires a later explicit owner instruction.",
+  "state": "public_launch_validated_pending_deployment",
+  "authorisation": "Owner instruction of 22 October 2026 explicitly authorises Imagination Bridge branding, public publication, homepage/discovery links and indexing eligibility. Earlier review-only restrictions are superseded.",
   "source_folder": "C:\\Users\\pmont\\OneDrive\\DataOD\\01 Work&Uni\\30 ALPINNO\\30 External partners\\Zatory - Rowan Gibson\\20_Output\\ALPINNO_Rowan_Webpage_en_original_v3",
   "source_sha256_before": {
     "AGENTS.md": "f99290356cffd506edc24118e59c49216510f255cf3a32bdb7bbce7bbb0ad4e6",
@@ -49,7 +49,9 @@
     "images/innovation-excellence/rowan-gibson.jpg": "8a68270d53c9cb992f4bb3dbece0c366d2086827e26ca1e94ffc932c5811b970",
     "images/innovation-excellence/pier-paolo-monticone.jpg": "5d8a0ec1bfaf2af4aa5f6e1c095199cc3d35d92ace2259144a8f1c0be36247cf",
     "images/innovation-excellence/innovation-ai-agile-metaphor.png": "2dd70c97f2e9f8222a16cbe35129b179b9f346f1213b9e1b458df1df19140682",
-    "images/innovation-excellence/four-lenses-book.jpg": "81a5237899831f4da249eac5fdaec6c9b855fccb4c5754cf7287664e4fd6c8b8"
+    "images/innovation-excellence/four-lenses-book.jpg": "81a5237899831f4da249eac5fdaec6c9b855fccb4c5754cf7287664e4fd6c8b8",
+    "images/innovation-excellence/imagination_bridge_official_mark_dark.png": "e39a0b4822991b2457d6f5d96906cd357e1289548ea22809a1388820cf3c8ffe",
+    "images/innovation-excellence/imagination_bridge_official_mark_light.png": "a618677ffae63f18ef35c314e80bca22cd3c630cb0e619b77508cf8947e814ec"
   },
   "implementation": {
     "architecture": "Existing static HTML/CSS/JavaScript and GitHub Pages workflow",
@@ -57,8 +59,8 @@
     "favicon": "Existing images/favicon.ico; supplied duplicate favicon is not copied",
     "contact": "https://alpinno-solutions.ch/#contact-form",
     "backend": "No new backend, form, analytics, dependencies or infrastructure",
-    "response_header": "No custom response header configured; served HTML head carries noindex, nofollow",
-    "discovery": "Excluded from other pages, navigation, sitemap, llms, feeds and language alternates",
+    "response_header": "No custom response header configured; public HTML permits index and follow",
+    "discovery": "Public homepage service link, sitemap entry and llms directory entry",
     "source_notes": "Source registers, internal prices and source notes are not copied into the public artifact",
     "ci_adjustment": {
       "observed": "Initial Pages run 39509621051 and its retry failed inside npm before executing HTML validation: edgesOut null dereference.",
@@ -68,53 +70,164 @@
         "https://github.com/npm/cli/issues/9787",
         "https://docs.npmjs.com/cli/v10/using-npm/config/#legacy-peer-deps"
       ]
-    }
+    },
+    "route_decision": "Retain the shared HTML URL as authorised fallback: existing workflow-based static GitHub Pages hosting has no configured permanent path-redirect mechanism; no new infrastructure introduced.",
+    "partner_identity": "ALPINNO and Imagination Bridge; Rowan: Founder & President, Imagination Bridge",
+    "logo_usage": "Two supplied official mark variants copied unchanged, with editable partner-name text; unused vertical wordmark not deployed."
   },
   "validation": {
-    "site_structure": "20 HTML pages passed production validation, zero warnings",
-    "review_content_and_discovery": "Source and built artifact checks passed",
+    "checked_at_utc": "2026-10-22T11:36:34.450494+00:00",
+    "site_structure": "20 HTML pages passed production validation with zero warnings",
+    "html_validation": "Homepage and collaboration page passed cached html-validate 11.5.6; no new local dependency installation",
     "javascript_syntax": "node --check passed",
-    "visible_copy": "Identical to source V3",
-    "assets": "Four image hashes match source V3; portraits unchanged",
-    "metaphor": "1254 x 1254 RGBA, alpha extrema 0 and 255",
-    "source_folder": "All 17 source hashes unchanged",
-    "agenda": "Two continuous 09:00-18:00 days, 60-minute lunches, 90-minute executive sessions, 960 workshop minutes",
-    "browser": "Desktop hero alignment, transparent metaphor, book/method and lower profile order reviewed. Both agenda panels and Validate remained open together. Fresh #workshop URL opened only Strategize.",
-    "generated_artifact": "66 allowlisted files, no internal documents or discovery entries",
-    "html_validation": "html-validate 11.5.6 passed using the existing cached tool; no dependency installation",
-    "visual_limit": "Embedded desktop viewport reviewed; a separate mobile viewport was not available through the native preview controls.",
-    "ci": "Production structure, source review checks, full HTML validation, existing Lighthouse checks, artifact review restrictions and Pages deployment passed.",
-    "live_browser": "Deployed HTTPS page opened in the native embedded browser; review banner, aligned portraits and default closed stages verified.",
-    "screenshot": "10_Working/reports/innovation-review/review-hero.png (ignored local QA evidence, excluded from deployment)"
+    "content_preservation": "Five protected sections, both biographies and all unrelated homepage text unchanged",
+    "assets": "All six public content/branding images match approved source hashes; original portraits, metaphor and book unchanged",
+    "references": "All 21 selected read-only reference hashes unchanged, including private presentation",
+    "browser_desktop": "Official white and orange marks legible; equal hero cards and profile order retained; homepage link reaches the page; fresh #workshop opens only Strategize",
+    "browser_mobile": "390px local iframe viewport: branding and aligned portrait cards fit; menu toggles and closes on workshop navigation; all three stages and both nested agendas stay independently open",
+    "mobile_limit": "Responsive viewport reviewed through the native embedded browser; no physical-device test",
+    "discovery": "Homepage service link, one sitemap entry and one llms directory entry; self-canonical and social/structured metadata agree; no non-existent translation alternates",
+    "public_artifact": "68 allowlisted code/asset files; source records, private deck, notes and local QA helper excluded",
+    "screenshots": [
+      "10_Working/reports/innovation-launch/mobile-menu.png"
+    ]
   },
-  "deployment": {
-    "code_commit": "82f80abcf7f4de388e4294a2e5cad72d28911236",
-    "workflow_run": "https://github.com/lad-plunk/ALPINNO-GmbH/actions/runs/39509968424",
-    "workflow_result": "success: validate and deploy",
-    "verified_at_utc": "2026-10-20T22:44:31.463129+00:00",
-    "final_url": "https://alpinno-solutions.ch/review-innovation-excellence-a7c29e.html",
-    "http_status": 200,
-    "served_robots_meta": "noindex, nofollow, noarchive",
-    "x_robots_tag": null,
-    "live_code_and_assets_match": [
-      "review-innovation-excellence-a7c29e.html",
-      "innovation-excellence.css",
-      "innovation-excellence.js",
-      "images/innovation-excellence/rowan-gibson.jpg",
-      "images/innovation-excellence/pier-paolo-monticone.jpg",
-      "images/innovation-excellence/innovation-ai-agile-metaphor.png",
-      "images/innovation-excellence/four-lenses-book.jpg"
-    ],
-    "other_live_pages_without_inbound_links": 19,
-    "live_discovery_files_without_review_route": [
-      "robots.txt",
-      "sitemap.xml",
-      "llms.txt"
-    ],
-    "internal_files_return_404": {
-      "10_Working/innovation-review-release.json": 404,
-      "CONTEXT.md": 404
+  "deployment": null,
+  "review_phase": {
+    "state": "deployed_unlisted_review_verified",
+    "authorisation": "Unlisted non-indexed review hosting only. Public launch requires a later explicit owner instruction.",
+    "implementation": {
+      "architecture": "Existing static HTML/CSS/JavaScript and GitHub Pages workflow",
+      "styling": "Native style.css plus scoped V3 styles and namespaced page classes",
+      "favicon": "Existing images/favicon.ico; supplied duplicate favicon is not copied",
+      "contact": "https://alpinno-solutions.ch/#contact-form",
+      "backend": "No new backend, form, analytics, dependencies or infrastructure",
+      "response_header": "No custom response header configured; served HTML head carries noindex, nofollow",
+      "discovery": "Excluded from other pages, navigation, sitemap, llms, feeds and language alternates",
+      "source_notes": "Source registers, internal prices and source notes are not copied into the public artifact",
+      "ci_adjustment": {
+        "observed": "Initial Pages run 39509621051 and its retry failed inside npm before executing HTML validation: edgesOut null dereference.",
+        "scope": "Set npm_config_legacy_peer_deps only on the existing html-validate step. Same pinned validator and full validation rules; no new project dependencies.",
+        "reason": "Standalone HTML CLI does not use the optional Jest/Vitest test integrations declared by html-validate 11.5.6.",
+        "references": [
+          "https://github.com/npm/cli/issues/9787",
+          "https://docs.npmjs.com/cli/v10/using-npm/config/#legacy-peer-deps"
+        ]
+      }
     },
-    "search_engine_results_checked": false
+    "validation": {
+      "site_structure": "20 HTML pages passed production validation, zero warnings",
+      "review_content_and_discovery": "Source and built artifact checks passed",
+      "javascript_syntax": "node --check passed",
+      "visible_copy": "Identical to source V3",
+      "assets": "Four image hashes match source V3; portraits unchanged",
+      "metaphor": "1254 x 1254 RGBA, alpha extrema 0 and 255",
+      "source_folder": "All 17 source hashes unchanged",
+      "agenda": "Two continuous 09:00-18:00 days, 60-minute lunches, 90-minute executive sessions, 960 workshop minutes",
+      "browser": "Desktop hero alignment, transparent metaphor, book/method and lower profile order reviewed. Both agenda panels and Validate remained open together. Fresh #workshop URL opened only Strategize.",
+      "generated_artifact": "66 allowlisted files, no internal documents or discovery entries",
+      "html_validation": "html-validate 11.5.6 passed using the existing cached tool; no dependency installation",
+      "visual_limit": "Embedded desktop viewport reviewed; a separate mobile viewport was not available through the native preview controls.",
+      "ci": "Production structure, source review checks, full HTML validation, existing Lighthouse checks, artifact review restrictions and Pages deployment passed.",
+      "live_browser": "Deployed HTTPS page opened in the native embedded browser; review banner, aligned portraits and default closed stages verified.",
+      "screenshot": "10_Working/reports/innovation-review/review-hero.png (ignored local QA evidence, excluded from deployment)"
+    },
+    "deployment": {
+      "code_commit": "82f80abcf7f4de388e4294a2e5cad72d28911236",
+      "workflow_run": "https://github.com/lad-plunk/ALPINNO-GmbH/actions/runs/39509968424",
+      "workflow_result": "success: validate and deploy",
+      "verified_at_utc": "2026-10-20T22:44:31.463129+00:00",
+      "final_url": "https://alpinno-solutions.ch/review-innovation-excellence-a7c29e.html",
+      "http_status": 200,
+      "served_robots_meta": "noindex, nofollow, noarchive",
+      "x_robots_tag": null,
+      "live_code_and_assets_match": [
+        "review-innovation-excellence-a7c29e.html",
+        "innovation-excellence.css",
+        "innovation-excellence.js",
+        "images/innovation-excellence/rowan-gibson.jpg",
+        "images/innovation-excellence/pier-paolo-monticone.jpg",
+        "images/innovation-excellence/innovation-ai-agile-metaphor.png",
+        "images/innovation-excellence/four-lenses-book.jpg"
+      ],
+      "other_live_pages_without_inbound_links": 19,
+      "live_discovery_files_without_review_route": [
+        "robots.txt",
+        "sitemap.xml",
+        "llms.txt"
+      ],
+      "internal_files_return_404": {
+        "10_Working/innovation-review-release.json": 404,
+        "CONTEXT.md": 404
+      },
+      "search_engine_results_checked": false
+    }
+  },
+  "public_page": "review-innovation-excellence-a7c29e.html",
+  "public_url": "https://alpinno-solutions.ch/review-innovation-excellence-a7c29e.html",
+  "public_launch": {
+    "started_at_utc": "2026-10-22T11:26:49.080023+00:00",
+    "reference_sources_sha256_before": {
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/AGENTS.md": "f99290356cffd506edc24118e59c49216510f255cf3a32bdb7bbce7bbb0ad4e6",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/ASSET_REGISTER.json": "e645362537b3d7470013b0a615e9c15222fefd85949a5da7dc1d533e61ad8695",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/assets/favicon.png": "226dc932ad7969961a2dcf97544c29d4b88e5f51904c7125b7e7a4d66cc920f0",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/assets/four-lenses-book.jpg": "81a5237899831f4da249eac5fdaec6c9b855fccb4c5754cf7287664e4fd6c8b8",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/assets/innovation-ai-agile-metaphor.png": "2dd70c97f2e9f8222a16cbe35129b179b9f346f1213b9e1b458df1df19140682",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/assets/pier-paolo-monticone.jpg": "5d8a0ec1bfaf2af4aa5f6e1c095199cc3d35d92ace2259144a8f1c0be36247cf",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/assets/rowan-gibson.jpg": "8a68270d53c9cb992f4bb3dbece0c366d2086827e26ca1e94ffc932c5811b970",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/CHANGES.md": "cdaaa4f59be0fa1e81881de856e98f1f0c726370808783485a716d276982cb48",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/CONTENT.md": "1f747951cbda13f13e8c288c774f10b3f2781fcd1c09786860f8531386ce40af",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/CONTENT_ALIGNMENT.json": "c591dcaaa91b3aa1dfa626728e4ac836035a625632db4f6fef9d8255fc15efd8",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/CONTEXT.md": "77d21af12bd0548bde6e5a53b37d5de44833bf1d1f3fb63611b96a37a3651252",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/IMPLEMENTATION_PROMPT.md": "dc666497dfd7b77e07a06a70e0af880ce9805722850138a7a06329a4106d2f32",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/index.html": "dab9774855b49ac18db07acc998bd026f5ee6cbaeccd2f80255d7ae005653d8e",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/QA_REPORT.json": "8e5dd50c9c70e7625187e78a4ace44706af7d53d1dfb3072012a3858c734bcda",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/script.js": "5b9419f7b292d8389ec481cdedd88f513c89553db98d3a749cdf759481e92d84",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/SOURCE_RECONCILIATION.json": "611d5bc06f8d2168ed92a37836730d3c22976a1c725129e9d38b86a5d2768a4a",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/styles.css": "77dba7ffca06ef74b7f439e5044e0e6b6f46115ea25054ca80f29e8402ecab2a",
+      "00_Input/03_References/imagination_bridge_official_mark_dark.png": "e39a0b4822991b2457d6f5d96906cd357e1289548ea22809a1388820cf3c8ffe",
+      "00_Input/03_References/imagination_bridge_official_mark_light.png": "a618677ffae63f18ef35c314e80bca22cd3c630cb0e619b77508cf8947e814ec",
+      "00_Input/03_References/imagination_bridge_official_wordmark.png": "a3e767a6cb7d904acd743b0e4875e58ad6912037e4098059c14df3eca3cb9c2a",
+      "20_Output/ALPINNO_Imagination_Bridge_AI_Enabled_Innovation_Excellence_en_original_v31.pptx": "8ec059f283297461396f16fff53046d7aa15e08b323af6e1ae861ccb841a6367"
+    },
+    "reference_sources_sha256_after": {
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/AGENTS.md": "f99290356cffd506edc24118e59c49216510f255cf3a32bdb7bbce7bbb0ad4e6",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/ASSET_REGISTER.json": "e645362537b3d7470013b0a615e9c15222fefd85949a5da7dc1d533e61ad8695",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/assets/favicon.png": "226dc932ad7969961a2dcf97544c29d4b88e5f51904c7125b7e7a4d66cc920f0",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/assets/four-lenses-book.jpg": "81a5237899831f4da249eac5fdaec6c9b855fccb4c5754cf7287664e4fd6c8b8",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/assets/innovation-ai-agile-metaphor.png": "2dd70c97f2e9f8222a16cbe35129b179b9f346f1213b9e1b458df1df19140682",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/assets/pier-paolo-monticone.jpg": "5d8a0ec1bfaf2af4aa5f6e1c095199cc3d35d92ace2259144a8f1c0be36247cf",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/assets/rowan-gibson.jpg": "8a68270d53c9cb992f4bb3dbece0c366d2086827e26ca1e94ffc932c5811b970",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/CHANGES.md": "cdaaa4f59be0fa1e81881de856e98f1f0c726370808783485a716d276982cb48",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/CONTENT.md": "1f747951cbda13f13e8c288c774f10b3f2781fcd1c09786860f8531386ce40af",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/CONTENT_ALIGNMENT.json": "c591dcaaa91b3aa1dfa626728e4ac836035a625632db4f6fef9d8255fc15efd8",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/CONTEXT.md": "77d21af12bd0548bde6e5a53b37d5de44833bf1d1f3fb63611b96a37a3651252",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/IMPLEMENTATION_PROMPT.md": "dc666497dfd7b77e07a06a70e0af880ce9805722850138a7a06329a4106d2f32",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/index.html": "dab9774855b49ac18db07acc998bd026f5ee6cbaeccd2f80255d7ae005653d8e",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/QA_REPORT.json": "8e5dd50c9c70e7625187e78a4ace44706af7d53d1dfb3072012a3858c734bcda",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/script.js": "5b9419f7b292d8389ec481cdedd88f513c89553db98d3a749cdf759481e92d84",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/SOURCE_RECONCILIATION.json": "611d5bc06f8d2168ed92a37836730d3c22976a1c725129e9d38b86a5d2768a4a",
+      "20_Output/ALPINNO_Rowan_Webpage_en_original_v3/styles.css": "77dba7ffca06ef74b7f439e5044e0e6b6f46115ea25054ca80f29e8402ecab2a",
+      "00_Input/03_References/imagination_bridge_official_mark_dark.png": "e39a0b4822991b2457d6f5d96906cd357e1289548ea22809a1388820cf3c8ffe",
+      "00_Input/03_References/imagination_bridge_official_mark_light.png": "a618677ffae63f18ef35c314e80bca22cd3c630cb0e619b77508cf8947e814ec",
+      "00_Input/03_References/imagination_bridge_official_wordmark.png": "a3e767a6cb7d904acd743b0e4875e58ad6912037e4098059c14df3eca3cb9c2a",
+      "20_Output/ALPINNO_Imagination_Bridge_AI_Enabled_Innovation_Excellence_en_original_v31.pptx": "8ec059f283297461396f16fff53046d7aa15e08b323af6e1ae861ccb841a6367"
+    },
+    "protected_content_sha256": {
+      "challenge": "1a8181ebd6192bf6099d715e8bb06a7d6b097e1767e00d524d29e9d9a4a1d134",
+      "system": "4c237eb540fdec90b1460c658c4cb131eed346b945903ec2b3c4f2c1c65bbccf",
+      "journey_and_agendas": "bc9e906633f11228c64c26ac77761a2ddafa54cad88384e85316c807c2d759c7",
+      "four_lenses_and_workflow": "eba9562f32180244be51ba41c9a8e24dd5b84c3a0c3ecd4902608fce0eb9e45f",
+      "practical_questions": "efa3fcceddbb591a48aa50c3856b0d4f0026010ab1036fc3ab569da966290290"
+    },
+    "deliberate_zatory_product_mentions": [],
+    "presentation_use": "Names and positioning checked only; presentation and its commercial terms are not copied or deployed.",
+    "indexing": {
+      "state": "pending_live_eligibility_check",
+      "requested": false,
+      "confirmed_indexed": null,
+      "search_console": "No authorised Search Console connector is exposed by the available tools; no new connection or credentials will be created."
+    },
+    "references_unchanged": true
   }
 }

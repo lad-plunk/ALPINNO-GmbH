@@ -34,7 +34,7 @@ jobs:
       - name: Run repository checks
         run: python 10_Working/validate_site.py --production
 
-      - name: Check unlisted review page
+      - name: Check public Innovation Excellence page
         run: python 10_Working/validate_innovation_review.py
 
       - name: Validate HTML
@@ -63,7 +63,7 @@ jobs:
       - name: Build Pages artifact
         run: python 10_Working/build_site.py --clean --output _site
 
-      - name: Check deployed artifact and review restrictions
+      - name: Check public artifact and indexing eligibility
         run: python 10_Working/validate_innovation_review.py --site-root _site
 
       - name: Upload Pages artifact

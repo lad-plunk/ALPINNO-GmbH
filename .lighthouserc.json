@@ -3,7 +3,8 @@
     "collect": {
       "url": [
         "http://127.0.0.1:5055/",
-        "http://127.0.0.1:5055/privacy.html"
+        "http://127.0.0.1:5055/privacy.html",
+        "http://127.0.0.1:5055/review-innovation-excellence-a7c29e.html"
       ],
       "numberOfRuns": 1,
       "settings": {
