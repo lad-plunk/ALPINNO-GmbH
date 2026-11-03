@@ -135,7 +135,7 @@ def validate(production: bool) -> tuple[list[str], list[str]]:
         "index.html", "services.html", "aidea.html",
         "review-innovation-excellence-a7c29e.html", "tools.html", "about.html", "contact.html",
     )
-    site_pages = navigation_pages + ("privacy.html", "sharewise/index.html")
+    site_pages = navigation_pages + ("privacy.html", "sharewise/index.html", "sharewise/privacy.html")
     for source in site_pages:
         for language in SITE_LANGUAGES:
             name = page_variant(source, language)
@@ -164,13 +164,20 @@ def validate(production: bool) -> tuple[list[str], list[str]]:
             if [(link.get("lang"), link.get("href")) for link in page.language_links] != expected_languages:
                 errors.append(f"{name}: language switch must keep visitors on the corresponding page")
             directives = {item.strip() for item in page.robots[0].lower().split(",")} if len(page.robots) == 1 else set()
-            if source.startswith("sharewise/"):
+            if source == "sharewise/index.html":
                 if "noindex" not in directives:
                     errors.append(f"{name}: preserve the existing ShareWise noindex setting")
             elif not {"index", "follow"}.issubset(directives):
                 errors.append(f"{name}: public page must permit indexing and following")
             if source != "privacy.html" and ("href", "mailto:" + PUBLIC_CONTACT_EMAIL) not in page.references:
                 errors.append(f"{name}: missing approved direct contact email")
+            if source in {"privacy.html", "sharewise/index.html"}:
+                notice = prefix + page_variant("sharewise/privacy.html", language)
+                if prefix:
+                    notice = notice.removeprefix("../sharewise/")
+                required_links = 2 if source == "sharewise/index.html" else 1
+                if page.references.count(("href", notice)) < required_links:
+                    errors.append(f"{name}: missing ShareWise privacy notice cross-links")
 
     for path, parser in parsed_pages.items():
         display = path.relative_to(PROJECT_ROOT)
@@ -226,7 +233,7 @@ def validate(production: bool) -> tuple[list[str], list[str]]:
         sitemap = ET.parse(PROJECT_ROOT / "sitemap.xml")
         namespace = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9", "x": "http://www.w3.org/1999/xhtml"}
         entries = sitemap.findall("s:url", namespace)
-        expected_urls = {page_canonical(source, language): source for source in site_pages if not source.startswith("sharewise/") for language in SITE_LANGUAGES}
+        expected_urls = {page_canonical(source, language): source for source in site_pages if source != "sharewise/index.html" for language in SITE_LANGUAGES}
         locations = [entry.findtext("s:loc", namespaces=namespace) for entry in entries]
         if len(locations) != len(set(locations)) or set(locations) != set(expected_urls):
             errors.append("sitemap.xml: list each indexable language page exactly once, preserving ShareWise noindex")

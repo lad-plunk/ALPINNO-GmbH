@@ -1315,6 +1315,14 @@ footer {
   max-width: 860px;
   margin: 0 auto;
   padding: clamp(4rem, 8vw, 7rem) 1.25rem;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 360px) {
+  .privacy-page .brand-suffix,
+  .sharewise-page .brand-suffix {
+    display: none;
+  }
 }
 
 .privacy-shell > header {

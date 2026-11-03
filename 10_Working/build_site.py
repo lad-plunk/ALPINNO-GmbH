@@ -56,6 +56,12 @@ PUBLIC_FILES += tuple(
 PUBLIC_DIRECTORIES = ("images",)
 PUBLIC_SHAREWISE_FILES = (
     "index.html",
+    "privacy.html",
+    "privacy-it.html",
+    "privacy-fr.html",
+    "privacy-de.html",
+    "privacy-ja.html",
+    "privacy-zh.html",
     "it.html",
     "fr.html",
     "de.html",
