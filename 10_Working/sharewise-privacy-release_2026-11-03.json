@@ -1,0 +1,65 @@
+{
+  "effective_date": "2026-11-03",
+  "public_privacy_url": "https://alpinno-solutions.ch/sharewise/privacy.html",
+  "publication": "GitHub Pages",
+  "source_commit": "2dd67934ac6e9fcb5b0dde2538d2b031f32f8d93",
+  "workflow_url": "https://github.com/lad-plunk/ALPINNO-GmbH/actions/runs/41556596328",
+  "workflow_result": "success: validate and deploy",
+  "inputs": [
+    "ShareWise/10_Working/msix/privacy-policy-en-draft.html",
+    "ShareWise/10_Working/msix/PRIVACY_REVIEW_2026-11-03.md"
+  ],
+  "owner_confirmed_on": "2026-11-03",
+  "confirmed_practices": [
+    "Mailbox and contact form will be monitored for ShareWise privacy and support.",
+    "Support follows general notice retention; unnecessary personal/confidential attachments deleted when no longer needed.",
+    "No current access or download of Microsoft diagnostic reports. Future personal information in diagnostic/error reports handled confidentially with authorised purpose-limited access and deletion within 30 days or sooner if Microsoft requires. Aggregate acquisition/sales statistics are separate."
+  ],
+  "verification": {
+    "unauthenticated_https_get": true,
+    "certificate_validation": true,
+    "policy_languages": 6,
+    "public_pages_http_200_and_source_match": 18,
+    "distinct_policy_link_targets_http_200": 61,
+    "mobile_widths_px": [
+      320,
+      390
+    ],
+    "mobile_result": "all six policies fit at 320px after title wrapping and compact navigation repair",
+    "desktop_width_px": 1280,
+    "html_pages_validated": 61,
+    "html_validator": "11.5.6 passed",
+    "production_site_checks": "passed with zero warnings",
+    "innovation_regression_check": "passed",
+    "public_build_files": 111,
+    "video_and_transcripts": "unchanged in all six product languages",
+    "live_public_mobile_check": "English notice verified at 320px: 305px content width, effective date 3 November 2026, no login fields."
+  },
+  "build_scratch": "C:\\Users\\pmont\\AppData\\Local\\Temp\\alpinno-website-build",
+  "review_method": "Sol 6.1 high bounded read-only code review, split locale authorship and final semantic audit. Parent integrated changes and independently validated source, build, mobile layouts and public responses.",
+  "limits": "No Store certification, encryption implementation or full legal/security compliance conclusion is implied by publication.",
+  "changed_source_files": [
+    "10_Working/build_site.py",
+    "10_Working/validate_site.py",
+    "privacy-de.html",
+    "privacy-fr.html",
+    "privacy-it.html",
+    "privacy-ja.html",
+    "privacy-zh.html",
+    "privacy.html",
+    "sharewise/de.html",
+    "sharewise/fr.html",
+    "sharewise/index.html",
+    "sharewise/it.html",
+    "sharewise/ja.html",
+    "sharewise/privacy-de.html",
+    "sharewise/privacy-fr.html",
+    "sharewise/privacy-it.html",
+    "sharewise/privacy-ja.html",
+    "sharewise/privacy-zh.html",
+    "sharewise/privacy.html",
+    "sharewise/zh.html",
+    "sitemap.xml",
+    "style.css"
+  ]
+}
